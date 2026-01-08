@@ -36,7 +36,7 @@ return new class extends Migration
             $table->foreignId('email_sequence_id')->nullable()->constrained()->onDelete('set null');
             $table->foreignId('email_sequence_email_id')->nullable()->constrained()->onDelete('set null');
             $table->string('subject');
-            $table->text('status')->default('pending'); // pending, sent, failed, opened, clicked
+            $table->string('status')->default('pending'); // pending, sent, failed, opened, clicked
             $table->timestamp('sent_at')->nullable();
             $table->timestamp('opened_at')->nullable();
             $table->timestamp('clicked_at')->nullable();
