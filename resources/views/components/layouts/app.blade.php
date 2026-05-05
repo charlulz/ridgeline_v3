@@ -94,17 +94,17 @@
             <!-- Main Navigation -->
             <nav class="bg-white shadow-lg border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700 sticky top-0 z-50" x-data="{ mobileMenuOpen: false, residentialOpen: false, commercialOpen: false }">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div class="flex justify-between h-20 items-center">
-                        <div class="flex items-center">
+                    <div class="flex justify-between h-20 items-center gap-3">
+                        <div class="flex items-center min-w-0">
                             <!-- Logo -->
-                            <div class="flex-shrink-0 flex items-center">
+                            <div class="flex-shrink-0 flex items-center min-w-0">
                                 <a href="{{ route('home') }}" class="flex items-center group">
                                     <div class="h-12 flex items-center justify-center group-hover:scale-105 transition-transform duration-200">
                                         <img src="{{ asset('logo.webp') }}" alt="Ridgeline Roofing" class="h-12 w-auto">
                                     </div>
-                                    <div class="ml-3">
-                                        <span class="text-2xl font-bold text-gray-900 dark:text-white">Ridgeline Roofing</span>
-                                        <div class="text-xs text-gray-500 dark:text-gray-400 -mt-1">Professional Roofing Services</div>
+                                    <div class="ml-3 min-w-0">
+                                        <span class="block text-xl sm:text-2xl font-bold text-gray-900 dark:text-white truncate">Ridgeline Roofing</span>
+                                        <div class="hidden sm:block text-xs text-gray-500 dark:text-gray-400 -mt-1 truncate">Professional Roofing Services</div>
                                     </div>
                                 </a>
                             </div>
@@ -207,7 +207,7 @@
                         </div>
 
                         <!-- Right side - CTAs -->
-                        <div class="flex items-center space-x-3">
+                        <div class="flex items-center space-x-2 sm:space-x-3 flex-shrink-0">
                             <!-- Phone CTA -->
                             <a href="tel:3043811122" class="hidden md:flex items-center bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200 shadow-md hover:shadow-lg">
                                 <svg class="h-4 w-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
@@ -217,7 +217,7 @@
                             </a>
                             
                             <!-- Primary CTA -->
-                            <a href="{{ route('contact') }}" class="bg-orange-600 hover:bg-orange-700 text-white px-6 py-3 rounded-lg text-sm font-bold transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105">
+                            <a href="{{ route('contact') }}" class="hidden sm:inline-flex bg-orange-600 hover:bg-orange-700 text-white px-5 sm:px-6 py-3 rounded-lg text-sm font-bold transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105">
                                 Free Quote
                             </a>
 

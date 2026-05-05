@@ -80,12 +80,12 @@
 
                     <!-- Main Headline -->
                     <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">
-                        Commercial Roofing Contractor
+                        Roofing Contractor
                         <span class="block text-yellow-300">Ashland, KY • Huntington, WV • Ironton, OH</span>
                     </h1>
 
                     <p class="text-base md:text-lg mb-6 max-w-2xl mx-auto lg:mx-0 leading-relaxed text-orange-50/95">
-                        Fast, professional repairs and replacements for offices, warehouses, and multi‑unit properties—plus emergency response when storms hit.
+                        Residential and commercial repairs, replacements, and storm response—done by a local team that prioritizes clear communication and quality workmanship.
                     </p>
 
                     <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm md:text-base text-gray-100/95 mb-7 max-w-2xl mx-auto lg:mx-0">
@@ -103,7 +103,7 @@
                                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                                 </svg>
                             </span>
-                            <span><strong>Licensed & insured</strong> crews</span>
+                            <span><strong>Licensed & insured</strong></span>
                         </li>
                         <li class="flex items-start gap-3">
                             <span class="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-white/10 border border-white/15">
@@ -111,7 +111,7 @@
                                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                                 </svg>
                             </span>
-                            <span><strong>Insurance help</strong> when storms hit</span>
+                            <span><strong>Storm damage</strong> & insurance help</span>
                         </li>
                         <li class="flex items-start gap-3">
                             <span class="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-white/10 border border-white/15">
@@ -199,10 +199,10 @@
                     <div class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 shadow-2xl">
                         <div class="flex items-start justify-between gap-6">
                             <div>
-                                <div class="text-xs uppercase tracking-wider text-orange-200 font-semibold mb-2">Commercial Focus</div>
-                                <h3 class="text-2xl font-bold text-white mb-3">Minimize downtime. Protect your asset.</h3>
+                                <div class="text-xs uppercase tracking-wider text-orange-200 font-semibold mb-2">Local • Professional • Reliable</div>
+                                <h3 class="text-2xl font-bold text-white mb-3">Protect your property with confidence.</h3>
                                 <p class="text-gray-200 leading-relaxed">
-                                    Fast scheduling, clear scope, and professional crews for commercial roofing repairs and replacements.
+                                    Fast scheduling, clear scope, and professional crews for roofing repairs and replacements—residential or commercial.
                                 </p>
                             </div>
                             <div class="text-right">
