@@ -1,3 +1,20 @@
+@props([
+    'title' => null,
+    'metaDescription' => null,
+    'canonical' => null,
+    'ogImage' => null,
+    'robots' => null,
+    'schemaJson' => null,
+])
+
+@php
+    $computedTitle = trim(($title ? $title . ' - ' : '') . 'Ridgeline Roofing');
+    $computedDescription = $metaDescription
+        ?? 'Ridgeline Roofing provides residential and commercial roofing, storm damage repair, and emergency service. Get a free inspection and estimate today.';
+    $computedCanonical = $canonical ?? url()->current();
+    $computedOgImage = $ogImage ?? asset('logo.webp');
+@endphp
+
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="h-full">
     <head>
@@ -5,7 +22,27 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>{{ $title ?? 'Ridgeline Roofing' }} - Professional Roofing Services</title>
+        <title>{{ $computedTitle }} | Professional Roofing Services</title>
+        <meta name="description" content="{{ $computedDescription }}">
+        @if(!empty($robots))
+            <meta name="robots" content="{{ $robots }}">
+        @endif
+        <link rel="canonical" href="{{ $computedCanonical }}">
+
+        <meta property="og:title" content="{{ $computedTitle }} | Professional Roofing Services">
+        <meta property="og:description" content="{{ $computedDescription }}">
+        <meta property="og:url" content="{{ $computedCanonical }}">
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="{{ $computedOgImage }}">
+
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="{{ $computedTitle }} | Professional Roofing Services">
+        <meta name="twitter:description" content="{{ $computedDescription }}">
+        <meta name="twitter:image" content="{{ $computedOgImage }}">
+
+        @if(!empty($schemaJson))
+            <script type="application/ld+json">{!! $schemaJson !!}</script>
+        @endif
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -94,7 +131,6 @@
                                                     <h4 class="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-3">Roof Replacement</h4>
                                                     <ul class="space-y-2">
                                                         <li><a href="{{ route('services.residential.shingle-replacement') }}" class="flex items-center text-sm text-gray-700 dark:text-gray-300 hover:text-orange-600 dark:hover:text-orange-400"><svg class="h-3 w-3 mr-2 text-orange-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/></svg>Shingle Roof</a></li>
-                                                        <li><a href="{{ route('services.residential.rubber-replacement') }}" class="flex items-center text-sm text-gray-700 dark:text-gray-300 hover:text-orange-600 dark:hover:text-orange-400"><svg class="h-3 w-3 mr-2 text-orange-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/></svg>Rubber Roof</a></li>
                                                         <li><a href="{{ route('services.residential.metal-replacement') }}" class="flex items-center text-sm text-gray-700 dark:text-gray-300 hover:text-orange-600 dark:hover:text-orange-400"><svg class="h-3 w-3 mr-2 text-orange-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/></svg>Metal Roof</a></li>
                                                         <li><a href="{{ route('services.residential.designer-shingle-replacement') }}" class="flex items-center text-sm text-gray-700 dark:text-gray-300 hover:text-orange-600 dark:hover:text-orange-400"><svg class="h-3 w-3 mr-2 text-orange-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/></svg>Designer Shingles</a></li>
                                                     </ul>
@@ -103,7 +139,6 @@
                                                     <h4 class="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-3">Roof Repair</h4>
                                                     <ul class="space-y-2">
                                                         <li><a href="{{ route('services.residential.shingle-repair') }}" class="flex items-center text-sm text-gray-700 dark:text-gray-300 hover:text-orange-600 dark:hover:text-orange-400"><svg class="h-3 w-3 mr-2 text-orange-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/></svg>Shingle Repair</a></li>
-                                                        <li><a href="{{ route('services.residential.rubber-repair') }}" class="flex items-center text-sm text-gray-700 dark:text-gray-300 hover:text-orange-600 dark:hover:text-orange-400"><svg class="h-3 w-3 mr-2 text-orange-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/></svg>Rubber Repair</a></li>
                                                         <li><a href="{{ route('services.residential.metal-repair') }}" class="flex items-center text-sm text-gray-700 dark:text-gray-300 hover:text-orange-600 dark:hover:text-orange-400"><svg class="h-3 w-3 mr-2 text-orange-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/></svg>Metal Repair</a></li>
                                                     </ul>
                                                 </div>
@@ -211,12 +246,10 @@
                             <div x-show="residentialOpen" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" class="pl-6 space-y-1 bg-gray-50 dark:bg-gray-700">
                                 <p class="px-3 py-2 text-xs font-bold text-gray-500 dark:text-gray-400 uppercase">Replacement</p>
                                 <a href="{{ route('services.residential.shingle-replacement') }}" class="block px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:text-orange-600">Shingle Roof</a>
-                                <a href="{{ route('services.residential.rubber-replacement') }}" class="block px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:text-orange-600">Rubber Roof</a>
                                 <a href="{{ route('services.residential.metal-replacement') }}" class="block px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:text-orange-600">Metal Roof</a>
                                 <a href="{{ route('services.residential.designer-shingle-replacement') }}" class="block px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:text-orange-600">Designer Shingles</a>
                                 <p class="px-3 py-2 text-xs font-bold text-gray-500 dark:text-gray-400 uppercase">Repair</p>
                                 <a href="{{ route('services.residential.shingle-repair') }}" class="block px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:text-orange-600">Shingle Repair</a>
-                                <a href="{{ route('services.residential.rubber-repair') }}" class="block px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:text-orange-600">Rubber Repair</a>
                                 <a href="{{ route('services.residential.metal-repair') }}" class="block px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:text-orange-600">Metal Repair</a>
                                 <p class="px-3 py-2 text-xs font-bold text-gray-500 dark:text-gray-400 uppercase">Additional</p>
                                 <a href="{{ route('services.residential.seamless-5-gutters') }}" class="block px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:text-orange-600">Seamless 5" Gutters</a>
@@ -309,7 +342,6 @@
                             <h3 class="text-sm font-semibold text-gray-900 dark:text-white uppercase tracking-wider mb-4">Our Services</h3>
                             <ul class="space-y-2">
                                 <li><a href="{{ route('services.residential.shingle-replacement') }}" class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white text-sm transition-colors duration-200">Shingle Roof Replacement</a></li>
-                                <li><a href="{{ route('services.residential.rubber-replacement') }}" class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white text-sm transition-colors duration-200">Rubber Roof Replacement</a></li>
                                 <li><a href="{{ route('services.residential.metal-replacement') }}" class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white text-sm transition-colors duration-200">Metal Roof Replacement</a></li>
                                 <li><a href="{{ route('services.residential.shingle-repair') }}" class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white text-sm transition-colors duration-200">Roof Repair</a></li>
                             </ul>
@@ -319,12 +351,12 @@
                     <!-- Partner Logos -->
                     <div class="mt-8 pt-8 border-t border-gray-200 dark:border-gray-700">
                         <div class="flex flex-wrap items-center justify-center gap-8 mb-8">
-                            <a href="https://www.gaf.com/en-us/roofing-contractors/residential/usa/ky/ashland/ridgeline-roofing-llc-1137706" target="_blank" rel="noopener noreferrer" class="grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100">
-                                <img src="{{ asset('img/GAF_logo.png') }}" alt="GAF Certified Contractor" class="h-12 w-auto">
-                            </a>
                             <div class="grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100">
                                 <img src="{{ asset('img/blog-preferred-contractor-logo.png') }}" alt="Preferred Contractor" class="h-12 w-auto">
                             </div>
+                            <a href="https://www.gaf.com/en-us/roofing-contractors/residential/usa/ky/ashland/ridgelineroofing-llc-1137706" target="_blank" rel="noopener noreferrer" class="grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100">
+                                <img src="{{ asset('img/GAF_logo.png') }}" alt="GAF Certified Contractor" class="h-12 w-auto">
+                            </a>
                             <div class="grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100">
                                 <img src="{{ asset('img/MuleHide-Logo-2025(6x6)nr.png') }}" alt="MuleHide Partner" class="h-12 w-auto">
                             </div>

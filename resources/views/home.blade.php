@@ -1,4 +1,36 @@
-<x-layouts.app title="Home">
+@php
+    $homeSchema = [
+        '@context' => 'https://schema.org',
+        '@type' => 'RoofingContractor',
+        'name' => 'Ridgeline Roofing',
+        'url' => url('/'),
+        'telephone' => '+1-304-381-1122',
+        'address' => [
+            '@type' => 'PostalAddress',
+            'streetAddress' => '1100 Our Lady\'s Way, Suite 208',
+            'addressLocality' => 'Ashland',
+            'addressRegion' => 'KY',
+            'postalCode' => '41101',
+            'addressCountry' => 'US',
+        ],
+        'areaServed' => [
+            ['@type' => 'City', 'name' => 'Ashland', 'addressRegion' => 'KY'],
+            ['@type' => 'City', 'name' => 'Huntington', 'addressRegion' => 'WV'],
+            ['@type' => 'City', 'name' => 'Teays Valley', 'addressRegion' => 'WV'],
+        ],
+        'sameAs' => [
+            'https://www.gaf.com/en-us/roofing-contractors/residential/usa/ky/ashland/ridgeline-roofing-llc-1137706',
+        ],
+    ];
+    $homeSchemaJson = json_encode($homeSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+@endphp
+
+<x-layouts.app
+    title="Roofing Contractor in Ashland, KY | Huntington, WV | Teays Valley, WV"
+    metaDescription="Ridgeline Roofing is a local roofing contractor serving Ashland, KY, Huntington, WV, and Teays Valley, WV. Residential & commercial roofing, storm damage repairs, and 24/7 emergency service."
+    :canonical="route('home')"
+    :schemaJson="$homeSchemaJson"
+>
     <!-- Hero Section -->
     <div class="relative text-white overflow-hidden min-h-screen flex items-center">
         <!-- Background Image -->
@@ -47,14 +79,28 @@
 
                     <!-- Main Headline -->
                     <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-                        @foreach($headlineLines as $index => $line)
-                            <span class="block @if($index === count($headlineLines) - 1) text-yellow-300 @endif">{{ trim($line) }}</span>
-                        @endforeach
+                        Roofing Contractor Serving
+                        <span class="block text-yellow-300">Ashland, KY • Huntington, WV • Teays Valley, WV</span>
                     </h1>
 
-                    <!-- Subheadline -->
+                    <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed text-orange-50/95">
+                        Residential & commercial roofing, storm damage repairs, and <strong>24/7 emergency service</strong>—backed by premium materials and a local team you can trust.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row sm:flex-wrap gap-3 mb-8 justify-center lg:justify-start">
+                        <span class="inline-flex items-center bg-white/10 border border-white/20 rounded-full px-4 py-2 text-sm font-semibold">
+                            Free Rush Estimates
+                        </span>
+                        <span class="inline-flex items-center bg-white/10 border border-white/20 rounded-full px-4 py-2 text-sm font-semibold">
+                            Insurance Claim Assistance
+                        </span>
+                        <span class="inline-flex items-center bg-white/10 border border-white/20 rounded-full px-4 py-2 text-sm font-semibold">
+                            Licensed & Insured
+                        </span>
+                    </div>
+
                     @if(!empty($subheadline))
-                        <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                        <p class="text-sm md:text-base text-orange-100/90 mb-8 max-w-2xl mx-auto lg:mx-0">
                             {!! nl2br(e($subheadline)) !!}
                         </p>
                     @endif
@@ -319,14 +365,6 @@
                                         </svg>
                                     </div>
                                     <span class="text-gray-300 text-lg">Shingle Roof Replacement</span>
-                                </div>
-                                <div class="flex items-center">
-                                    <div class="flex-shrink-0 w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center mr-4">
-                                        <svg class="h-3 w-3 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                                        </svg>
-                                    </div>
-                                    <span class="text-gray-300 text-lg">Rubber Roof Replacement</span>
                                 </div>
                                 <div class="flex items-center">
                                     <div class="flex-shrink-0 w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center mr-4">
