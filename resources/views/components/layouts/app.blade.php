@@ -153,6 +153,9 @@
                                                         <li><a href="{{ route('services.residential.seamless-6-gutters') }}" class="flex items-center text-sm text-gray-700 dark:text-gray-300 hover:text-orange-600 dark:hover:text-orange-400"><svg class="h-3 w-3 mr-2 text-orange-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/></svg>Seamless 6" Gutters</a></li>
                                                         <li><a href="{{ route('services.residential.chimney-flashing') }}" class="flex items-center text-sm text-gray-700 dark:text-gray-300 hover:text-orange-600 dark:hover:text-orange-400"><svg class="h-3 w-3 mr-2 text-orange-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/></svg>Chimney Flashing</a></li>
                                                     </ul>
+                                                    <ul class="space-y-2 mt-2">
+                                                        <li><a href="{{ route('services.residential.siding') }}" class="flex items-center text-sm text-gray-700 dark:text-gray-300 hover:text-orange-600 dark:hover:text-orange-400"><svg class="h-3 w-3 mr-2 text-orange-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010 1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/></svg>Siding</a></li>
+                                                    </ul>
                                                 </div>
                                             </div>
                                         </div>
@@ -193,6 +196,7 @@
                                                     <ul class="space-y-2">
                                                         <li><a href="{{ route('services.commercial.gutters') }}" class="flex items-center text-sm text-gray-700 dark:text-gray-300 hover:text-orange-600 dark:hover:text-orange-400"><svg class="h-3 w-3 mr-2 text-orange-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/></svg>Commercial Gutters</a></li>
                                                         <li><a href="{{ route('services.commercial.roof-deck') }}" class="flex items-center text-sm text-gray-700 dark:text-gray-300 hover:text-orange-600 dark:hover:text-orange-400"><svg class="h-3 w-3 mr-2 text-orange-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/></svg>Roof Deck Services</a></li>
+                                                        <li><a href="{{ route('services.commercial.siding') }}" class="flex items-center text-sm text-gray-700 dark:text-gray-300 hover:text-orange-600 dark:hover:text-orange-400"><svg class="h-3 w-3 mr-2 text-orange-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010 1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/></svg>Siding</a></li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -259,6 +263,7 @@
                                 <a href="{{ route('services.residential.seamless-5-gutters') }}" class="block px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:text-orange-600">Seamless 5" Gutters</a>
                                 <a href="{{ route('services.residential.seamless-6-gutters') }}" class="block px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:text-orange-600">Seamless 6" Gutters</a>
                                 <a href="{{ route('services.residential.chimney-flashing') }}" class="block px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:text-orange-600">Chimney Flashing</a>
+                                <a href="{{ route('services.residential.siding') }}" class="block px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:text-orange-600">Siding</a>
                             </div>
                         </div>
 
@@ -280,6 +285,7 @@
                                 <p class="px-3 py-2 text-xs font-bold text-gray-500 dark:text-gray-400 uppercase">Additional</p>
                                 <a href="{{ route('services.commercial.gutters') }}" class="block px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:text-orange-600">Commercial Gutters</a>
                                 <a href="{{ route('services.commercial.roof-deck') }}" class="block px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:text-orange-600">Roof Deck Services</a>
+                                <a href="{{ route('services.commercial.siding') }}" class="block px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:text-orange-600">Siding</a>
                             </div>
                         </div>
 

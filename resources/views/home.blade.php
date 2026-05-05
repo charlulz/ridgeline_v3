@@ -85,7 +85,7 @@
                     </h1>
 
                     <p class="text-base md:text-lg mb-6 max-w-2xl mx-auto lg:mx-0 leading-relaxed text-orange-50/95">
-                        Residential and commercial repairs, replacements, and storm response—done by a local team that prioritizes clear communication and quality workmanship.
+                        We specialize in residential and commercial roof replacements with a focus on clear scopes, professional execution, and long-term reliability. 
                     </p>
 
                     <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm md:text-base text-gray-100/95 mb-7 max-w-2xl mx-auto lg:mx-0">
@@ -202,7 +202,7 @@
                                 <div class="text-xs uppercase tracking-wider text-orange-200 font-semibold mb-2">Local • Professional • Reliable</div>
                                 <h3 class="text-2xl font-bold text-white mb-3">Protect your property with confidence.</h3>
                                 <p class="text-gray-200 leading-relaxed">
-                                    Fast scheduling, clear scope, and professional crews for roofing repairs and replacements—residential or commercial.
+                                    Fast scheduling, clear scope, and professional crews for roofing replacements and repairs—residential or commercial.
                                 </p>
                             </div>
                             <div class="text-right">

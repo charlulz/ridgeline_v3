@@ -52,6 +52,7 @@ Route::get('/services/residential/metal-roof-repair', [ServicePageController::cl
 Route::get('/services/residential/seamless-5-gutters', [ServicePageController::class, 'seamless5Gutters'])->name('services.residential.seamless-5-gutters');
 Route::get('/services/residential/seamless-6-gutters', [ServicePageController::class, 'seamless6Gutters'])->name('services.residential.seamless-6-gutters');
 Route::get('/services/residential/chimney-flashing-reflashing', [ServicePageController::class, 'chimneyFlashing'])->name('services.residential.chimney-flashing');
+Route::get('/services/residential/siding', [ServicePageController::class, 'residentialSiding'])->name('services.residential.siding');
 
 // Commercial Roof Replacement
 Route::get('/services/commercial/shingle-roof-replacement', [ServicePageController::class, 'commercialShingleReplacement'])->name('services.commercial.shingle-replacement');
@@ -66,6 +67,7 @@ Route::get('/services/commercial/metal-roof-repair', [ServicePageController::cla
 // Commercial Additional Services
 Route::get('/services/commercial/seamless-5-gutters', [ServicePageController::class, 'commercialGutters'])->name('services.commercial.gutters');
 Route::get('/services/commercial/roof-deck-repair', [ServicePageController::class, 'commercialRoofDeck'])->name('services.commercial.roof-deck');
+Route::get('/services/commercial/siding', [ServicePageController::class, 'commercialSiding'])->name('services.commercial.siding');
 
 // Blog routes
 Route::get('/blog', [BlogController::class, 'index'])->name('blog.index');

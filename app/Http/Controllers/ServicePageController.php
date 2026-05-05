@@ -74,6 +74,11 @@ class ServicePageController extends Controller
         return view('services.residential.chimney-flashing-reflashing');
     }
 
+    public function residentialSiding()
+    {
+        return view('services.residential.siding');
+    }
+
     // Commercial Services - Replacement
     public function commercialShingleReplacement()
     {
@@ -115,5 +120,10 @@ class ServicePageController extends Controller
     public function commercialRoofDeck()
     {
         return view('services.commercial.roof-deck-repair');
+    }
+
+    public function commercialSiding()
+    {
+        return view('services.commercial.siding');
     }
 }
