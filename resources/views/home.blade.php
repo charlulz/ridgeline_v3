@@ -16,7 +16,8 @@
         'areaServed' => [
             ['@type' => 'City', 'name' => 'Ashland', 'addressRegion' => 'KY'],
             ['@type' => 'City', 'name' => 'Huntington', 'addressRegion' => 'WV'],
-            ['@type' => 'City', 'name' => 'Teays Valley', 'addressRegion' => 'WV'],
+            ['@type' => 'City', 'name' => 'Ironton', 'addressRegion' => 'OH'],
+            ['@type' => 'AdministrativeArea', 'name' => 'Surrounding Tri-State Area'],
         ],
         'sameAs' => [
             'https://www.gaf.com/en-us/roofing-contractors/residential/usa/ky/ashland/ridgeline-roofing-llc-1137706',
@@ -26,13 +27,13 @@
 @endphp
 
 <x-layouts.app
-    title="Roofing Contractor in Ashland, KY | Huntington, WV | Teays Valley, WV"
-    metaDescription="Ridgeline Roofing is a local roofing contractor serving Ashland, KY, Huntington, WV, and Teays Valley, WV. Residential & commercial roofing, storm damage repairs, and 24/7 emergency service."
+    title="Roofing Contractor in Ashland, KY | Huntington, WV | Ironton, OH"
+    metaDescription="Ridgeline Roofing is a local roofing contractor serving Ashland, KY, Huntington, WV, Ironton, OH, and the surrounding tri-state area. Residential & commercial roofing, storm damage repairs, and 24/7 emergency service."
     :canonical="route('home')"
     :schemaJson="$homeSchemaJson"
 >
     <!-- Hero Section -->
-    <div class="relative text-white overflow-hidden min-h-screen flex items-center">
+    <div class="relative text-white overflow-hidden py-16 sm:py-20 lg:py-24 lg:min-h-[78vh] flex items-center">
         <!-- Background Image -->
         @php
             $heroImage = \App\Models\Setting::getHeroImage();
@@ -45,10 +46,10 @@
         <!-- Orange Brand Overlay -->
         <div class="absolute inset-0 bg-gradient-to-br from-orange-600/40 via-orange-700/30 to-orange-800/50"></div>
         
-        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
                 <!-- Left Column - Main Content -->
-                <div class="text-center lg:text-left">
+                <div class="text-center lg:text-left" x-data="{ quoteModalOpen: false }" @keydown.escape.window="quoteModalOpen = false">
                     @php
                         $stormAlertEnabled = \App\Models\Setting::isAlertEnabled('storm');
                         $stormAlertText = \App\Models\Setting::getAlertText('storm');
@@ -69,7 +70,7 @@
                             ];
                             $colors = $alertColors[$stormAlertColor] ?? $alertColors['red'];
                         @endphp
-                        <div class="inline-flex items-center {{ $colors['bg'] }} {{ $colors['border'] }} rounded-full px-4 py-2 mb-6">
+                        <div class="inline-flex items-center {{ $colors['bg'] }} {{ $colors['border'] }} rounded-full px-4 py-2 mb-5">
                             <svg class="h-4 w-4 {{ $colors['icon'] }} mr-2" fill="currentColor" viewBox="0 0 20 20">
                                 <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
                             </svg>
@@ -78,160 +79,148 @@
                     @endif
 
                     <!-- Main Headline -->
-                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-                        Roofing Contractor Serving
-                        <span class="block text-yellow-300">Ashland, KY • Huntington, WV • Teays Valley, WV</span>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">
+                        Commercial Roofing Contractor
+                        <span class="block text-yellow-300">Ashland, KY • Huntington, WV • Ironton, OH</span>
                     </h1>
 
-                    <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed text-orange-50/95">
-                        Residential & commercial roofing, storm damage repairs, and <strong>24/7 emergency service</strong>—backed by premium materials and a local team you can trust.
+                    <p class="text-base md:text-lg mb-6 max-w-2xl mx-auto lg:mx-0 leading-relaxed text-orange-50/95">
+                        Fast, professional repairs and replacements for offices, warehouses, and multi‑unit properties—plus emergency response when storms hit.
                     </p>
 
-                    <div class="flex flex-col sm:flex-row sm:flex-wrap gap-3 mb-8 justify-center lg:justify-start">
-                        <span class="inline-flex items-center bg-white/10 border border-white/20 rounded-full px-4 py-2 text-sm font-semibold">
-                            Free Rush Estimates
-                        </span>
-                        <span class="inline-flex items-center bg-white/10 border border-white/20 rounded-full px-4 py-2 text-sm font-semibold">
-                            Insurance Claim Assistance
-                        </span>
-                        <span class="inline-flex items-center bg-white/10 border border-white/20 rounded-full px-4 py-2 text-sm font-semibold">
-                            Licensed & Insured
-                        </span>
-                    </div>
+                    <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm md:text-base text-gray-100/95 mb-7 max-w-2xl mx-auto lg:mx-0">
+                        <li class="flex items-start gap-3">
+                            <span class="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-white/10 border border-white/15">
+                                <svg class="h-4 w-4 text-yellow-300" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                            </span>
+                            <span><strong>Rapid response</strong> & clear scope</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-white/10 border border-white/15">
+                                <svg class="h-4 w-4 text-yellow-300" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                            </span>
+                            <span><strong>Licensed & insured</strong> crews</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-white/10 border border-white/15">
+                                <svg class="h-4 w-4 text-yellow-300" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                            </span>
+                            <span><strong>Insurance help</strong> when storms hit</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-white/10 border border-white/15">
+                                <svg class="h-4 w-4 text-yellow-300" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                            </span>
+                            <span><strong>Free inspections</strong> & fast estimates</span>
+                        </li>
+                    </ul>
 
-                    @if(!empty($subheadline))
-                        <p class="text-sm md:text-base text-orange-100/90 mb-8 max-w-2xl mx-auto lg:mx-0">
-                            {!! nl2br(e($subheadline)) !!}
-                        </p>
-                    @endif
-
-                    <!-- Hero Form -->
-                    <livewire:hero-form />
-
-                    <!-- Phone CTA -->
-                    <div class="text-center lg:text-left">
-                        <p class="text-sm text-orange-100 mb-3">Emergency? Call now for immediate response:</p>
-                        <a href="tel:3043811122" class="inline-flex items-center bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-bold transition-colors duration-200 shadow-lg hover:shadow-xl animate-pulse">
-                            <svg class="h-5 w-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
-                            </svg>
-                            <span>(304) 381-1122</span>
+                    <!-- Primary CTA -->
+                    <div class="flex flex-col sm:flex-row gap-3 items-center justify-center lg:justify-start">
+                        <a
+                            href="tel:3043811122"
+                            class="w-full sm:w-auto inline-flex items-center justify-center bg-green-600 hover:bg-green-700 text-white px-7 py-3.5 rounded-xl font-bold text-lg transition-all duration-200 shadow-lg hover:shadow-xl"
+                        >
+                            Call Now: (304) 381-1122
                         </a>
-                        <p class="text-xs text-orange-200 mt-2">Available 24/7 for storm emergencies</p>
+                        <button
+                            type="button"
+                            @click="quoteModalOpen = true"
+                            class="w-full sm:w-auto inline-flex items-center justify-center bg-white/10 hover:bg-white/15 border border-white/20 text-white px-7 py-3.5 rounded-xl font-bold text-lg transition-all duration-200"
+                            aria-haspopup="dialog"
+                            :aria-expanded="quoteModalOpen.toString()"
+                        >
+                            Get a Free Quote
+                        </button>
                     </div>
+
+                    <div class="mt-6 flex flex-wrap items-center justify-center lg:justify-start gap-x-6 gap-y-3 text-sm text-orange-100/90">
+                        <div class="inline-flex items-center gap-2">
+                            <span class="font-bold text-yellow-300">4.9★</span>
+                            <span>Google Rating</span>
+                        </div>
+                        <div class="hidden sm:inline-flex items-center gap-2">
+                            <span class="font-bold text-yellow-300">15+</span>
+                            <span>Years Experience</span>
+                        </div>
+                        <div class="inline-flex items-center gap-2">
+                            <span class="font-bold text-yellow-300">24/7</span>
+                            <span>Emergency</span>
+                        </div>
+                    </div>
+
+                    <!-- Quote Modal -->
+                    <div
+                        class="fixed inset-0 z-50 flex items-center justify-center p-4"
+                        x-show="quoteModalOpen"
+                        x-cloak
+                        x-transition.opacity
+                        role="dialog"
+                        aria-modal="true"
+                        aria-label="Get a Free Quote"
+                        @click.self="quoteModalOpen = false"
+                    >
+                        <div class="absolute inset-0 bg-black/70"></div>
+                        <div class="relative w-full max-w-2xl bg-white dark:bg-gray-900 rounded-2xl shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden">
+                            <div class="flex items-center justify-between px-6 py-4 border-b border-gray-200 dark:border-gray-800">
+                                <div>
+                                    <h2 class="text-xl font-bold text-gray-900 dark:text-white">Get a Free Quote</h2>
+                                    <p class="text-sm text-gray-600 dark:text-gray-300">Fast response • No obligation</p>
+                                </div>
+                                <button
+                                    type="button"
+                                    class="p-2 rounded-lg text-gray-500 hover:text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:text-white dark:hover:bg-gray-800 transition-colors"
+                                    @click="quoteModalOpen = false"
+                                    aria-label="Close modal"
+                                >
+                                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="p-6">
+                                <livewire:hero-form />
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
 
                 <!-- Right Column - Visual Elements -->
-                <div class="relative space-y-6">
-                    <!-- Main Visual Card -->
+                <div class="relative hidden lg:block">
                     <div class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 shadow-2xl">
-                        <!-- Social Proof -->
-                        <div class="text-center mb-6">
-                            <h3 class="text-2xl font-bold mb-2">Trusted by 200+ Happy Clients</h3>
-                            <div class="flex items-center justify-center space-x-6">
-                                <div class="text-center">
-                                    <div class="text-3xl font-bold text-yellow-300">4.9★</div>
-                                    <div class="text-sm text-orange-100">Google Rating</div>
-                                </div>
-                                <div class="text-center">
-                                    <div class="text-3xl font-bold text-yellow-300">15+</div>
-                                    <div class="text-sm text-orange-100">Years Experience</div>
-                                </div>
+                        <div class="flex items-start justify-between gap-6">
+                            <div>
+                                <div class="text-xs uppercase tracking-wider text-orange-200 font-semibold mb-2">Commercial Focus</div>
+                                <h3 class="text-2xl font-bold text-white mb-3">Minimize downtime. Protect your asset.</h3>
+                                <p class="text-gray-200 leading-relaxed">
+                                    Fast scheduling, clear scope, and professional crews for commercial roofing repairs and replacements.
+                                </p>
+                            </div>
+                            <div class="text-right">
+                                <div class="text-3xl font-bold text-yellow-300">15+</div>
+                                <div class="text-sm text-orange-100">Years Experience</div>
                             </div>
                         </div>
-
-                        <!-- Key Benefits -->
-                        <div class="space-y-3">
-                            <div class="flex items-center">
-                                <div class="flex-shrink-0 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center mr-3">
-                                    <svg class="h-4 w-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                                    </svg>
+                        <div class="mt-8 pt-6 border-t border-white/15">
+                            <div class="flex items-center justify-between">
+                                <div class="text-sm text-orange-100/90">
+                                    <div class="font-semibold text-white">Prefer a quick call?</div>
+                                    <div>We’ll confirm scope, timeline, and next steps.</div>
                                 </div>
-                                <div>
-                                    <h4 class="font-semibold text-white text-sm">Free Rush Estimates</h4>
-                                </div>
-                            </div>
-
-                            <div class="flex items-center">
-                                <div class="flex-shrink-0 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center mr-3">
-                                    <svg class="h-4 w-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                                    </svg>
-                                </div>
-                                <div>
-                                    <h4 class="font-semibold text-white text-sm">24/7 Emergency Service</h4>
-                                </div>
-                            </div>
-
-                            <div class="flex items-center">
-                                <div class="flex-shrink-0 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center mr-3">
-                                    <svg class="h-4 w-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                                    </svg>
-                                </div>
-                                <div>
-                                    <h4 class="font-semibold text-white text-sm">Licensed & Insured</h4>
-                                </div>
+                                <a href="tel:3043811122" class="inline-flex items-center bg-green-600 hover:bg-green-700 text-white px-5 py-3 rounded-xl font-bold transition-colors duration-200 shadow-lg">
+                                    Call (304) 381-1122
+                                </a>
                             </div>
                         </div>
-                    </div>
-
-                    <!-- Customer Testimonial Card -->
-                    <div class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 shadow-2xl">
-                        <div class="text-center">
-                            <div class="flex justify-center mb-3">
-                                <div class="flex text-yellow-400">
-                                    <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
-                                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                                    </svg>
-                                    <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
-                                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                                    </svg>
-                                    <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
-                                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                                    </svg>
-                                    <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
-                                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                                    </svg>
-                                    <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
-                                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                                    </svg>
-                                </div>
-                            </div>
-                            <blockquote class="text-white text-sm italic mb-3">
-                                "Ridgeline Roofing replaced our entire shingle roof and gutters. Their pricing was the best among three companies. The job was completed very fast within a day and a half. Highly recommend!"
-                            </blockquote>
-                            <div class="text-orange-100 text-xs">
-                                <strong>Andrew Crager</strong> • Google Review
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Service Areas Card -->
-                    <div class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 shadow-2xl">
-                        <div class="text-center">
-                            <h3 class="text-lg font-bold text-white mb-4">Serving Tri-State Area</h3>
-                            <div class="grid grid-cols-1 gap-3 text-sm">
-                                <div class="flex items-center justify-center">
-                                    <div class="w-2 h-2 bg-orange-400 rounded-full mr-2"></div>
-                                    <span class="text-orange-100">Kentucky</span>
-                                </div>
-                                <div class="flex items-center justify-center">
-                                    <div class="w-2 h-2 bg-orange-400 rounded-full mr-2"></div>
-                                    <span class="text-orange-100">West Virginia</span>
-                                </div>
-                                <div class="flex items-center justify-center">
-                                    <div class="w-2 h-2 bg-orange-400 rounded-full mr-2"></div>
-                                    <span class="text-orange-100">Ohio</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Floating Elements -->
-                    <div class="absolute -top-4 -right-4 bg-yellow-400 text-orange-800 px-4 py-2 rounded-full text-sm font-bold shadow-lg animate-pulse">
-                        Free Inspection!
                     </div>
                 </div>
             </div>

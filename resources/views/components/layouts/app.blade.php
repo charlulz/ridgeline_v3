@@ -29,6 +29,10 @@
         @endif
         <link rel="canonical" href="{{ $computedCanonical }}">
 
+        <link rel="icon" href="{{ asset('logo.webp') }}" type="image/webp">
+        <link rel="shortcut icon" href="{{ asset('logo.webp') }}" type="image/webp">
+        <link rel="apple-touch-icon" href="{{ asset('logo.webp') }}">
+
         <meta property="og:title" content="{{ $computedTitle }} | Professional Roofing Services">
         <meta property="og:description" content="{{ $computedDescription }}">
         <meta property="og:url" content="{{ $computedCanonical }}">
