@@ -9,7 +9,7 @@
                     </svg>
                 </div>
                 <h3 class="text-xl font-bold text-gray-900 mb-2">Thank You!</h3>
-                <p class="text-gray-600 mb-4">We'll call you within 30 minutes to schedule your free roof inspection.</p>
+                <p class="text-gray-600 mb-4">We&apos;ll review your request and reach out to discuss the next step.</p>
                 <p class="text-sm text-gray-500">Redirecting...</p>
             </div>
         </div>
@@ -25,8 +25,8 @@
         <!-- Hero Form -->
         <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-2xl mb-8 max-w-md mx-auto lg:mx-0">
             <div class="text-center mb-4">
-                <h3 class="text-xl font-bold text-gray-900 mb-2">Emergency Roof Inspection</h3>
-                <p class="text-sm text-gray-600">Free • No obligation • Same-day response</p>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Get a Free Quote</h3>
+                <p class="text-sm text-gray-600">Free • No obligation • Tell us about your project</p>
             </div>
             
             <form wire:submit="submit" class="space-y-4">
@@ -105,11 +105,10 @@
                         wire:model="urgency"
                         class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500 text-gray-900 @error('urgency') border-red-500 @enderror"
                     >
-                        <option value="">Urgency Level (Optional)</option>
-                        <option value="emergency">Emergency - Immediate Help Needed</option>
-                        <option value="high">High - Within 24 Hours</option>
-                        <option value="medium">Medium - This Week</option>
-                        <option value="low">Low - Planning Ahead</option>
+                        <option value="">Project Timing (Optional)</option>
+                        <option value="high">ASAP</option>
+                        <option value="medium">Soon</option>
+                        <option value="low">Planning Ahead</option>
                     </select>
                     @error('urgency')
                         <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
@@ -133,33 +132,20 @@
                     @enderror
                 </div>
 
-                <!-- Insurance Claim -->
-                <div class="flex items-center">
-                    <input 
-                        type="checkbox" 
-                        wire:model="insurance_claim"
-                        id="insurance_claim"
-                        class="h-4 w-4 text-orange-600 focus:ring-orange-500 border-gray-300 rounded"
-                    >
-                    <label for="insurance_claim" class="ml-2 text-sm text-gray-700">
-                        I have an active insurance claim
-                    </label>
-                </div>
-
                 <!-- Submit Button -->
                 <button 
                     type="submit" 
                     class="w-full bg-orange-600 hover:bg-orange-700 text-white font-bold py-3 px-4 rounded-lg transition-colors duration-200 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed"
                     wire:loading.attr="disabled"
                 >
-                    <span wire:loading.remove>Get Emergency Inspection</span>
+                    <span wire:loading.remove>Request Free Quote</span>
                     <span wire:loading>Sending...</span>
                 </button>
             </form>
             
             <!-- Trust Text -->
             <p class="text-xs text-gray-500 text-center mt-3">
-                ✓ Licensed & Insured ✓ Emergency Response ✓ No High-Pressure Sales
+                ✓ Licensed &amp; Insured ✓ Structured Scheduling ✓ No High-Pressure Sales
             </p>
         </div>
     @endif

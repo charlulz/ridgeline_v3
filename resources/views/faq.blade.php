@@ -1,6 +1,6 @@
 <x-layouts.app title="Frequently Asked Questions">
     <!-- Hero Section -->
-    <div class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-16">
+    <div class="bg-gradient-to-r from-orange-600 to-orange-800 text-white py-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center">
                 <h1 class="text-4xl md:text-5xl font-bold mb-4">Frequently Asked Questions</h1>
@@ -45,7 +45,7 @@
                         What should I do if I have a roof emergency?
                     </h3>
                     <p class="text-gray-600 dark:text-gray-300">
-                        Call our emergency line at <a href="tel:3043811122" class="text-blue-600 dark:text-blue-400 font-semibold hover:underline">(304) 381-1122</a> immediately. 
+                        Call our emergency line at <a href="tel:3043811122" class="text-orange-600 dark:text-orange-400 font-semibold hover:underline">(304) 381-1122</a> immediately. 
                         We provide 24/7 emergency services for urgent roofing issues like leaks, storm damage, or structural problems. 
                         Our emergency response team can typically be on-site within hours.
                     </p>
@@ -138,14 +138,14 @@
     </div>
 
     <!-- Still Have Questions CTA -->
-    <div class="py-16 bg-blue-600 text-white">
+    <div class="py-16 bg-orange-600 text-white">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 class="text-3xl font-bold mb-4">Still Have Questions?</h2>
             <p class="text-xl mb-8">
                 Our team is here to help. Contact us for personalized answers to your roofing questions.
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="{{ route('contact') }}" class="bg-white text-blue-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors duration-200">
+                <a href="{{ route('contact') }}" class="bg-white text-orange-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors duration-200">
                     Contact Us
                 </a>
                 <a href="tel:3043811122" class="bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition-colors duration-200">

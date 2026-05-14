@@ -6,7 +6,7 @@
         <div class="absolute inset-0 bg-gradient-to-br from-purple-900/50 to-purple-800/30"></div>
         <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center">
-                <span class="inline-block bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-bold mb-4">RESIDENTIAL</span>
+                <span class="inline-block bg-orange-600 text-white px-4 py-1 rounded-full text-sm font-bold mb-4">RESIDENTIAL</span>
                 <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">Rolled Roofing Replacement</h1>
                 <p class="text-xl md:text-2xl max-w-3xl mx-auto mb-8 text-gray-100">
                     Cost-effective rolled roofing solutions for low-slope residential applications. Quick installation, reliable protection, excellent value.

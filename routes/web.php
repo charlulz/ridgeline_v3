@@ -52,14 +52,17 @@ Route::get('/services/residential/rubber-roof-repair', [ServicePageController::c
 Route::get('/services/residential/metal-roof-repair', [ServicePageController::class, 'metalRepair'])->name('services.residential.metal-repair');
 
 // Residential Gutters & Additional Services
-Route::get('/services/residential/seamless-5-gutters', [ServicePageController::class, 'seamless5Gutters'])->name('services.residential.seamless-5-gutters');
-Route::get('/services/residential/seamless-6-gutters', [ServicePageController::class, 'seamless6Gutters'])->name('services.residential.seamless-6-gutters');
+Route::get('/services/residential/seamless-gutters', [ServicePageController::class, 'seamlessGutters'])->name('services.residential.seamless-gutters');
+Route::redirect('/services/residential/seamless-5-gutters', '/services/residential/seamless-gutters', 301)->name('services.residential.seamless-5-gutters');
+Route::redirect('/services/residential/seamless-6-gutters', '/services/residential/seamless-gutters', 301)->name('services.residential.seamless-6-gutters');
 Route::get('/services/residential/chimney-flashing-reflashing', [ServicePageController::class, 'chimneyFlashing'])->name('services.residential.chimney-flashing');
 Route::get('/services/residential/siding', [ServicePageController::class, 'residentialSiding'])->name('services.residential.siding');
+Route::get('/services/residential/skylight-repair-replacement', [ServicePageController::class, 'residentialSkylights'])->name('services.residential.skylights');
 
 // Commercial Roof Replacement
 Route::get('/services/commercial/shingle-roof-replacement', [ServicePageController::class, 'commercialShingleReplacement'])->name('services.commercial.shingle-replacement');
-Route::get('/services/commercial/rubber-roof-replacement', [ServicePageController::class, 'commercialRubberReplacement'])->name('services.commercial.rubber-replacement');
+Route::get('/services/commercial/flat-roof-replacement', [ServicePageController::class, 'commercialFlatReplacement'])->name('services.commercial.flat-replacement');
+Route::redirect('/services/commercial/rubber-roof-replacement', '/services/commercial/flat-roof-replacement', 301)->name('services.commercial.rubber-replacement');
 Route::get('/services/commercial/metal-roof-replacement', [ServicePageController::class, 'commercialMetalReplacement'])->name('services.commercial.metal-replacement');
 
 // Commercial Roof Repair

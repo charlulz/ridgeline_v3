@@ -57,12 +57,12 @@ class ServiceAreaPageController extends Controller
             'services.residential.shingle-repair',
             'services.residential.rubber-repair',
             'services.residential.metal-repair',
-            'services.residential.seamless-5-gutters',
-            'services.residential.seamless-6-gutters',
+            'services.residential.seamless-gutters',
             'services.residential.chimney-flashing',
             'services.residential.siding',
+            'services.residential.skylights',
             'services.commercial.shingle-replacement',
-            'services.commercial.rubber-replacement',
+            'services.commercial.flat-replacement',
             'services.commercial.metal-replacement',
             'services.commercial.shingle-repair',
             'services.commercial.rubber-repair',
@@ -178,8 +178,8 @@ class ServiceAreaPageController extends Controller
         return [
             [
                 'label' => 'Commercial Flat Roofing',
-                'description' => 'EPDM, TPO, and commercial flat roof replacement and repair for offices, retail, and industrial properties.',
-                'route' => route('services.commercial.rubber-replacement'),
+                'description' => 'EPDM-focused commercial flat roof replacement and repair for offices, retail, and industrial properties.',
+                'route' => route('services.commercial.flat-replacement'),
             ],
             [
                 'label' => 'Commercial Metal Roofing',

@@ -114,7 +114,7 @@
             <div class="text-center mb-12">
                 <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Meet Our Team</h2>
                 <p class="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-                    Experienced professionals dedicated to your roofing needs
+                    The people who help lead Ridgeline Roofing every day
                 </p>
             </div>
             
@@ -124,9 +124,9 @@
                         <img src="{{ asset('img/employees/image0.jpeg') }}" alt="Seth Kelley" class="h-full w-full object-cover">
                     </div>
                     <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Seth Kelley</h3>
-                    <p class="text-orange-600 dark:text-orange-400 font-medium mb-3">Founder &amp; President</p>
+                    <p class="text-orange-600 dark:text-orange-400 font-medium mb-3">Owner, President, Commercial Sales</p>
                     <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
-                        With 20 years in the roofing industry, Seth founded Ridgeline Roofing to provide quality service and fair pricing to the community.
+                        Seth brings more than 20 years in the roofing industry and helps lead Ridgeline's commercial sales efforts. He focuses on clear scopes, strong customer relationships, and dependable project execution from the first conversation through completion.
                     </p>
                 </div>
 
@@ -135,9 +135,9 @@
                         <img src="{{ asset('img/employees/image1.jpeg') }}" alt="Tyler Blagg" class="h-full w-full object-cover">
                     </div>
                     <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Tyler Blagg</h3>
-                    <p class="text-orange-600 dark:text-orange-400 font-medium mb-3">Owner &amp; Residential Sales</p>
+                    <p class="text-orange-600 dark:text-orange-400 font-medium mb-3">Owner, Personnel Management, Residential Sales</p>
                     <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
-                        Tyler handles personnel management, leads residential sales, and is dedicated to providing every customer with an honest and thorough experience from start to finish.
+                        Tyler oversees personnel management while leading Ridgeline's residential sales efforts. He is committed to giving homeowners an honest, thorough experience from the initial inspection to the final walkthrough.
                     </p>
                 </div>
 
@@ -146,9 +146,9 @@
                         <img src="{{ asset('img/employees/image2.jpeg') }}" alt="Mary Reynolds" class="h-full w-full object-cover">
                     </div>
                     <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Mary Reynolds</h3>
-                    <p class="text-orange-600 dark:text-orange-400 font-medium mb-3">Production Manager</p>
+                    <p class="text-orange-600 dark:text-orange-400 font-medium mb-3">Production Manager / Office Manager</p>
                     <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
-                        Mary handles production management and office management. She is the friendliest voice you'll talk to, and is dedicated to making your experience with Ridgeline the best it can be!
+                        Mary keeps production scheduling and office operations moving smoothly behind the scenes. She is often the friendly voice customers hear first and works hard to make every Ridgeline experience organized, responsive, and positive.
                     </p>
                 </div>
             </div>
@@ -161,11 +161,11 @@
             <div class="text-center mb-12">
                 <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Certifications & Insurance</h2>
                 <p class="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-                    Fully licensed, bonded, and insured for your peace of mind
+                    Licensed and insured roofing professionals you can count on
                 </p>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="text-center">
                     <div class="h-16 w-16 bg-orange-100 dark:bg-orange-900/40 rounded-lg flex items-center justify-center mx-auto mb-4">
                         <svg class="h-8 w-8 text-orange-600 dark:text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -179,21 +179,11 @@
                 <div class="text-center">
                     <div class="h-16 w-16 bg-orange-100 dark:bg-orange-900/40 rounded-lg flex items-center justify-center mx-auto mb-4">
                         <svg class="h-8 w-8 text-orange-600 dark:text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Bonded</h3>
-                    <p class="text-gray-600 dark:text-gray-300 text-sm">Fully bonded for your protection</p>
-                </div>
-
-                <div class="text-center">
-                    <div class="h-16 w-16 bg-orange-100 dark:bg-orange-900/40 rounded-lg flex items-center justify-center mx-auto mb-4">
-                        <svg class="h-8 w-8 text-orange-600 dark:text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
                         </svg>
                     </div>
                     <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Insured</h3>
-                    <p class="text-gray-600 dark:text-gray-300 text-sm">Comprehensive liability insurance</p>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm">Comprehensive liability insurance for added peace of mind</p>
                 </div>
 
                 <div class="text-center">
@@ -202,8 +192,8 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                         </svg>
                     </div>
-                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Certified</h3>
-                    <p class="text-gray-600 dark:text-gray-300 text-sm">Industry certifications & training</p>
+                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Trained &amp; Qualified</h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm">Ongoing manufacturer and industry training for residential and commercial roofing systems</p>
                 </div>
             </div>
         </div>

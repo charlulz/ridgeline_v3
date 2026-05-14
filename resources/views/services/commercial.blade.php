@@ -31,58 +31,30 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
-                <!-- Commercial Shingle -->
+                <!-- Commercial Flat Roof -->
                 <div class="bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-700 rounded-xl p-8">
-                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Commercial Shingle Replacement</h3>
+                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Commercial Flat Roof Replacement</h3>
                     <p class="text-gray-600 dark:text-gray-300 mb-6">
-                        Durable commercial-grade shingle systems designed for larger buildings. Engineered for long-term performance and cost-effectiveness.
+                        EPDM-focused flat roof systems for commercial buildings that need dependable waterproofing, long-term durability, and a practical replacement strategy.
                     </p>
                     <ul class="space-y-2 mb-6">
                         <li class="flex items-center text-gray-600 dark:text-gray-300">
                             <svg class="h-5 w-5 text-green-600 dark:text-green-400 mr-2" fill="currentColor" viewBox="0 0 20 20">
                                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                             </svg>
-                            Commercial-grade materials
+                            EPDM as the preferred primary system
                         </li>
                         <li class="flex items-center text-gray-600 dark:text-gray-300">
                             <svg class="h-5 w-5 text-green-600 dark:text-green-400 mr-2" fill="currentColor" viewBox="0 0 20 20">
                                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                             </svg>
-                            Minimal business disruption
+                            Modified bitumen and coating options available
                         </li>
                         <li class="flex items-center text-gray-600 dark:text-gray-300">
                             <svg class="h-5 w-5 text-green-600 dark:text-green-400 mr-2" fill="currentColor" viewBox="0 0 20 20">
                                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                             </svg>
-                            Extended warranties
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Commercial Rubber -->
-                <div class="bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-700 rounded-xl p-8">
-                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Commercial Rubber Replacement</h3>
-                    <p class="text-gray-600 dark:text-gray-300 mb-6">
-                        EPDM rubber roofing systems perfect for large commercial flat roofs. Superior weather resistance and energy efficiency.
-                    </p>
-                    <ul class="space-y-2 mb-6">
-                        <li class="flex items-center text-gray-600 dark:text-gray-300">
-                            <svg class="h-5 w-5 text-green-600 dark:text-green-400 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                            </svg>
-                            Seamless installation
-                        </li>
-                        <li class="flex items-center text-gray-600 dark:text-gray-300">
-                            <svg class="h-5 w-5 text-green-600 dark:text-green-400 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                            </svg>
-                            Energy-efficient solutions
-                        </li>
-                        <li class="flex items-center text-gray-600 dark:text-gray-300">
-                            <svg class="h-5 w-5 text-green-600 dark:text-green-400 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                            </svg>
-                            Low maintenance requirements
+                            Long-term flat roof performance
                         </li>
                     </ul>
                 </div>
@@ -111,6 +83,34 @@
                                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                             </svg>
                             Environmentally friendly
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Commercial Shingle -->
+                <div class="bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-700 rounded-xl p-8">
+                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Commercial Shingle Replacement</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">
+                        Durable commercial-grade shingle systems designed for larger buildings. Engineered for long-term performance and cost-effectiveness.
+                    </p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center text-gray-600 dark:text-gray-300">
+                            <svg class="h-5 w-5 text-green-600 dark:text-green-400 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Commercial-grade materials
+                        </li>
+                        <li class="flex items-center text-gray-600 dark:text-gray-300">
+                            <svg class="h-5 w-5 text-green-600 dark:text-green-400 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Minimal business disruption
+                        </li>
+                        <li class="flex items-center text-gray-600 dark:text-gray-300">
+                            <svg class="h-5 w-5 text-green-600 dark:text-green-400 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Extended warranties
                         </li>
                     </ul>
                 </div>
@@ -155,8 +155,8 @@
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="text-center">
-                    <div class="h-16 w-16 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <svg class="h-8 w-8 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div class="h-16 w-16 bg-orange-100 dark:bg-orange-900 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="h-8 w-8 text-orange-600 dark:text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                         </svg>
                     </div>

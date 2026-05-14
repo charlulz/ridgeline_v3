@@ -53,7 +53,7 @@ class FunnelPageController extends Controller
             'email' => $validated['email'] ?? null,
             'property_type' => $validated['property_type'] ?? null,
             'property_address' => $validated['property_address'] ?? null,
-            'urgency' => $validated['urgency'] ?? ($funnelPage->form_type === 'emergency' ? 'emergency' : 'high'),
+            'urgency' => $validated['urgency'] ?? ($funnelPage->form_type === 'emergency' ? 'emergency' : null),
             'preferred_contact_time' => $validated['preferred_contact_time'] ?? null,
             'insurance_claim' => $validated['insurance_claim'] ?? false,
             'how_did_you_hear' => $validated['how_did_you_hear'] ?? null,

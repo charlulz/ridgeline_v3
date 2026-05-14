@@ -149,12 +149,12 @@
                                                 <div>
                                                     <h4 class="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-3">Additional Services</h4>
                                                     <ul class="space-y-2">
-                                                        <li><a href="{{ route('services.residential.seamless-5-gutters') }}" class="flex items-center text-sm text-gray-700 dark:text-gray-300 hover:text-orange-600 dark:hover:text-orange-400"><svg class="h-3 w-3 mr-2 text-orange-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/></svg>Seamless 5" Gutters</a></li>
-                                                        <li><a href="{{ route('services.residential.seamless-6-gutters') }}" class="flex items-center text-sm text-gray-700 dark:text-gray-300 hover:text-orange-600 dark:hover:text-orange-400"><svg class="h-3 w-3 mr-2 text-orange-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/></svg>Seamless 6" Gutters</a></li>
+                                                        <li><a href="{{ route('services.residential.seamless-gutters') }}" class="flex items-center text-sm text-gray-700 dark:text-gray-300 hover:text-orange-600 dark:hover:text-orange-400"><svg class="h-3 w-3 mr-2 text-orange-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/></svg>Seamless Gutters (5&quot; &amp; 6&quot;)</a></li>
                                                         <li><a href="{{ route('services.residential.chimney-flashing') }}" class="flex items-center text-sm text-gray-700 dark:text-gray-300 hover:text-orange-600 dark:hover:text-orange-400"><svg class="h-3 w-3 mr-2 text-orange-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/></svg>Chimney Flashing</a></li>
                                                     </ul>
                                                     <ul class="space-y-2 mt-2">
-                                                        <li><a href="{{ route('services.residential.siding') }}" class="flex items-center text-sm text-gray-700 dark:text-gray-300 hover:text-orange-600 dark:hover:text-orange-400"><svg class="h-3 w-3 mr-2 text-orange-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010 1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/></svg>Siding</a></li>
+                                                        <li><a href="{{ route('services.residential.skylights') }}" class="flex items-center text-sm text-gray-700 dark:text-gray-300 hover:text-orange-600 dark:hover:text-orange-400"><svg class="h-3 w-3 mr-2 text-orange-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/></svg>Skylight Repair &amp; Replacement</a></li>
+                                                        <li><a href="{{ route('services.residential.siding') }}" class="flex items-center text-sm text-gray-700 dark:text-gray-300 hover:text-orange-600 dark:hover:text-orange-400"><svg class="h-3 w-3 mr-2 text-orange-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010 1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/></svg>Siding Installation</a></li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -178,9 +178,9 @@
                                                 <div>
                                                     <h4 class="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-3">Roof Replacement</h4>
                                                     <ul class="space-y-2">
-                                                        <li><a href="{{ route('services.commercial.shingle-replacement') }}" class="flex items-center text-sm text-gray-700 dark:text-gray-300 hover:text-orange-600 dark:hover:text-orange-400"><svg class="h-3 w-3 mr-2 text-orange-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/></svg>Shingle Roof</a></li>
-                                                        <li><a href="{{ route('services.commercial.rubber-replacement') }}" class="flex items-center text-sm text-gray-700 dark:text-gray-300 hover:text-orange-600 dark:hover:text-orange-400"><svg class="h-3 w-3 mr-2 text-orange-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/></svg>Rubber Roof</a></li>
+                                                        <li><a href="{{ route('services.commercial.flat-replacement') }}" class="flex items-center text-sm text-gray-700 dark:text-gray-300 hover:text-orange-600 dark:hover:text-orange-400"><svg class="h-3 w-3 mr-2 text-orange-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/></svg>Flat Roof</a></li>
                                                         <li><a href="{{ route('services.commercial.metal-replacement') }}" class="flex items-center text-sm text-gray-700 dark:text-gray-300 hover:text-orange-600 dark:hover:text-orange-400"><svg class="h-3 w-3 mr-2 text-orange-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/></svg>Metal Roof</a></li>
+                                                        <li><a href="{{ route('services.commercial.shingle-replacement') }}" class="flex items-center text-sm text-gray-700 dark:text-gray-300 hover:text-orange-600 dark:hover:text-orange-400"><svg class="h-3 w-3 mr-2 text-orange-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/></svg>Shingle Roof</a></li>
                                                     </ul>
                                                 </div>
                                                 <div>
@@ -194,9 +194,9 @@
                                                 <div>
                                                     <h4 class="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-3">Additional Services</h4>
                                                     <ul class="space-y-2">
-                                                        <li><a href="{{ route('services.commercial.gutters') }}" class="flex items-center text-sm text-gray-700 dark:text-gray-300 hover:text-orange-600 dark:hover:text-orange-400"><svg class="h-3 w-3 mr-2 text-orange-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/></svg>Commercial Gutters</a></li>
+                                                        <li><a href="{{ route('services.commercial.gutters') }}" class="flex items-center text-sm text-gray-700 dark:text-gray-300 hover:text-orange-600 dark:hover:text-orange-400"><svg class="h-3 w-3 mr-2 text-orange-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/></svg>Gutter Installation &amp; Repair</a></li>
                                                         <li><a href="{{ route('services.commercial.roof-deck') }}" class="flex items-center text-sm text-gray-700 dark:text-gray-300 hover:text-orange-600 dark:hover:text-orange-400"><svg class="h-3 w-3 mr-2 text-orange-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/></svg>Roof Deck Services</a></li>
-                                                        <li><a href="{{ route('services.commercial.siding') }}" class="flex items-center text-sm text-gray-700 dark:text-gray-300 hover:text-orange-600 dark:hover:text-orange-400"><svg class="h-3 w-3 mr-2 text-orange-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010 1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/></svg>Siding</a></li>
+                                                        <li><a href="{{ route('services.commercial.siding') }}" class="flex items-center text-sm text-gray-700 dark:text-gray-300 hover:text-orange-600 dark:hover:text-orange-400"><svg class="h-3 w-3 mr-2 text-orange-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010 1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/></svg>Siding Installation</a></li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -260,9 +260,9 @@
                                 <a href="{{ route('services.residential.shingle-repair') }}" class="block px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:text-orange-600">Shingle Repair</a>
                                 <a href="{{ route('services.residential.metal-repair') }}" class="block px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:text-orange-600">Metal Repair</a>
                                 <p class="px-3 py-2 text-xs font-bold text-gray-500 dark:text-gray-400 uppercase">Additional</p>
-                                <a href="{{ route('services.residential.seamless-5-gutters') }}" class="block px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:text-orange-600">Seamless 5" Gutters</a>
-                                <a href="{{ route('services.residential.seamless-6-gutters') }}" class="block px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:text-orange-600">Seamless 6" Gutters</a>
+                                <a href="{{ route('services.residential.seamless-gutters') }}" class="block px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:text-orange-600">Seamless Gutters (5" & 6")</a>
                                 <a href="{{ route('services.residential.chimney-flashing') }}" class="block px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:text-orange-600">Chimney Flashing</a>
+                                <a href="{{ route('services.residential.skylights') }}" class="block px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:text-orange-600">Skylight Repair & Replacement</a>
                                 <a href="{{ route('services.residential.siding') }}" class="block px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:text-orange-600">Siding</a>
                             </div>
                         </div>
@@ -275,17 +275,17 @@
                             </button>
                             <div x-show="commercialOpen" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" class="pl-6 space-y-1 bg-gray-50 dark:bg-gray-700">
                                 <p class="px-3 py-2 text-xs font-bold text-gray-500 dark:text-gray-400 uppercase">Replacement</p>
-                                <a href="{{ route('services.commercial.shingle-replacement') }}" class="block px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:text-orange-600">Shingle Roof</a>
-                                <a href="{{ route('services.commercial.rubber-replacement') }}" class="block px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:text-orange-600">Rubber Roof</a>
+                                <a href="{{ route('services.commercial.flat-replacement') }}" class="block px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:text-orange-600">Flat Roof</a>
                                 <a href="{{ route('services.commercial.metal-replacement') }}" class="block px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:text-orange-600">Metal Roof</a>
+                                <a href="{{ route('services.commercial.shingle-replacement') }}" class="block px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:text-orange-600">Shingle Roof</a>
                                 <p class="px-3 py-2 text-xs font-bold text-gray-500 dark:text-gray-400 uppercase">Repair</p>
                                 <a href="{{ route('services.commercial.shingle-repair') }}" class="block px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:text-orange-600">Shingle Repair</a>
                                 <a href="{{ route('services.commercial.rubber-repair') }}" class="block px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:text-orange-600">Rubber Repair</a>
                                 <a href="{{ route('services.commercial.metal-repair') }}" class="block px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:text-orange-600">Metal Repair</a>
                                 <p class="px-3 py-2 text-xs font-bold text-gray-500 dark:text-gray-400 uppercase">Additional</p>
-                                <a href="{{ route('services.commercial.gutters') }}" class="block px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:text-orange-600">Commercial Gutters</a>
+                                <a href="{{ route('services.commercial.gutters') }}" class="block px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:text-orange-600">Gutter Installation &amp; Repair</a>
                                 <a href="{{ route('services.commercial.roof-deck') }}" class="block px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:text-orange-600">Roof Deck Services</a>
-                                <a href="{{ route('services.commercial.siding') }}" class="block px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:text-orange-600">Siding</a>
+                                <a href="{{ route('services.commercial.siding') }}" class="block px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:text-orange-600">Siding Installation</a>
                             </div>
                         </div>
 
@@ -317,7 +317,14 @@
             <!-- Footer -->
             <footer class="bg-gray-50 dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700">
                 <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-                    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                    @php
+                        $footerServiceLocations = collect(config('service_areas.cities', []))
+                            ->sortBy('rank')
+                            ->take(6)
+                            ->values();
+                    @endphp
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
                         <!-- Company Info -->
                         <div class="col-span-1 md:col-span-2">
                             <div class="flex items-center mb-4">
@@ -347,13 +354,34 @@
                             </ul>
                         </div>
 
+                        <!-- Service Locations -->
+                        <div>
+                            <h3 class="text-sm font-semibold text-gray-900 dark:text-white uppercase tracking-wider mb-4">Service Locations</h3>
+                            <ul class="space-y-2">
+                                @foreach ($footerServiceLocations as $location)
+                                    <li>
+                                        <a href="{{ route('service-areas.show', ['slug' => $location['slug']]) }}" class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white text-sm transition-colors duration-200">
+                                            {{ $location['city'] }}, {{ $location['state_abbr'] }}
+                                        </a>
+                                    </li>
+                                @endforeach
+                                <li>
+                                    <a href="{{ route('service-areas') }}" class="text-orange-600 dark:text-orange-400 hover:text-orange-700 dark:hover:text-orange-300 text-sm font-medium transition-colors duration-200">
+                                        View All Locations
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
                         <!-- Our Services -->
                         <div>
                             <h3 class="text-sm font-semibold text-gray-900 dark:text-white uppercase tracking-wider mb-4">Our Services</h3>
                             <ul class="space-y-2">
-                                <li><a href="{{ route('services.residential.shingle-replacement') }}" class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white text-sm transition-colors duration-200">Shingle Roof Replacement</a></li>
-                                <li><a href="{{ route('services.residential.metal-replacement') }}" class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white text-sm transition-colors duration-200">Metal Roof Replacement</a></li>
-                                <li><a href="{{ route('services.residential.shingle-repair') }}" class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white text-sm transition-colors duration-200">Roof Repair</a></li>
+                                <li><a href="{{ route('services.residential') }}" class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white text-sm transition-colors duration-200">Residential Roofing</a></li>
+                                <li><a href="{{ route('services.commercial') }}" class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white text-sm transition-colors duration-200">Commercial Roofing</a></li>
+                                <li><a href="{{ route('services') }}" class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white text-sm transition-colors duration-200">Roof Replacement</a></li>
+                                <li><a href="{{ route('contact') }}" class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white text-sm transition-colors duration-200">Roof Inspection</a></li>
+                                <li><a href="{{ route('services.residential.siding') }}" class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white text-sm transition-colors duration-200">Siding</a></li>
                             </ul>
                         </div>
                     </div>

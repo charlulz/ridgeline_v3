@@ -90,9 +90,9 @@
             </div>
 
             <!-- Insurance Note -->
-            <div class="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl p-6 mb-8">
-                <h3 class="text-lg font-semibold text-blue-900 dark:text-blue-200 mb-2">Need Help with Insurance Claims?</h3>
-                <p class="text-blue-800 dark:text-blue-300">
+            <div class="bg-orange-50 dark:bg-orange-900/20 border border-orange-200 dark:border-orange-800 rounded-xl p-6 mb-8">
+                <h3 class="text-lg font-semibold text-orange-900 dark:text-orange-200 mb-2">Need Help with Insurance Claims?</h3>
+                <p class="text-orange-800 dark:text-orange-300">
                     Our team can help you navigate the insurance claim process. We'll work directly with your insurance company 
                     to ensure you get the coverage you deserve. Mention this when we call you!
                 </p>

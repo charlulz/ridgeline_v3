@@ -248,18 +248,18 @@
                     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                         <div class="order-1">
                             <div class="relative">
-                                <div class="aspect-[4/3] bg-gradient-to-br from-blue-500/20 to-blue-600/10 rounded-3xl overflow-hidden border border-white/20">
+                                <div class="aspect-[4/3] bg-gradient-to-br from-orange-500/20 to-orange-600/10 rounded-3xl overflow-hidden border border-white/20">
                                     <img src="{{ asset('img/shingles/shingle_roof_1.jpg') }}" alt="Residential roofing project" class="w-full h-full object-cover">
                                 </div>
-                                <div class="absolute -bottom-6 -left-6 bg-blue-600 text-white px-6 py-3 rounded-2xl shadow-2xl">
+                                <div class="absolute -bottom-6 -left-6 bg-orange-600 text-white px-6 py-3 rounded-2xl shadow-2xl">
                                     <div class="text-sm font-semibold">Residential Roofing</div>
                                     <div class="text-xs opacity-90">Built for long-term protection</div>
                                 </div>
                             </div>
                         </div>
                         <div class="order-2">
-                            <div class="inline-flex items-center bg-blue-600/20 border border-blue-400/30 rounded-full px-4 py-2 mb-6">
-                                <span class="text-blue-300 text-sm font-semibold uppercase tracking-wide">Residential Services</span>
+                            <div class="inline-flex items-center bg-orange-600/20 border border-orange-400/30 rounded-full px-4 py-2 mb-6">
+                                <span class="text-orange-300 text-sm font-semibold uppercase tracking-wide">Residential Services</span>
                             </div>
                             <h3 class="text-4xl font-bold text-white mb-6">Residential Roofing</h3>
                             <p class="text-xl text-gray-300 mb-8 leading-relaxed">
@@ -267,7 +267,7 @@
                             </p>
                             <div class="space-y-4 mb-8">
                                 <div class="flex items-center">
-                                    <div class="flex-shrink-0 w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center mr-4">
+                                    <div class="flex-shrink-0 w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center mr-4">
                                         <svg class="h-3 w-3 text-white" fill="currentColor" viewBox="0 0 20 20">
                                             <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                                         </svg>
@@ -275,7 +275,7 @@
                                     <span class="text-gray-300 text-lg">Composite shingle installation and full roof replacement</span>
                                 </div>
                                 <div class="flex items-center">
-                                    <div class="flex-shrink-0 w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center mr-4">
+                                    <div class="flex-shrink-0 w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center mr-4">
                                         <svg class="h-3 w-3 text-white" fill="currentColor" viewBox="0 0 20 20">
                                             <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                                         </svg>
@@ -283,7 +283,7 @@
                                     <span class="text-gray-300 text-lg">Designer shingle options for upgraded curb appeal</span>
                                 </div>
                                 <div class="flex items-center">
-                                    <div class="flex-shrink-0 w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center mr-4">
+                                    <div class="flex-shrink-0 w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center mr-4">
                                         <svg class="h-3 w-3 text-white" fill="currentColor" viewBox="0 0 20 20">
                                             <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                                         </svg>
@@ -291,7 +291,7 @@
                                     <span class="text-gray-300 text-lg">Residential low-slope roofing for porches, additions, and problem areas</span>
                                 </div>
                                 <div class="flex items-center">
-                                    <div class="flex-shrink-0 w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center mr-4">
+                                    <div class="flex-shrink-0 w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center mr-4">
                                         <svg class="h-3 w-3 text-white" fill="currentColor" viewBox="0 0 20 20">
                                             <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                                         </svg>
@@ -301,10 +301,10 @@
                             </div>
                             <div class="flex items-center justify-between">
                                 <div class="text-center">
-                                    <div class="text-3xl font-bold text-blue-400">Thousands</div>
+                                    <div class="text-3xl font-bold text-orange-400">Thousands</div>
                                     <div class="text-sm text-gray-400">Satisfied Customers</div>
                                 </div>
-                                <a href="{{ route('contact') }}" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-xl font-bold transition-colors duration-200 shadow-lg hover:shadow-xl">
+                                <a href="{{ route('contact') }}" class="bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 rounded-xl font-bold transition-colors duration-200 shadow-lg hover:shadow-xl">
                                     Get Home Quote
                                 </a>
                             </div>
@@ -552,10 +552,10 @@
                         <!-- Image -->
                         <div class="order-1">
                             <div class="relative">
-                                <div class="aspect-[4/3] bg-gradient-to-br from-blue-500/20 to-blue-600/10 rounded-3xl overflow-hidden border border-gray-200 dark:border-gray-700">
+                                <div class="aspect-[4/3] bg-gradient-to-br from-orange-500/20 to-orange-600/10 rounded-3xl overflow-hidden border border-gray-200 dark:border-gray-700">
                                     <img src="{{ asset('img/shingles/shingle_roof_2.jpg') }}" alt="Quality roofing work" class="w-full h-full object-cover">
                                 </div>
-                                <div class="absolute -bottom-6 -left-6 bg-blue-600 text-white px-6 py-3 rounded-2xl shadow-2xl">
+                                <div class="absolute -bottom-6 -left-6 bg-orange-600 text-white px-6 py-3 rounded-2xl shadow-2xl">
                                     <div class="text-sm font-semibold">Quality Materials</div>
                                     <div class="text-xs opacity-90">Built for dependable results</div>
                                 </div>
@@ -563,8 +563,8 @@
                         </div>
                         <!-- Content -->
                         <div class="order-2">
-                            <div class="inline-flex items-center bg-blue-600/20 border border-blue-400/30 rounded-full px-4 py-2 mb-6">
-                                <span class="text-blue-800 dark:text-blue-200 text-sm font-semibold uppercase tracking-wide">Quality</span>
+                            <div class="inline-flex items-center bg-orange-600/20 border border-orange-400/30 rounded-full px-4 py-2 mb-6">
+                                <span class="text-orange-800 dark:text-orange-200 text-sm font-semibold uppercase tracking-wide">Quality</span>
                             </div>
                             <h3 class="text-4xl font-bold text-gray-900 dark:text-white mb-6">Dependable Roofing Backed by Quality Materials</h3>
                             <p class="text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
@@ -572,7 +572,7 @@
                             </p>
                             <div class="space-y-4 mb-8">
                                 <div class="flex items-center">
-                                    <div class="flex-shrink-0 w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center mr-4">
+                                    <div class="flex-shrink-0 w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center mr-4">
                                         <svg class="h-3 w-3 text-white" fill="currentColor" viewBox="0 0 20 20">
                                             <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                                         </svg>
@@ -580,7 +580,7 @@
                                     <span class="text-gray-600 dark:text-gray-300 text-lg">Premium Materials Only</span>
                                 </div>
                                 <div class="flex items-center">
-                                    <div class="flex-shrink-0 w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center mr-4">
+                                    <div class="flex-shrink-0 w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center mr-4">
                                         <svg class="h-3 w-3 text-white" fill="currentColor" viewBox="0 0 20 20">
                                             <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                                         </svg>
@@ -588,7 +588,7 @@
                                     <span class="text-gray-600 dark:text-gray-300 text-lg">Comprehensive Warranties</span>
                                 </div>
                                 <div class="flex items-center">
-                                    <div class="flex-shrink-0 w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center mr-4">
+                                    <div class="flex-shrink-0 w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center mr-4">
                                         <svg class="h-3 w-3 text-white" fill="currentColor" viewBox="0 0 20 20">
                                             <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                                         </svg>
@@ -598,10 +598,10 @@
                             </div>
                             <div class="flex items-center justify-between">
                                 <div class="text-center">
-                                    <div class="text-3xl font-bold text-blue-600">Trusted</div>
+                                    <div class="text-3xl font-bold text-orange-600">Trusted</div>
                                     <div class="text-sm text-gray-500 dark:text-gray-400">Materials & Warranties</div>
                                 </div>
-                                <a href="{{ route('contact') }}" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-xl font-bold transition-colors duration-200 shadow-lg hover:shadow-xl">
+                                <a href="{{ route('contact') }}" class="bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 rounded-xl font-bold transition-colors duration-200 shadow-lg hover:shadow-xl">
                                     Get Quality Quote
                                 </a>
                             </div>

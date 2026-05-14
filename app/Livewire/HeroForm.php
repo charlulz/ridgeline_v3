@@ -23,7 +23,7 @@ class HeroForm extends Component
     #[Validate('nullable|string|max:500')]
     public $property_address = '';
 
-    #[Validate('nullable|in:low,medium,high,emergency')]
+    #[Validate('nullable|in:low,medium,high')]
     public $urgency = '';
 
     #[Validate('nullable|string|max:50')]
@@ -61,14 +61,12 @@ class HeroForm extends Component
                 'email' => $this->email,
                 'property_type' => $this->property_type,
                 'property_address' => $this->property_address,
-                'urgency' => $this->urgency ?: 'high',
+                'urgency' => $this->urgency ?: null,
                 'preferred_contact_time' => $this->preferred_contact_time,
                 'insurance_claim' => $this->insurance_claim,
                 'how_did_you_hear' => $this->how_did_you_hear,
                 'source' => 'hero_form',
-                'message' => $this->urgency === 'emergency' 
-                    ? 'Emergency roof inspection request from hero form' 
-                    : 'Roof inspection request from hero form',
+                'message' => 'Quote request from hero form',
                 'utm_source' => $utmSource,
                 'utm_medium' => $utmMedium,
                 'utm_campaign' => $utmCampaign,
@@ -77,10 +75,7 @@ class HeroForm extends Component
             $this->success = true;
             $this->reset(['name', 'phone', 'email', 'property_type', 'property_address', 'urgency', 'preferred_contact_time', 'insurance_claim', 'how_did_you_hear']);
             
-            // Redirect to appropriate thank you page based on urgency
-            $redirectUrl = ($this->urgency === 'emergency') 
-                ? route('thank-you.emergency')
-                : route('thank-you.inspection');
+            $redirectUrl = route('thank-you.inspection');
             
             // Use JavaScript redirect for Livewire
             $this->dispatch('redirect', url: $redirectUrl);

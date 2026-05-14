@@ -1,6 +1,6 @@
 <x-layouts.app title="Blog - Roofing Tips & News">
     <!-- Hero Section -->
-    <div class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-16">
+    <div class="bg-gradient-to-r from-orange-600 to-orange-800 text-white py-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center">
                 <h1 class="text-4xl md:text-5xl font-bold mb-4">Roofing Blog</h1>
@@ -28,14 +28,14 @@
                                     {{ $post->published_at->format('F j, Y') }}
                                 </div>
                                 <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-3">
-                                    <a href="{{ route('blog.show', $post) }}" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                                    <a href="{{ route('blog.show', $post) }}" class="hover:text-orange-600 dark:hover:text-orange-400 transition-colors">
                                         {{ $post->title }}
                                     </a>
                                 </h2>
                                 @if($post->excerpt)
                                     <p class="text-gray-600 dark:text-gray-300 mb-4">{{ $post->excerpt }}</p>
                                 @endif
-                                <a href="{{ route('blog.show', $post) }}" class="text-blue-600 dark:text-blue-400 font-semibold hover:underline">
+                                <a href="{{ route('blog.show', $post) }}" class="text-orange-600 dark:text-orange-400 font-semibold hover:underline">
                                     Read More →
                                 </a>
                             </div>
@@ -60,7 +60,7 @@
     </div>
 
     <!-- Newsletter CTA -->
-    <div class="py-16 bg-blue-600 text-white">
+    <div class="py-16 bg-orange-600 text-white">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 class="text-3xl font-bold mb-4">Stay Updated</h2>
             <p class="text-xl mb-8">

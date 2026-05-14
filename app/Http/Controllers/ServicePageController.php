@@ -59,14 +59,9 @@ class ServicePageController extends Controller
     }
 
     // Residential Gutters & Additional Services
-    public function seamless5Gutters()
+    public function seamlessGutters()
     {
-        return view('services.residential.seamless-5-gutters');
-    }
-
-    public function seamless6Gutters()
-    {
-        return view('services.residential.seamless-6-gutters');
+        return view('services.residential.seamless-gutters');
     }
 
     public function chimneyFlashing()
@@ -79,13 +74,18 @@ class ServicePageController extends Controller
         return view('services.residential.siding');
     }
 
+    public function residentialSkylights()
+    {
+        return view('services.residential.skylight-repair-replacement');
+    }
+
     // Commercial Services - Replacement
     public function commercialShingleReplacement()
     {
         return view('services.commercial.shingle-roof-replacement');
     }
 
-    public function commercialRubberReplacement()
+    public function commercialFlatReplacement()
     {
         return view('services.commercial.rubber-roof-replacement');
     }

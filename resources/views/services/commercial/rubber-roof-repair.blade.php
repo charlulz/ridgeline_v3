@@ -71,7 +71,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="bg-gradient-to-br from-slate-50 to-slate-100 dark:from-gray-800 dark:to-gray-700 rounded-2xl p-8">
+                <div class="bg-gradient-to-br from-orange-50 to-orange-100 dark:from-gray-800 dark:to-gray-700 rounded-2xl p-8">
                     <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">Our Repair Process</h3>
                     <div class="space-y-6">
                         <div class="flex items-start">
@@ -139,7 +139,7 @@
     </div>
 
     <!-- CTA Section -->
-    <div class="py-16 bg-gradient-to-r from-slate-700 to-slate-900 text-white">
+    <div class="py-16 bg-gradient-to-r from-orange-700 to-orange-900 text-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 class="text-3xl md:text-4xl font-bold mb-4">Need Commercial Flat Roof Repairs?</h2>
             <p class="text-xl mb-8 max-w-2xl mx-auto">

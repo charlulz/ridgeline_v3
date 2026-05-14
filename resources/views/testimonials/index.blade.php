@@ -57,7 +57,7 @@
                                 <div class="text-gray-600 dark:text-gray-300">{{ $featured->location }}</div>
                             @endif
                             @if($featured->source_url)
-                                <a href="{{ $featured->source_url }}" target="_blank" class="text-blue-600 dark:text-blue-400 text-sm hover:underline">
+                                <a href="{{ $featured->source_url }}" target="_blank" class="text-orange-600 dark:text-orange-400 text-sm hover:underline">
                                     View on {{ ucfirst($featured->source) }}
                                 </a>
                             @endif
@@ -94,7 +94,7 @@
                                 @if($testimonial->photo)
                                     <img src="{{ $testimonial->photo }}" alt="{{ $testimonial->name }}" class="h-12 w-12 rounded-full mr-3">
                                 @else
-                                    <div class="h-12 w-12 rounded-full bg-blue-600 flex items-center justify-center text-white font-bold mr-3">
+                                    <div class="h-12 w-12 rounded-full bg-orange-600 flex items-center justify-center text-white font-bold mr-3">
                                         {{ substr($testimonial->name, 0, 1) }}
                                     </div>
                                 @endif
@@ -148,14 +148,14 @@
     </div>
 
     <!-- CTA Section -->
-    <div class="py-16 bg-gradient-to-r from-blue-600 to-blue-800 text-white">
+    <div class="py-16 bg-gradient-to-r from-orange-600 to-orange-800 text-white">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready to Join Our Satisfied Customers?</h2>
             <p class="text-xl mb-8">
                 Get a free inspection and see why so many homeowners trust Ridgeline Roofing.
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="{{ route('contact') }}" class="bg-white text-blue-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors duration-200">
+                <a href="{{ route('contact') }}" class="bg-white text-orange-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors duration-200">
                     Request Free Inspection
                 </a>
                 <a href="tel:3043811122" class="bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition-colors duration-200">
