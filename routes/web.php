@@ -5,6 +5,7 @@ use App\Http\Controllers\GoHighLevelWebhookController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\TestimonialController;
 use App\Http\Controllers\ServicePageController;
+use App\Http\Controllers\ServiceAreaPageController;
 use App\Http\Controllers\FunnelPageController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\SettingsController;
@@ -20,6 +21,8 @@ use Livewire\Volt\Volt;
 Route::get('/', function () {
     return view('home');
 })->name('home');
+
+Route::get('/sitemap.xml', [ServiceAreaPageController::class, 'sitemap'])->name('sitemap');
 
 Route::get('/about', function () {
     return view('about');
@@ -82,9 +85,10 @@ Route::get('/faq', function () {
 })->name('faq');
 
 // Service Areas route
-Route::get('/service-areas', function () {
-    return view('service-areas');
-})->name('service-areas');
+Route::get('/service-areas', [ServiceAreaPageController::class, 'index'])->name('service-areas');
+Route::get('/service-areas/{slug}', [ServiceAreaPageController::class, 'show'])
+    ->where('slug', '[a-z0-9-]+')
+    ->name('service-areas.show');
 
 Route::get('/contact', function () {
     return view('contact');

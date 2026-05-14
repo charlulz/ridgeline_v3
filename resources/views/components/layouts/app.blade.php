@@ -77,11 +77,11 @@
                             </div>
                         </div>
                         <div class="flex items-center space-x-3">
-                            <a href="tel:3043811122" class="flex items-center bg-red-600 hover:bg-red-700 px-3 py-1 rounded-full text-xs font-medium transition-colors duration-200 animate-pulse">
+                            <a href="tel:3043811122" class="flex items-center bg-green-700 hover:bg-green-800 px-3 py-1 rounded-full text-xs font-medium transition-colors duration-200">
                                 <svg class="h-3 w-3 mr-1" fill="currentColor" viewBox="0 0 20 20">
                                     <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
                                 </svg>
-                                24/7 Emergency
+                                Free Estimates
                             </a>
                             <div class="hidden sm:flex items-center text-xs">
                                 <span class="text-orange-200">Free Rush Estimates</span>
@@ -327,10 +327,10 @@
                                 <span class="ml-2 text-xl font-bold text-gray-900 dark:text-white">Ridgeline Roofing</span>
                             </div>
                             <p class="text-gray-600 dark:text-gray-300 text-sm max-w-md">
-                                Professional roofing services with over 20 years of experience. We provide quality roofing solutions for residential and commercial properties.
+                                Professional roofing services with 20+ years of experience. We provide quality roofing solutions for residential and commercial properties.
                             </p>
                             <div class="mt-4 text-sm text-gray-600 dark:text-gray-300">
-                                <p>1100 Our Lady's Way, Suite 208</p>
+                                <p>1100 Our Lady's Way, Suite 214</p>
                                 <p>Ashland, KY 41101</p>
                                 <p class="mt-2 font-medium">(304) 381-1122</p>
                             </div>

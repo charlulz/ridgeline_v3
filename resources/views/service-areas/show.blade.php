@@ -1,7 +1,7 @@
 <x-layouts.app
-    title="Service Areas - Tri-State Roofing"
-    metaDescription="Ridgeline Roofing proudly serves homeowners and businesses across Ashland, Huntington, Ironton, and surrounding communities throughout Kentucky, West Virginia, and Ohio."
-    :canonical="route('service-areas')"
+    :title="'Roofing Contractor in ' . $cityPage['city'] . ', ' . $cityPage['state_abbr']"
+    :metaDescription="$metaDescription"
+    :canonical="$canonical"
     :schemaJson="$schemaJson"
 >
     <div class="relative text-white overflow-hidden py-16 sm:py-20 lg:py-24 lg:min-h-[72vh] flex items-center">
@@ -14,18 +14,19 @@
                 <div class="text-center lg:text-left">
                     <div class="inline-flex items-center bg-orange-600/20 border border-orange-400/30 rounded-full px-4 py-2 mb-5">
                         <svg class="h-4 w-4 text-orange-300 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.536-9.95a1 1 0 10-1.414-1.414L9 9.757 7.879 8.636a1 1 0 10-1.415 1.414l1.828 1.829a1 1 0 001.415 0l3.829-3.829z" clip-rule="evenodd"/>
+                            <path fill-rule="evenodd" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" clip-rule="evenodd"></path>
+                            <path fill-rule="evenodd" d="M11 11a1 1 0 11-2 0 1 1 0 012 0z" clip-rule="evenodd"></path>
                         </svg>
-                        <span class="text-sm font-semibold text-orange-200">Tri-State Coverage</span>
+                        <span class="text-sm font-semibold text-orange-200">Service Area: {{ $cityPage['city'] }}, {{ $cityPage['state_abbr'] }}</span>
                     </div>
 
                     <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">
-                        Roofing Service Across
-                        <span class="block text-yellow-300">Kentucky, West Virginia, and Ohio</span>
+                        Roofing Contractor in
+                        <span class="block text-yellow-300">{{ $cityPage['city'] }}, {{ $cityPage['state_abbr'] }}</span>
                     </h1>
 
                     <p class="text-base md:text-lg mb-6 max-w-2xl mx-auto lg:mx-0 leading-relaxed text-orange-50/95">
-                        Ridgeline Roofing delivers residential and commercial roofing solutions across the tri-state area with the same local responsiveness, clear communication, and professional workmanship featured throughout our homepage.
+                        {{ $cityPage['intro'] }}
                     </p>
 
                     <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm md:text-base text-gray-100/95 mb-7 max-w-2xl mx-auto lg:mx-0">
@@ -35,7 +36,7 @@
                                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                                 </svg>
                             </span>
-                            <span><strong>Residential and commercial</strong> service</span>
+                            <span><strong>Residential and commercial</strong> roofing support</span>
                         </li>
                         <li class="flex items-start gap-3">
                             <span class="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-white/10 border border-white/15">
@@ -43,7 +44,7 @@
                                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                                 </svg>
                             </span>
-                            <span><strong>Storm response</strong> and inspections</span>
+                            <span><strong>Storm damage inspections</strong> and repairs</span>
                         </li>
                         <li class="flex items-start gap-3">
                             <span class="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-white/10 border border-white/15">
@@ -51,7 +52,7 @@
                                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                                 </svg>
                             </span>
-                            <span><strong>Local code familiarity</strong> in all 3 states</span>
+                            <span><strong>Free inspections</strong> with clear scope recommendations</span>
                         </li>
                         <li class="flex items-start gap-3">
                             <span class="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-white/10 border border-white/15">
@@ -59,51 +60,43 @@
                                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                                 </svg>
                             </span>
-                            <span><strong>Fast scheduling</strong> from a regional team</span>
+                            <span><strong>Local scheduling</strong> across the tri-state area</span>
                         </li>
                     </ul>
 
                     <div class="flex flex-col sm:flex-row gap-3 items-center justify-center lg:justify-start">
                         <a href="{{ route('contact') }}" class="w-full sm:w-auto inline-flex items-center justify-center bg-green-600 hover:bg-green-700 text-white px-7 py-3.5 rounded-xl font-bold text-lg transition-all duration-200 shadow-lg hover:shadow-xl">
-                            Schedule Free Inspection
+                            Request Free Inspection
                         </a>
                         <a href="tel:3043811122" class="w-full sm:w-auto inline-flex items-center justify-center bg-white/10 hover:bg-white/15 border border-white/20 text-white px-7 py-3.5 rounded-xl font-bold text-lg transition-all duration-200">
                             Call (304) 381-1122
                         </a>
                     </div>
-
-                    <div class="mt-6 flex flex-wrap items-center justify-center lg:justify-start gap-x-6 gap-y-3 text-sm text-orange-100/90">
-                        @foreach($serviceAreas as $area)
-                            <div class="inline-flex items-center gap-2">
-                                <span class="font-bold text-yellow-300">{{ $area['abbr'] }}</span>
-                                <span>{{ $area['headline'] }}</span>
-                            </div>
-                        @endforeach
-                    </div>
                 </div>
 
                 <div class="relative hidden lg:block">
                     <div class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 shadow-2xl">
-                        <div class="flex items-start justify-between gap-6">
-                            <div>
-                                <div class="text-xs uppercase tracking-wider text-orange-200 font-semibold mb-2">Regional Reach • Local Service</div>
-                                <h2 class="text-2xl font-bold text-white mb-3">One trusted roofing partner across the tri-state.</h2>
-                                <p class="text-gray-200 leading-relaxed">
-                                    From emergency roof repairs to full replacements, our team serves homes and businesses throughout Kentucky, West Virginia, and Ohio with consistent quality and responsive communication.
-                                </p>
-                            </div>
-                            <div class="text-right">
-                                <div class="text-3xl font-bold text-yellow-300">3</div>
-                                <div class="text-sm text-orange-100">States Served</div>
-                            </div>
+                        <div class="rounded-2xl border border-white/15 bg-black/10 px-5 py-6 text-center">
+                            <div class="text-xs uppercase tracking-wide text-orange-100">Primary Service Market</div>
+                            <div class="mt-2 text-3xl font-bold text-yellow-300">{{ $cityPage['city'] }}, {{ $cityPage['state_abbr'] }}</div>
                         </div>
-                        <div class="mt-8 grid grid-cols-3 gap-4">
-                            @foreach($serviceAreas as $area)
-                                <div class="rounded-xl border border-white/15 bg-black/10 px-4 py-5 text-center">
-                                    <div class="text-2xl font-bold text-yellow-300">{{ $area['abbr'] }}</div>
-                                    <div class="mt-1 text-sm text-orange-100">{{ $area['state'] }}</div>
-                                </div>
-                            @endforeach
+
+                        <div class="mt-8 pt-6 border-t border-white/15">
+                            <div class="text-xs uppercase tracking-wider text-orange-200 font-semibold mb-2">Local Service Context</div>
+                            <p class="text-gray-200 leading-relaxed">
+                                {{ $cityPage['local_context'] }}
+                            </p>
+                        </div>
+
+                        <div class="mt-8 pt-6 border-t border-white/15">
+                            <div class="text-xs uppercase tracking-wider text-orange-200 font-semibold mb-4">Nearby Communities</div>
+                            <div class="flex flex-wrap gap-2">
+                                @foreach($cityPage['nearby_areas'] as $nearbyArea)
+                                    <span class="inline-flex rounded-full bg-white/10 border border-white/15 px-3 py-1.5 text-sm text-orange-50">
+                                        {{ $nearbyArea }}
+                                    </span>
+                                @endforeach
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -120,62 +113,71 @@
             <div class="text-center mb-16">
                 <div class="inline-flex items-center bg-orange-600/20 border border-orange-400/30 rounded-full px-6 py-3 mb-8">
                     <svg class="h-5 w-5 text-orange-300 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v3a1 1 0 102 0V7zm-1 8a1.25 1.25 0 100-2.5A1.25 1.25 0 0010 15z" clip-rule="evenodd"/>
+                        <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"/>
                     </svg>
-                    <span class="text-orange-200 text-sm font-semibold uppercase tracking-wide">Coverage Area</span>
+                    <span class="text-orange-200 text-sm font-semibold uppercase tracking-wide">Roofing Services in {{ $cityPage['city'] }}</span>
                 </div>
                 <h2 class="text-5xl md:text-6xl font-bold mb-8 leading-tight">
-                    <span class="block">Explore All</span>
-                    <span class="block text-orange-400">15 Service Area Pages</span>
+                    <span class="block">Residential & Commercial</span>
+                    <span class="block text-orange-400">Roofing Solutions</span>
                 </h2>
                 <p class="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                    Browse our city-specific roofing pages to find the service area closest to you and see how Ridgeline Roofing supports that local market.
+                    {{ $cityPage['service_focus'] }}
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
-                @foreach($cityPages as $cityPage)
-                    <a
-                        href="{{ route('service-areas.show', ['slug' => $cityPage['slug']]) }}"
-                        class="group rounded-3xl border border-white/10 bg-white/5 backdrop-blur-sm shadow-2xl overflow-hidden transition-transform duration-200 hover:-translate-y-1 hover:border-orange-400/40"
-                    >
-                        <div class="p-8 border-b border-white/10">
-                            <div class="flex items-start justify-between gap-4 mb-5">
-                                <div>
-                                    <div class="text-sm uppercase tracking-widest text-orange-200 font-semibold">{{ $cityPage['state'] }}</div>
-                                    <h3 class="text-3xl font-bold text-white mt-2">{{ $cityPage['city'] }}, {{ $cityPage['state_abbr'] }}</h3>
-                                </div>
-                                <div class="rounded-2xl bg-orange-600 px-4 py-3 text-center shadow-lg">
-                                    <div class="text-xs uppercase tracking-wide text-orange-100">Coverage</div>
-                                    <div class="text-lg font-bold text-white">Tri-State</div>
-                                </div>
-                            </div>
-                            <p class="text-gray-300 text-lg leading-relaxed">{{ $cityPage['service_focus'] }}</p>
+            <div class="grid grid-cols-1 xl:grid-cols-2 gap-8">
+                <div class="rounded-3xl border border-white/10 bg-white/5 backdrop-blur-sm shadow-2xl overflow-hidden">
+                    <div class="p-8 border-b border-white/10">
+                        <div class="inline-flex items-center bg-orange-600/20 border border-orange-400/30 rounded-full px-4 py-2 mb-5">
+                            <span class="text-orange-200 text-sm font-semibold uppercase tracking-wide">Residential</span>
                         </div>
-                        <div class="p-8">
-                            <div class="text-sm uppercase tracking-wide text-orange-200 font-semibold mb-4">Nearby Communities</div>
-                            <ul class="space-y-3">
-                                @foreach(array_slice($cityPage['nearby_areas'], 0, 4) as $nearbyArea)
-                                    <li class="flex items-center">
-                                        <div class="flex-shrink-0 w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center mr-4">
-                                            <svg class="h-3 w-3 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                                            </svg>
-                                        </div>
-                                        <span class="text-gray-200 text-lg">{{ $nearbyArea }}</span>
-                                    </li>
-                                @endforeach
-                            </ul>
+                        <h3 class="text-3xl font-bold text-white mb-4">Roofing for Homes in {{ $cityPage['city'] }}</h3>
+                        <p class="text-gray-300 text-lg leading-relaxed">
+                            We help homeowners in {{ $cityPage['city'] }} protect their property with replacement systems, targeted repairs, and dependable storm response.
+                        </p>
+                    </div>
+                    <div class="p-8 space-y-6">
+                        @foreach($residentialServices as $service)
+                            <div class="rounded-2xl border border-white/10 bg-black/10 p-6">
+                                <h4 class="text-xl font-bold text-white mb-2">{{ $service['label'] }}</h4>
+                                <p class="text-gray-300 mb-4">{{ $service['description'] }}</p>
+                                <a href="{{ $service['route'] }}" class="inline-flex items-center text-orange-300 font-semibold hover:text-orange-200">
+                                    Learn more
+                                    <svg class="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        @endforeach
+                    </div>
+                </div>
 
-                            <div class="mt-6 inline-flex items-center text-orange-300 font-semibold group-hover:text-orange-200">
-                                View {{ $cityPage['city'] }} page
-                                <svg class="ml-2 h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                                </svg>
-                            </div>
+                <div class="rounded-3xl border border-white/10 bg-white/5 backdrop-blur-sm shadow-2xl overflow-hidden">
+                    <div class="p-8 border-b border-white/10">
+                        <div class="inline-flex items-center bg-orange-600/20 border border-orange-400/30 rounded-full px-4 py-2 mb-5">
+                            <span class="text-orange-200 text-sm font-semibold uppercase tracking-wide">Commercial</span>
                         </div>
-                    </a>
-                @endforeach
+                        <h3 class="text-3xl font-bold text-white mb-4">Roofing for Businesses in {{ $cityPage['city'] }}</h3>
+                        <p class="text-gray-300 text-lg leading-relaxed">
+                            From flat roof systems to metal roofing and repair work, Ridgeline Roofing supports commercial properties throughout the {{ $cityPage['city'] }} market.
+                        </p>
+                    </div>
+                    <div class="p-8 space-y-6">
+                        @foreach($commercialServices as $service)
+                            <div class="rounded-2xl border border-white/10 bg-black/10 p-6">
+                                <h4 class="text-xl font-bold text-white mb-2">{{ $service['label'] }}</h4>
+                                <p class="text-gray-300 mb-4">{{ $service['description'] }}</p>
+                                <a href="{{ $service['route'] }}" class="inline-flex items-center text-orange-300 font-semibold hover:text-orange-200">
+                                    Learn more
+                                    <svg class="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        @endforeach
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -191,14 +193,14 @@
                     <svg class="h-5 w-5 text-orange-600 dark:text-orange-400 mr-2" fill="currentColor" viewBox="0 0 20 20">
                         <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                     </svg>
-                    <span class="text-orange-800 dark:text-orange-200 text-sm font-semibold uppercase tracking-wide">Local Advantage</span>
+                    <span class="text-orange-800 dark:text-orange-200 text-sm font-semibold uppercase tracking-wide">Why Ridgeline in {{ $cityPage['city'] }}</span>
                 </div>
                 <h2 class="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-8 leading-tight">
-                    <span class="block">Why Local</span>
-                    <span class="block text-orange-600">Coverage Matters</span>
+                    <span class="block">Local Knowledge.</span>
+                    <span class="block text-orange-600">Professional Execution.</span>
                 </h2>
                 <p class="text-xl md:text-2xl text-gray-600 dark:text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                    Our crews understand the weather, permit expectations, and service needs across the tri-state area, which helps us move faster and communicate more clearly from inspection to completion.
+                    Our crews understand the needs of properties across {{ $cityPage['city'] }}, {{ $cityPage['state_abbr'] }}, and the surrounding tri-state communities.
                 </p>
             </div>
 
@@ -209,9 +211,9 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path>
                         </svg>
                     </div>
-                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Weather Expertise</h3>
+                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Regional Weather Expertise</h3>
                     <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
-                        We understand the storm cycles, seasonal wear, and roofing challenges that affect homes and commercial properties in this region.
+                        {{ $cityPage['local_context'] }}
                     </p>
                 </div>
 
@@ -221,9 +223,9 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
                         </svg>
                     </div>
-                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Code Familiarity</h3>
+                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Clear Scope & Honest Guidance</h3>
                     <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
-                        We work within the permit and code expectations across Kentucky, West Virginia, and Ohio so your project keeps moving with fewer surprises.
+                        We prioritize practical recommendations, transparent communication, and workmanship that protects your property for the long haul.
                     </p>
                 </div>
 
@@ -234,10 +236,17 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
                         </svg>
                     </div>
-                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Fast Response Times</h3>
-                    <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
-                        Because we stay focused on the tri-state market, we can respond quickly for inspections, estimates, emergency tarping, and follow-up service.
+                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Nearby Coverage</h3>
+                    <p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
+                        We also serve the communities around {{ $cityPage['city'] }}, helping customers get faster scheduling and a contractor familiar with the surrounding market.
                     </p>
+                    <div class="flex flex-wrap gap-2">
+                        @foreach(array_slice($cityPage['nearby_areas'], 0, 4) as $nearbyArea)
+                            <span class="inline-flex rounded-full bg-orange-100 text-orange-700 dark:bg-orange-900/40 dark:text-orange-200 px-3 py-1.5 text-sm font-medium">
+                                {{ $nearbyArea }}
+                            </span>
+                        @endforeach
+                    </div>
                 </div>
             </div>
         </div>
@@ -245,19 +254,18 @@
 
     <div class="py-20 bg-gradient-to-r from-orange-600 to-orange-700 text-white">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl md:text-5xl font-bold mb-5">Need Roofing Service in Your Area?</h2>
+            <h2 class="text-3xl md:text-5xl font-bold mb-5">Need Roofing Help in {{ $cityPage['city'] }}?</h2>
             <p class="text-lg md:text-xl text-orange-50 mb-8 max-w-3xl mx-auto">
-                If you are in or near our Kentucky, West Virginia, or Ohio coverage area, we can help with inspections, repairs, and full roof replacements.
+                Schedule a free inspection and talk with a local team that serves {{ $cityPage['city'] }}, {{ $cityPage['state_abbr'] }}, and the surrounding area with residential and commercial roofing support.
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="{{ route('contact') }}" class="bg-white text-orange-600 px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-colors duration-200 shadow-lg">
                     Request Free Inspection
                 </a>
-                <a href="tel:3043811122" class="bg-orange-800 hover:bg-orange-900 text-white px-8 py-4 rounded-xl font-bold text-lg transition-colors duration-200 shadow-lg">
-                    Call (304) 381-1122
+                <a href="{{ route('service-areas') }}" class="bg-orange-800 hover:bg-orange-900 text-white px-8 py-4 rounded-xl font-bold text-lg transition-colors duration-200 shadow-lg">
+                    View All Service Areas
                 </a>
             </div>
         </div>
     </div>
 </x-layouts.app>
-
