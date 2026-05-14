@@ -1,6 +1,6 @@
 <x-layouts.app title="Residential Roofing Services">
     <!-- Hero Section -->
-    <div class="relative bg-gradient-to-br from-blue-600 to-blue-800 text-white py-20 overflow-hidden">
+    <div class="relative bg-gradient-to-br from-orange-600 via-orange-700 to-orange-800 text-white py-20 overflow-hidden">
         <div class="absolute inset-0 bg-black/20"></div>
         <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center">

@@ -328,7 +328,7 @@
                         <div class="order-1">
                             <div class="relative">
                                 <div class="aspect-[4/3] bg-gradient-to-br from-blue-500/20 to-blue-600/10 rounded-3xl overflow-hidden border border-white/20">
-                                    <img src="{{ asset('img/shingle-roof.webp') }}" alt="Residential roofing project" class="w-full h-full object-cover">
+                                    <img src="{{ asset('img/shingles/shingle_roof_1.jpg') }}" alt="Residential roofing project" class="w-full h-full object-cover">
                                 </div>
                                 <div class="absolute -bottom-6 -left-6 bg-blue-600 text-white px-6 py-3 rounded-2xl shadow-2xl">
                                     <div class="text-sm font-semibold">Happy Homeowner</div>
@@ -625,7 +625,7 @@
                         <div class="order-1">
                             <div class="relative">
                                 <div class="aspect-[4/3] bg-gradient-to-br from-blue-500/20 to-blue-600/10 rounded-3xl overflow-hidden border border-gray-200 dark:border-gray-700">
-                                    <img src="{{ asset('img/shingle-roof.webp') }}" alt="Quality roofing work" class="w-full h-full object-cover">
+                                    <img src="{{ asset('img/shingles/shingle_roof_2.jpg') }}" alt="Quality roofing work" class="w-full h-full object-cover">
                                 </div>
                                 <div class="absolute -bottom-6 -left-6 bg-blue-600 text-white px-6 py-3 rounded-2xl shadow-2xl">
                                     <div class="text-sm font-semibold">Quality Guaranteed</div>

@@ -2,9 +2,9 @@
     <!-- Hero Section -->
     <div class="relative text-white py-24 md:py-32 overflow-hidden">
         <!-- Background Image -->
-        <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" style="background-image: url('{{ asset('img/full-shot-man-sitting-roof.webp') }}');"></div>
+        <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" style="background-image: url('{{ asset('img/shingles/shingle_roof_3.jpg') }}');"></div>
         <div class="absolute inset-0 bg-black/60"></div>
-        <div class="absolute inset-0 bg-gradient-to-br from-blue-900/50 to-blue-800/30"></div>
+        <div class="absolute inset-0 bg-gradient-to-br from-orange-600/40 via-orange-700/30 to-orange-800/50"></div>
         <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center">
                 <span class="inline-block bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-bold mb-4">RESIDENTIAL</span>
@@ -75,7 +75,7 @@
                 <div class="space-y-8">
                     <!-- Service Image -->
                     <div class="rounded-2xl overflow-hidden shadow-lg">
-                        <img src="{{ asset('img/shingle-roof.webp') }}" alt="Shingle Roof Replacement" class="w-full h-64 object-cover">
+                        <img src="{{ asset('img/shingles/shingle_roof_4.jpg') }}" alt="Shingle Roof Replacement" class="w-full h-64 object-cover">
                     </div>
                     <!-- Our Process -->
                     <div class="bg-gradient-to-br from-blue-50 to-blue-100 dark:from-gray-800 dark:to-gray-700 rounded-2xl p-8">

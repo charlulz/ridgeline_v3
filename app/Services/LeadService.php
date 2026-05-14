@@ -5,13 +5,15 @@ namespace App\Services;
 use App\Models\Lead;
 use App\Models\EmailSequence;
 use App\Services\GoHighLevelService;
+use App\Services\JobProgressService;
 use App\Jobs\SendEmailSequenceEmail;
 use Illuminate\Support\Facades\Log;
 
 class LeadService
 {
     public function __construct(
-        private GoHighLevelService $ghlService
+        private GoHighLevelService $ghlService,
+        private JobProgressService $jobProgressService,
     ) {
     }
 
@@ -28,6 +30,16 @@ class LeadService
             $this->ghlService->createContact($lead);
         } catch (\Exception $e) {
             Log::error('Failed to sync lead to GoHighLevel', [
+                'lead_id' => $lead->id,
+                'error' => $e->getMessage(),
+            ]);
+        }
+
+        // Sync to JobProgress as a new lead/prospect
+        try {
+            $this->jobProgressService->createProspectFromLead($lead);
+        } catch (\Exception $e) {
+            Log::error('Failed to sync lead to JobProgress', [
                 'lead_id' => $lead->id,
                 'error' => $e->getMessage(),
             ]);

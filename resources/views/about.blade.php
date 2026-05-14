@@ -119,39 +119,36 @@
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="text-center">
-                    <div class="h-32 w-32 bg-gray-200 dark:bg-gray-700 rounded-full mx-auto mb-4 flex items-center justify-center">
-                        <span class="text-gray-500 dark:text-gray-400 text-4xl font-bold">JD</span>
+                <div class="text-center bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 shadow-sm">
+                    <div class="h-36 w-36 rounded-full mx-auto mb-5 overflow-hidden ring-4 ring-orange-100 dark:ring-orange-900/40 shadow-lg">
+                        <img src="{{ asset('img/employees/image0.jpeg') }}" alt="Seth Kelley" class="h-full w-full object-cover">
                     </div>
-                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">John Davis</h3>
-                    <p class="text-orange-600 dark:text-orange-400 font-medium mb-2">Founder & CEO</p>
-                    <p class="text-gray-600 dark:text-gray-300 text-sm">
-                        With over 25 years in the roofing industry, John founded Ridgeline Roofing to provide 
-                        quality service and craftsmanship to the community.
+                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Seth Kelley</h3>
+                    <p class="text-orange-600 dark:text-orange-400 font-medium mb-3">Founder &amp; President</p>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+                        With 20 years in the roofing industry, Seth founded Ridgeline Roofing to provide quality service and fair pricing to the community.
                     </p>
                 </div>
 
-                <div class="text-center">
-                    <div class="h-32 w-32 bg-gray-200 dark:bg-gray-700 rounded-full mx-auto mb-4 flex items-center justify-center">
-                        <span class="text-gray-500 dark:text-gray-400 text-4xl font-bold">SM</span>
+                <div class="text-center bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 shadow-sm">
+                    <div class="h-36 w-36 rounded-full mx-auto mb-5 overflow-hidden ring-4 ring-orange-100 dark:ring-orange-900/40 shadow-lg">
+                        <img src="{{ asset('img/employees/image1.jpeg') }}" alt="Tyler Blagg" class="h-full w-full object-cover">
                     </div>
-                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Sarah Martinez</h3>
-                    <p class="text-orange-600 dark:text-orange-400 font-medium mb-2">Project Manager</p>
-                    <p class="text-gray-600 dark:text-gray-300 text-sm">
-                        Sarah oversees all projects from start to finish, ensuring quality control and 
-                        customer satisfaction throughout the process.
+                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Tyler Blagg</h3>
+                    <p class="text-orange-600 dark:text-orange-400 font-medium mb-3">Owner &amp; Residential Sales</p>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+                        Tyler handles personnel management, leads residential sales, and is dedicated to providing every customer with an honest and thorough experience from start to finish.
                     </p>
                 </div>
 
-                <div class="text-center">
-                    <div class="h-32 w-32 bg-gray-200 dark:bg-gray-700 rounded-full mx-auto mb-4 flex items-center justify-center">
-                        <span class="text-gray-500 dark:text-gray-400 text-4xl font-bold">MW</span>
+                <div class="text-center bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 shadow-sm">
+                    <div class="h-36 w-36 rounded-full mx-auto mb-5 overflow-hidden ring-4 ring-orange-100 dark:ring-orange-900/40 shadow-lg">
+                        <img src="{{ asset('img/employees/image2.jpeg') }}" alt="Mary Reynolds" class="h-full w-full object-cover">
                     </div>
-                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Mike Wilson</h3>
-                    <p class="text-orange-600 dark:text-orange-400 font-medium mb-2">Lead Installer</p>
-                    <p class="text-gray-600 dark:text-gray-300 text-sm">
-                        Mike leads our installation team with 15 years of experience in residential 
-                        and commercial roofing projects.
+                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Mary Reynolds</h3>
+                    <p class="text-orange-600 dark:text-orange-400 font-medium mb-3">Production Manager</p>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+                        Mary handles production management and office management. She is the friendliest voice you'll talk to, and is dedicated to making your experience with Ridgeline the best it can be!
                     </p>
                 </div>
             </div>
