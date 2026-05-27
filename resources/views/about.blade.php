@@ -15,31 +15,20 @@
                     About <span class="text-orange-400">Ridgeline Roofing</span>
                 </h1>
                 <p class="text-lg md:text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed">
-                    Your trusted partner for professional roofing services with over 20 years of experience
+                    A trusted name in roofing across Kentucky, West Virginia, and Ohio
                 </p>
             </div>
         </div>
     </div>
 
-    <!-- Company Story -->
+    <!-- About Ridgeline -->
     <div class="py-16 bg-white dark:bg-gray-900">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div>
-                    <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-6">Our Story</h2>
-                    <p class="text-lg text-gray-600 dark:text-gray-300 mb-6">
-                        Founded in 2003, Ridgeline Roofing began as a small family business with a simple mission: 
-                        to provide exceptional roofing services that protect and enhance our customers' properties.
-                    </p>
-                    <p class="text-lg text-gray-600 dark:text-gray-300 mb-6">
-                        Over the years, we've grown from a local operation to a trusted name in roofing services, 
-                        serving both residential and commercial clients throughout the region. Our commitment to 
-                        quality workmanship, fair pricing, and customer satisfaction has earned us a reputation 
-                        for excellence.
-                    </p>
-                    <p class="text-lg text-gray-600 dark:text-gray-300">
-                        Today, we continue to uphold the same values that guided us from the beginning: integrity, 
-                        professionalism, and a dedication to delivering roofing solutions that stand the test of time.
+                    <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-6">About Ridgeline Roofing</h2>
+                    <p class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+                        Ridgeline Roofing is a trusted name in roofing solutions across Kentucky, West Virginia, and Ohio. With over a decade of experience, we&apos;re committed to providing exceptional service and ensuring the highest standards in roofing.
                     </p>
                 </div>
                 <div class="bg-gray-50 dark:bg-gray-800/60 border border-gray-200 dark:border-gray-700 rounded-2xl p-8">
@@ -48,15 +37,30 @@
                             <span class="text-white text-2xl font-bold">RL</span>
                         </div>
                         <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Ridgeline Roofing</h3>
-                        <p class="text-gray-600 dark:text-gray-300">Since 2003</p>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm">Kentucky &bull; West Virginia &bull; Ohio</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
+    <!-- Our Mission -->
+    <div class="py-16 bg-gray-50 dark:bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">Our Mission</h2>
+                <p class="text-lg md:text-xl text-gray-600 dark:text-gray-300 leading-relaxed mb-8">
+                    Our mission is to provide top-quality roofing solutions that protect and enhance your home. We aim to deliver superior craftsmanship, use the best materials, and offer exceptional customer service. At Ridgeline Roofing, we believe every roof should be built to last.
+                </p>
+                <a href="#our-values" class="inline-flex items-center bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-200 shadow-lg">
+                    Discover Our Values
+                </a>
+            </div>
+        </div>
+    </div>
+
     <!-- Values -->
-    <div class="py-16 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white overflow-hidden">
+    <div id="our-values" class="py-16 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
                 <div class="inline-flex items-center bg-orange-600/20 border border-orange-400/30 rounded-full px-6 py-3 mb-6">
@@ -126,7 +130,7 @@
                     <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Seth Kelley</h3>
                     <p class="text-orange-600 dark:text-orange-400 font-medium mb-3">Owner, President, Commercial Sales</p>
                     <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
-                        Seth brings more than 20 years in the roofing industry and helps lead Ridgeline's commercial sales efforts. He focuses on clear scopes, strong customer relationships, and dependable project execution from the first conversation through completion.
+                        Seth brings more than 20 years of roofing experience and helps lead Ridgeline's commercial sales efforts. He focuses on clear scopes, strong customer relationships, and dependable project execution from the first conversation through completion.
                     </p>
                 </div>
 
