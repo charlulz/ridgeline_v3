@@ -452,7 +452,12 @@
         </div>
 
         <!-- Floating Phone CTA - Mobile Only -->
-        <div class="fixed bottom-4 right-4 z-50 lg:hidden">
+        <div
+            x-data="{ stickyBarVisible: false }"
+            x-init="window.addEventListener('scroll', () => { stickyBarVisible = window.scrollY > 300 })"
+            class="fixed right-4 z-50 lg:hidden transition-all duration-300"
+            :class="stickyBarVisible ? 'bottom-20' : 'bottom-4'"
+        >
             <a href="tel:3043811122" class="flex items-center justify-center w-14 h-14 bg-green-600 hover:bg-green-700 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-110">
                 <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>

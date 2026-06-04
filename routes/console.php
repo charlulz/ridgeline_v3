@@ -1,5 +1,6 @@
 <?php
 
+use App\Services\JobProgressService;
 use Illuminate\Foundation\Inspiring;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Http;
@@ -26,6 +27,8 @@ Artisan::command('jobprogress:test-prospect {--name=Test Lead} {--phone=} {--ema
     $first = array_shift($parts) ?: 'Test';
     $last = trim(implode(' ', $parts));
 
+    $repId = app(JobProgressService::class)->assigneeRepId();
+
     $payload = array_filter([
         'first_name' => $first,
         'last_name' => $last,
@@ -36,7 +39,12 @@ Artisan::command('jobprogress:test-prospect {--name=Test Lead} {--phone=} {--ema
         'source' => 'website',
         'lead_source' => 'website',
         'notes' => 'Test lead from website integration',
+        'rep_id' => $repId,
     ], fn ($v) => $v !== null && $v !== '');
+
+    if ($repId) {
+        $this->line('Assignee rep_id: ' . $repId);
+    }
 
     $response = Http::baseUrl($baseUrl)
         ->withToken($token)

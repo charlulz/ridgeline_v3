@@ -2,9 +2,12 @@
 
 namespace App\Services;
 
+use App\Mail\NewWebsiteLeadMail;
 use App\Models\Lead;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Mail;
 
 class JobProgressService
 {
@@ -51,6 +54,7 @@ class JobProgressService
             'source' => 'website',
             'lead_source' => 'website',
             'notes' => $this->buildNotes($lead),
+            'rep_id' => $this->assigneeRepId(),
         ], fn ($v) => $v !== null && $v !== '');
 
         $response = Http::baseUrl($baseUrl)
@@ -61,7 +65,12 @@ class JobProgressService
             ->post('/prospects', $payload);
 
         if ($response->successful()) {
-            return $response->json();
+            $body = $response->json();
+            $customerId = $body['customer']['id'] ?? null;
+
+            $this->sendLeadNotifications($lead, is_numeric($customerId) ? (int) $customerId : null);
+
+            return $body;
         }
 
         Log::warning('JobProgress prospect create failed', [
@@ -71,6 +80,84 @@ class JobProgressService
         ]);
 
         return null;
+    }
+
+    public function assigneeRepId(): ?int
+    {
+        $configured = config('jobprogress.assignee_rep_id');
+        if ($configured !== null && $configured !== '') {
+            return (int) $configured;
+        }
+
+        $email = strtolower(trim((string) config('jobprogress.assignee_email')));
+        if ($email === '') {
+            return null;
+        }
+
+        return Cache::remember(
+            'jobprogress.rep_id.' . md5($email),
+            now()->addDay(),
+            function () use ($email): ?int {
+                foreach ($this->fetchCompanyUsers() as $user) {
+                    if (strtolower((string) ($user['email'] ?? '')) === $email) {
+                        return (int) $user['id'];
+                    }
+                }
+
+                Log::warning('JobProgress assignee user not found', [
+                    'assignee_email' => $email,
+                ]);
+
+                return null;
+            }
+        );
+    }
+
+    /**
+     * @return list<array<string, mixed>>
+     */
+    private function fetchCompanyUsers(): array
+    {
+        $baseUrl = rtrim((string) config('jobprogress.base_url'), '/');
+        $token = (string) config('jobprogress.access_token');
+
+        $response = Http::baseUrl($baseUrl)
+            ->withToken($token)
+            ->acceptJson()
+            ->timeout(10)
+            ->get('/company/users');
+
+        if (!$response->successful()) {
+            Log::warning('JobProgress company users lookup failed', [
+                'status' => $response->status(),
+                'body' => $response->json() ?? $response->body(),
+            ]);
+
+            return [];
+        }
+
+        $users = $response->json('data');
+
+        return is_array($users) ? $users : [];
+    }
+
+    private function sendLeadNotifications(Lead $lead, ?int $jobProgressCustomerId): void
+    {
+        $recipients = config('jobprogress.notification_emails', []);
+
+        if ($recipients === []) {
+            return;
+        }
+
+        try {
+            Mail::to($recipients)->send(new NewWebsiteLeadMail($lead, $jobProgressCustomerId));
+        } catch (\Throwable $e) {
+            Log::error('Failed to send JobProgress lead notification email', [
+                'lead_id' => $lead->id,
+                'recipients' => $recipients,
+                'error' => $e->getMessage(),
+            ]);
+        }
     }
 
     private function splitName(?string $name): array
@@ -110,4 +197,3 @@ class JobProgressService
         return trim(implode("\n", $lines));
     }
 }
-
