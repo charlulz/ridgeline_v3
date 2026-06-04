@@ -5,6 +5,12 @@
         </div>
     @endif
 
+    @if (session()->has('error'))
+        <div class="mb-6 bg-red-100 dark:bg-red-900 border border-red-400 dark:border-red-600 text-red-700 dark:text-red-200 px-4 py-3 rounded-lg">
+            {{ session('error') }}
+        </div>
+    @endif
+
     <form wire:submit="submit" class="space-y-6">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
@@ -27,7 +33,7 @@
         
         <div>
             <label for="phone" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Phone Number</label>
-            <input type="tel" id="phone" wire:model="phone" class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-orange-500 focus:border-orange-500 dark:bg-gray-700 dark:text-white @error('phone') border-red-500 @enderror">
+            <input type="tel" id="phone" wire:model="phone" class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-orange-500 focus:border-orange-500 dark:bg-gray-700 dark:text-white @error('phone') border-red-500 @enderror" required>
             @error('phone') <span class="text-red-500 text-sm">{{ $message }}</span> @enderror
         </div>
         
