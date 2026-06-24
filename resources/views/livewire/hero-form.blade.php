@@ -71,7 +71,9 @@
                 
                 <!-- Property Type -->
                 <div>
-                    <select 
+                    <label for="hero-property-type" class="sr-only">Property Type</label>
+                    <select
+                        id="hero-property-type"
                         wire:model="property_type"
                         class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500 text-gray-900 @error('property_type') border-red-500 @enderror"
                     >
@@ -101,7 +103,9 @@
 
                 <!-- Urgency -->
                 <div>
-                    <select 
+                    <label for="hero-urgency" class="sr-only">Project Timing</label>
+                    <select
+                        id="hero-urgency"
                         wire:model="urgency"
                         class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500 text-gray-900 @error('urgency') border-red-500 @enderror"
                     >
@@ -117,7 +121,9 @@
 
                 <!-- Preferred Contact Time -->
                 <div>
-                    <select 
+                    <label for="hero-preferred-contact-time" class="sr-only">Best Time to Contact</label>
+                    <select
+                        id="hero-preferred-contact-time"
                         wire:model="preferred_contact_time"
                         class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500 text-gray-900 @error('preferred_contact_time') border-red-500 @enderror"
                     >

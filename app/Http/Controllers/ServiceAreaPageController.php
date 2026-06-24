@@ -38,7 +38,24 @@ class ServiceAreaPageController extends Controller
             'schemaJson' => $this->citySchemaJson($cityPage, $canonical, $metaDescription),
             'residentialServices' => $this->residentialServices(),
             'commercialServices' => $this->commercialServices(),
+            'nearbyCityLinks' => $this->nearbyCityLinks($cityPage),
         ]);
+    }
+
+    public function llms()
+    {
+        $featuredSlugs = config('service_areas.featured_slugs', []);
+        $featuredPages = $this->serviceAreaPages()
+            ->filter(fn (array $cityPage) => in_array($cityPage['slug'], $featuredSlugs, true))
+            ->values();
+
+        $content = view('llms', [
+            'featuredPages' => $featuredPages,
+            'allCityPages' => $this->serviceAreaPages(),
+        ])->render();
+
+        return response($content, Response::HTTP_OK)
+            ->header('Content-Type', 'text/plain; charset=UTF-8');
     }
 
     public function sitemap()
@@ -197,6 +214,18 @@ class ServiceAreaPageController extends Controller
     private function cityMetaDescription(array $cityPage): string
     {
         $nearbyAreas = implode(', ', array_slice($cityPage['nearby_areas'], 0, 3));
+        $county = $cityPage['county'] ?? null;
+
+        if ($county) {
+            return sprintf(
+                'Ridgeline Roofing provides residential and commercial roofing in %s, %s (%s). Roof repair, roof replacement, storm damage service, and free inspections in %s and nearby areas like %s.',
+                $cityPage['city'],
+                $cityPage['state_abbr'],
+                $county,
+                $cityPage['city'],
+                $nearbyAreas
+            );
+        }
 
         return sprintf(
             'Ridgeline Roofing provides residential and commercial roofing services in %s, %s. Get roof repair, roof replacement, storm damage service, and free inspections in %s and nearby areas like %s.',
@@ -205,6 +234,42 @@ class ServiceAreaPageController extends Controller
             $cityPage['city'],
             $nearbyAreas
         );
+    }
+
+    private function nearbyCityLinks(array $cityPage): array
+    {
+        $lookup = collect(config('service_areas.cities', []))
+            ->keyBy(fn (array $page) => strtolower($page['city']));
+
+        return collect($cityPage['nearby_areas'])
+            ->map(function (string $nearbyCity) use ($lookup) {
+                $match = $lookup->get(strtolower($nearbyCity));
+
+                if (! is_array($match)) {
+                    return [
+                        'label' => $nearbyCity,
+                        'url' => null,
+                    ];
+                }
+
+                return [
+                    'label' => $nearbyCity,
+                    'url' => route('service-areas.show', ['slug' => $match['slug']]),
+                ];
+            })
+            ->all();
+    }
+
+    private function businessAddressSchema(): array
+    {
+        return [
+            '@type' => 'PostalAddress',
+            'streetAddress' => '1100 Our Lady\'s Way, Suite 214',
+            'addressLocality' => 'Ashland',
+            'addressRegion' => 'KY',
+            'postalCode' => '41101',
+            'addressCountry' => 'US',
+        ];
     }
 
     private function hubSchemaJson(Collection $cityPages): string
@@ -229,22 +294,45 @@ class ServiceAreaPageController extends Controller
     {
         $locationLabel = "{$cityPage['city']}, {$cityPage['state_abbr']}";
 
-        $schema = [
+        $areaServed = [
             [
-                '@context' => 'https://schema.org',
-                '@type' => 'RoofingContractor',
-                'name' => "Ridgeline Roofing - {$locationLabel}",
-                'url' => $canonical,
-                'telephone' => '+1-304-381-1122',
-                'description' => $metaDescription,
-                'areaServed' => [
-                    [
-                        '@type' => 'City',
-                        'name' => $cityPage['city'],
-                        'addressRegion' => $cityPage['state_abbr'],
-                    ],
-                ],
+                '@type' => 'City',
+                'name' => $cityPage['city'],
+                'addressRegion' => $cityPage['state_abbr'],
             ],
+        ];
+
+        if (! empty($cityPage['county'])) {
+            $areaServed[] = [
+                '@type' => 'AdministrativeArea',
+                'name' => $cityPage['county'],
+            ];
+        }
+
+        $contractorSchema = [
+            '@context' => 'https://schema.org',
+            '@type' => 'RoofingContractor',
+            'name' => "Ridgeline Roofing - {$locationLabel}",
+            'url' => $canonical,
+            'telephone' => '+1-304-381-1122',
+            'description' => $metaDescription,
+            'address' => $this->businessAddressSchema(),
+            'areaServed' => $areaServed,
+            'sameAs' => [
+                'https://www.gaf.com/en-us/roofing-contractors/residential/usa/ky/ashland/ridgelineroofing-llc-1137706',
+            ],
+        ];
+
+        if (! empty($cityPage['latitude']) && ! empty($cityPage['longitude'])) {
+            $contractorSchema['geo'] = [
+                '@type' => 'GeoCoordinates',
+                'latitude' => $cityPage['latitude'],
+                'longitude' => $cityPage['longitude'],
+            ];
+        }
+
+        $schema = [
+            $contractorSchema,
             [
                 '@context' => 'https://schema.org',
                 '@type' => 'Service',
@@ -254,13 +342,7 @@ class ServiceAreaPageController extends Controller
                     '@type' => 'RoofingContractor',
                     'name' => 'Ridgeline Roofing',
                 ],
-                'areaServed' => [
-                    [
-                        '@type' => 'City',
-                        'name' => $cityPage['city'],
-                        'addressRegion' => $cityPage['state_abbr'],
-                    ],
-                ],
+                'areaServed' => $areaServed,
                 'url' => $canonical,
             ],
             [
@@ -288,6 +370,21 @@ class ServiceAreaPageController extends Controller
                 ],
             ],
         ];
+
+        if (! empty($cityPage['faqs'])) {
+            $schema[] = [
+                '@context' => 'https://schema.org',
+                '@type' => 'FAQPage',
+                'mainEntity' => collect($cityPage['faqs'])->map(fn (array $faq) => [
+                    '@type' => 'Question',
+                    'name' => $faq['question'],
+                    'acceptedAnswer' => [
+                        '@type' => 'Answer',
+                        'text' => $faq['answer'],
+                    ],
+                ])->all(),
+            ];
+        }
 
         return json_encode($schema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
     }

@@ -9,7 +9,7 @@ return [
     'assignee_rep_id' => env('JOB_PROGRESS_ASSIGNEE_REP_ID'),
     'notification_emails' => array_values(array_filter(array_map(
         'trim',
-        explode(',', (string) env('JOB_PROGRESS_NOTIFICATION_EMAILS', 'tyler@ridgelineroofing.us,info@ridgelineroofing.us'))
+        explode(',', (string) env('JOB_PROGRESS_NOTIFICATION_EMAILS', 'tyler@ridgelineroofing.us,info@ridgelineroofing.us,charles@silentpine.co'))
     ))),
 ];
 

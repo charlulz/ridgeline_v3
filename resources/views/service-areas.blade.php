@@ -1,6 +1,6 @@
 <x-layouts.app
     title="Service Areas - Tri-State Roofing"
-    metaDescription="Ridgeline Roofing proudly serves homeowners and businesses across Ashland, Huntington, Ironton, and surrounding communities throughout Kentucky, West Virginia, and Ohio."
+    metaDescription="Ridgeline Roofing proudly serves homeowners and businesses across Ashland, KY, Huntington, WV, Hurricane, WV, and surrounding communities throughout Kentucky, West Virginia, and Ohio."
     :canonical="route('service-areas')"
     :schemaJson="$schemaJson"
 >

@@ -149,6 +149,15 @@ class JobProgressService
             return;
         }
 
+        if (empty(config('services.brevo.key'))) {
+            Log::warning('Brevo API key not configured, skipping lead notification email', [
+                'lead_id' => $lead->id,
+                'recipients' => $recipients,
+            ]);
+
+            return;
+        }
+
         try {
             Mail::to($recipients)->send(new NewWebsiteLeadMail($lead, $jobProgressCustomerId));
         } catch (\Throwable $e) {

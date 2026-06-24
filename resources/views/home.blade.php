@@ -1,5 +1,5 @@
 @php
-    $homeMetaDescription = 'Ridgeline Roofing is a local roofing contractor serving Ashland, KY, Huntington, WV, Ironton, OH, and the surrounding tri-state area. Residential and commercial roofing, roof repairs, roof replacements, and free inspections.';
+    $homeMetaDescription = 'Ridgeline Roofing is a local roofing contractor serving Ashland, KY, Huntington, WV, Hurricane, WV, and the surrounding tri-state area. Residential and commercial roofing, roof repairs, roof replacements, and free inspections.';
     $heroProjectImage = asset('img/shingles/shingle_roof_6.jpg');
     $commercialProjectImage = asset('img/rubber/f7c54870-5141-42e9-b2c5-2228f0f26ff2.jpg');
     $repairSupportImage = asset('img/shingles/shingle_roof_5.jpg');
@@ -33,7 +33,10 @@
         'areaServed' => [
             ['@type' => 'City', 'name' => 'Ashland', 'addressRegion' => 'KY'],
             ['@type' => 'City', 'name' => 'Huntington', 'addressRegion' => 'WV'],
-            ['@type' => 'City', 'name' => 'Ironton', 'addressRegion' => 'OH'],
+            ['@type' => 'City', 'name' => 'Hurricane', 'addressRegion' => 'WV'],
+            ['@type' => 'AdministrativeArea', 'name' => 'Boyd County', 'addressRegion' => 'KY'],
+            ['@type' => 'AdministrativeArea', 'name' => 'Cabell County', 'addressRegion' => 'WV'],
+            ['@type' => 'AdministrativeArea', 'name' => 'Putnam County', 'addressRegion' => 'WV'],
             ['@type' => 'AdministrativeArea', 'name' => 'Surrounding Tri-State Area'],
         ],
         'sameAs' => [
@@ -44,7 +47,7 @@
 @endphp
 
 <x-layouts.app
-    title="Roofing Contractor in Ashland, KY | Huntington, WV | Ironton, OH"
+    title="Roofing Contractor in Ashland, KY | Huntington, WV | Hurricane, WV"
     :metaDescription="$homeMetaDescription"
     :canonical="route('home')"
     :schemaJson="$homeSchemaJson"
@@ -66,12 +69,19 @@
                     <!-- Main Headline -->
                     <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">
                         Roofing Contractor
-                        <span class="block text-yellow-300">Ashland, KY • Huntington, WV • Ironton, OH</span>
+                        <span class="block text-yellow-300">Ashland, KY • Huntington, WV • Hurricane, WV</span>
                         <span class="block text-orange-100 text-xl md:text-2xl lg:text-3xl mt-3">and surrounding tri-state area</span>
                     </h1>
 
-                    <p class="text-base md:text-lg mb-6 max-w-2xl mx-auto lg:mx-0 leading-relaxed text-orange-50/95">
+                    <p class="text-base md:text-lg mb-4 max-w-2xl mx-auto lg:mx-0 leading-relaxed text-orange-50/95">
                         Residential and commercial roofing support built around clear recommendations, professional execution, and long-term reliability for homes and businesses across the tri-state area.
+                    </p>
+
+                    <p class="text-sm md:text-base mb-6 max-w-2xl mx-auto lg:mx-0 text-orange-100/90">
+                        Local roofing in
+                        <a href="{{ route('service-areas.show', ['slug' => 'ashland-ky']) }}" class="font-semibold text-yellow-200 hover:text-yellow-100 underline underline-offset-2">Ashland, KY</a>,
+                        <a href="{{ route('service-areas.show', ['slug' => 'huntington-wv']) }}" class="font-semibold text-yellow-200 hover:text-yellow-100 underline underline-offset-2">Huntington, WV</a>, and
+                        <a href="{{ route('service-areas.show', ['slug' => 'hurricane-wv']) }}" class="font-semibold text-yellow-200 hover:text-yellow-100 underline underline-offset-2">Hurricane, WV</a>.
                     </p>
 
                     <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm md:text-base text-gray-100/95 mb-7 max-w-2xl mx-auto lg:mx-0">
@@ -694,7 +704,7 @@
                             </div>
                             <h3 class="text-4xl font-bold text-gray-900 dark:text-white mb-6">Hundreds and Hundreds of Completed Projects</h3>
                             <p class="text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-                                <strong>Local expertise matters</strong> across Ashland, Huntington, Ironton, and the surrounding communities. We understand the weather, the neighborhoods, and the expectations that come with working close to home.
+                                <strong>Local expertise matters</strong> across Ashland, Huntington, Hurricane, and the surrounding communities. We understand the weather, the neighborhoods, and the expectations that come with working close to home.
                             </p>
                             <div class="space-y-4 mb-8">
                                 <div class="flex items-center">
@@ -956,13 +966,13 @@
                             
                             <!-- Property Type -->
                             <div>
-                                <label class="block text-sm font-semibold text-gray-700 mb-2">Property Type</label>
-                                <select class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500 text-gray-900">
-                                    <option>Select property type</option>
-                                    <option>Residential Home</option>
-                                    <option>Commercial Building</option>
-                                    <option>Multi-Unit Property</option>
-                                    <option>Not Sure</option>
+                                <label for="inspection-property-type" class="block text-sm font-semibold text-gray-700 mb-2">Property Type</label>
+                                <select id="inspection-property-type" name="property_type" class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500 text-gray-900">
+                                    <option value="">Select property type</option>
+                                    <option value="residential">Residential Home</option>
+                                    <option value="commercial">Commercial Building</option>
+                                    <option value="multi_unit">Multi-Unit Property</option>
+                                    <option value="not_sure">Not Sure</option>
                                 </select>
                             </div>
                             

@@ -1,3 +1,4 @@
 User-agent: *
 Disallow:
-Sitemap: https://ridgelineroofingv3.test/sitemap.xml
+
+Sitemap: /sitemap.xml

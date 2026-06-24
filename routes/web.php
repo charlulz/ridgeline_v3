@@ -23,6 +23,7 @@ Route::get('/', function () {
 })->name('home');
 
 Route::get('/sitemap.xml', [ServiceAreaPageController::class, 'sitemap'])->name('sitemap');
+Route::get('/llms.txt', [ServiceAreaPageController::class, 'llms'])->name('llms');
 
 Route::get('/about', function () {
     return view('about');

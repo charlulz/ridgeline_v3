@@ -226,8 +226,15 @@
                             </a>
 
                             <!-- Mobile menu button -->
-                            <button @click="mobileMenuOpen = !mobileMenuOpen" class="lg:hidden p-2 rounded-md text-gray-700 hover:text-orange-600 hover:bg-gray-100 dark:text-gray-300 dark:hover:text-orange-400 dark:hover:bg-gray-700">
-                                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <button
+                                type="button"
+                                @click="mobileMenuOpen = !mobileMenuOpen"
+                                class="lg:hidden p-2 rounded-md text-gray-700 hover:text-orange-600 hover:bg-gray-100 dark:text-gray-300 dark:hover:text-orange-400 dark:hover:bg-gray-700"
+                                :aria-expanded="mobileMenuOpen"
+                                aria-controls="mobile-navigation"
+                                aria-label="Toggle navigation menu"
+                            >
+                                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                                 </svg>
                             </button>
@@ -236,7 +243,7 @@
                 </div>
 
                 <!-- Mobile menu -->
-                <div class="lg:hidden" x-show="mobileMenuOpen" x-transition x-cloak>
+                <div id="mobile-navigation" class="lg:hidden" x-show="mobileMenuOpen" x-transition x-cloak>
                     <div class="px-2 pt-2 pb-3 space-y-1 bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700">
                         <a href="{{ route('home') }}" class="block px-3 py-3 text-base font-semibold {{ request()->routeIs('home') ? 'bg-orange-50 border-l-4 border-orange-500 text-orange-700 dark:bg-orange-900 dark:border-orange-400 dark:text-orange-200' : 'text-gray-700 hover:bg-gray-50 hover:text-orange-600 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-orange-400' }}">
                             Home
@@ -318,9 +325,10 @@
             <footer class="bg-gray-50 dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700">
                 <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
                     @php
+                        $featuredSlugs = config('service_areas.featured_slugs', []);
                         $footerServiceLocations = collect(config('service_areas.cities', []))
-                            ->sortBy('rank')
-                            ->take(6)
+                            ->filter(fn (array $location) => in_array($location['slug'], $featuredSlugs, true))
+                            ->sortBy(fn (array $location) => array_search($location['slug'], $featuredSlugs, true))
                             ->values();
                     @endphp
 
@@ -458,8 +466,8 @@
             class="fixed right-4 z-50 lg:hidden transition-all duration-300"
             :class="stickyBarVisible ? 'bottom-20' : 'bottom-4'"
         >
-            <a href="tel:3043811122" class="flex items-center justify-center w-14 h-14 bg-green-600 hover:bg-green-700 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-110">
-                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 20 20">
+            <a href="tel:3043811122" aria-label="Call Ridgeline Roofing at (304) 381-1122" class="flex items-center justify-center w-14 h-14 bg-green-600 hover:bg-green-700 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-110">
+                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
                     <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
                 </svg>
             </a>

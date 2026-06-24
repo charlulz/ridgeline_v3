@@ -79,6 +79,13 @@
                         <div class="rounded-2xl border border-white/15 bg-black/10 px-5 py-6 text-center">
                             <div class="text-xs uppercase tracking-wide text-orange-100">Primary Service Market</div>
                             <div class="mt-2 text-3xl font-bold text-yellow-300">{{ $cityPage['city'] }}, {{ $cityPage['state_abbr'] }}</div>
+                            @if(!empty($cityPage['county']))
+                                <div class="mt-2 text-sm text-orange-100">{{ $cityPage['county'] }}</div>
+                            @endif
+                            @if(!empty($cityPage['zip_codes']))
+                                <div class="mt-3 text-xs uppercase tracking-wide text-orange-200">ZIP Codes Served</div>
+                                <div class="mt-1 text-sm text-gray-200">{{ implode(', ', $cityPage['zip_codes']) }}</div>
+                            @endif
                         </div>
 
                         <div class="mt-8 pt-6 border-t border-white/15">
@@ -91,10 +98,16 @@
                         <div class="mt-8 pt-6 border-t border-white/15">
                             <div class="text-xs uppercase tracking-wider text-orange-200 font-semibold mb-4">Nearby Communities</div>
                             <div class="flex flex-wrap gap-2">
-                                @foreach($cityPage['nearby_areas'] as $nearbyArea)
-                                    <span class="inline-flex rounded-full bg-white/10 border border-white/15 px-3 py-1.5 text-sm text-orange-50">
-                                        {{ $nearbyArea }}
-                                    </span>
+                                @foreach($nearbyCityLinks as $nearbyArea)
+                                    @if($nearbyArea['url'])
+                                        <a href="{{ $nearbyArea['url'] }}" class="inline-flex rounded-full bg-white/10 border border-white/15 px-3 py-1.5 text-sm text-orange-50 hover:bg-white/20 transition-colors duration-200">
+                                            {{ $nearbyArea['label'] }}
+                                        </a>
+                                    @else
+                                        <span class="inline-flex rounded-full bg-white/10 border border-white/15 px-3 py-1.5 text-sm text-orange-50">
+                                            {{ $nearbyArea['label'] }}
+                                        </span>
+                                    @endif
                                 @endforeach
                             </div>
                         </div>
@@ -241,16 +254,49 @@
                         We also serve the communities around {{ $cityPage['city'] }}, helping customers get faster scheduling and a contractor familiar with the surrounding market.
                     </p>
                     <div class="flex flex-wrap gap-2">
-                        @foreach(array_slice($cityPage['nearby_areas'], 0, 4) as $nearbyArea)
-                            <span class="inline-flex rounded-full bg-orange-100 text-orange-700 dark:bg-orange-900/40 dark:text-orange-200 px-3 py-1.5 text-sm font-medium">
-                                {{ $nearbyArea }}
-                            </span>
+                        @foreach(array_slice($nearbyCityLinks, 0, 4) as $nearbyArea)
+                            @if($nearbyArea['url'])
+                                <a href="{{ $nearbyArea['url'] }}" class="inline-flex rounded-full bg-orange-100 text-orange-700 dark:bg-orange-900/40 dark:text-orange-200 px-3 py-1.5 text-sm font-medium hover:bg-orange-200 dark:hover:bg-orange-900/60 transition-colors duration-200">
+                                    {{ $nearbyArea['label'] }}
+                                </a>
+                            @else
+                                <span class="inline-flex rounded-full bg-orange-100 text-orange-700 dark:bg-orange-900/40 dark:text-orange-200 px-3 py-1.5 text-sm font-medium">
+                                    {{ $nearbyArea['label'] }}
+                                </span>
+                            @endif
                         @endforeach
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    @if(!empty($cityPage['faqs']))
+        <div class="relative py-24 bg-white dark:bg-gray-900 overflow-hidden">
+            <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <div class="inline-flex items-center bg-orange-100 dark:bg-orange-900 rounded-full px-6 py-3 mb-6">
+                        <span class="text-orange-800 dark:text-orange-200 text-sm font-semibold uppercase tracking-wide">Local Roofing FAQ</span>
+                    </div>
+                    <h2 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+                        Roofing Questions in {{ $cityPage['city'] }}, {{ $cityPage['state_abbr'] }}
+                    </h2>
+                    <p class="text-lg text-gray-600 dark:text-gray-300">
+                        Common questions from homeowners and businesses in {{ $cityPage['city'] }}@if(!empty($cityPage['county'])) and {{ $cityPage['county'] }}@endif.
+                    </p>
+                </div>
+
+                <div class="space-y-5">
+                    @foreach($cityPage['faqs'] as $faq)
+                        <div class="rounded-2xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 p-6">
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">{{ $faq['question'] }}</h3>
+                            <p class="text-gray-600 dark:text-gray-300 leading-relaxed">{{ $faq['answer'] }}</p>
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+        </div>
+    @endif
 
     <div class="py-20 bg-gradient-to-r from-orange-600 to-orange-700 text-white">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

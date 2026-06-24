@@ -1,6 +1,12 @@
 <?php
 
 return [
+    'featured_slugs' => [
+        'ashland-ky',
+        'huntington-wv',
+        'hurricane-wv',
+    ],
+
     'states' => [
         'WV' => [
             'state' => 'West Virginia',
@@ -25,10 +31,32 @@ return [
             'rank' => 1,
             'population' => 46800,
             'population_label' => '~46,800',
-            'intro' => 'Homeowners and business owners in Huntington count on Ridgeline Roofing for roof repairs, replacements, and storm damage response backed by clear communication and dependable scheduling.',
-            'local_context' => 'From older neighborhoods near downtown to busy commercial properties across Cabell County, Huntington roofs need systems that can handle wind, rain, and year-round weather swings.',
-            'service_focus' => 'We support Huntington with residential shingle and metal roofing, commercial flat roof work, emergency leak response, and fast inspections.',
+            'county' => 'Cabell County',
+            'zip_codes' => ['25701', '25702', '25703', '25704', '25705'],
+            'latitude' => 38.4192,
+            'longitude' => -82.4452,
+            'intro' => 'Ridgeline Roofing is a local roofing contractor serving Huntington, WV with residential and commercial roof repair, roof replacement, storm damage response, and free inspections across Cabell County.',
+            'local_context' => 'From older neighborhoods near downtown to busy commercial properties across Cabell County, Huntington roofs need systems that can handle Ohio River Valley humidity, wind, heavy rain, and year-round weather swings.',
+            'service_focus' => 'We support Huntington with residential shingle and metal roofing, commercial flat roof work, emergency leak response, gutter installation, and fast storm damage inspections.',
             'nearby_areas' => ['Barboursville', 'Pea Ridge', 'Milton', 'Kenova', 'Hurricane'],
+            'faqs' => [
+                [
+                    'question' => 'Does Ridgeline Roofing serve Huntington, WV?',
+                    'answer' => 'Yes. Ridgeline Roofing provides residential and commercial roofing in Huntington, WV and throughout Cabell County, including roof repair, roof replacement, storm damage service, and free inspections.',
+                ],
+                [
+                    'question' => 'What roofing services are available in Huntington, WV?',
+                    'answer' => 'Homeowners and businesses in Huntington can request shingle roof replacement, metal roofing, commercial flat roof repair, leak diagnostics, gutter work, siding, and emergency storm response.',
+                ],
+                [
+                    'question' => 'How fast can Ridgeline Roofing respond to storm damage in Huntington?',
+                    'answer' => 'Because we focus on the tri-state market, our crews can often schedule Huntington storm inspections quickly and provide emergency tarping or repair recommendations after severe weather.',
+                ],
+                [
+                    'question' => 'What areas near Huntington does Ridgeline Roofing cover?',
+                    'answer' => 'In addition to Huntington, we serve nearby communities such as Barboursville, Pea Ridge, Milton, Kenova, and Hurricane throughout the Huntington metro area.',
+                ],
+            ],
         ],
         'ashland-ky' => [
             'city' => 'Ashland',
@@ -38,10 +66,32 @@ return [
             'rank' => 2,
             'population' => 21600,
             'population_label' => '~21,600',
-            'intro' => 'Ridgeline Roofing serves Ashland property owners with practical roofing solutions that prioritize long-term value, responsive service, and honest recommendations.',
-            'local_context' => 'Ashland homes and businesses see everything from heavy summer storms to winter weather, so roofing systems here need dependable installation details and prompt repair support.',
-            'service_focus' => 'In Ashland we handle residential roof replacement, roof repair, commercial roofing systems, gutter work, and storm-related inspections.',
+            'county' => 'Boyd County',
+            'zip_codes' => ['41101', '41102', '41129'],
+            'latitude' => 38.4784,
+            'longitude' => -82.6379,
+            'intro' => 'Ridgeline Roofing is headquartered in Ashland, KY and serves Boyd County homeowners and businesses with roof repair, roof replacement, commercial roofing, storm inspections, and free estimates.',
+            'local_context' => 'Ashland homes and businesses along the Ohio River and throughout Boyd County see heavy summer storms, winter ice, and seasonal temperature swings, so roofing systems here need dependable installation and prompt repair support.',
+            'service_focus' => 'In Ashland we handle residential roof replacement, roof repair, commercial roofing systems, seamless gutters, siding, and storm-related inspections for properties across Boyd County.',
             'nearby_areas' => ['Flatwoods', 'Russell', 'Grayson', 'Huntington', 'Ironton'],
+            'faqs' => [
+                [
+                    'question' => 'Does Ridgeline Roofing serve Ashland, KY?',
+                    'answer' => 'Yes. Ridgeline Roofing is based in Ashland, KY at 1100 Our Lady\'s Way and provides residential and commercial roofing throughout Boyd County and the surrounding tri-state area.',
+                ],
+                [
+                    'question' => 'What roofing services are available in Ashland, KY?',
+                    'answer' => 'Ashland customers can request shingle and metal roof replacement, roof repair, commercial flat roofing, gutter installation, siding, skylights, and insurance-related storm damage inspections.',
+                ],
+                [
+                    'question' => 'Is Ridgeline Roofing licensed and insured in Kentucky?',
+                    'answer' => 'Yes. Ridgeline Roofing is a licensed and insured roofing contractor serving Ashland, KY and Boyd County. We are happy to provide proof of insurance before your project begins.',
+                ],
+                [
+                    'question' => 'What communities near Ashland does Ridgeline Roofing serve?',
+                    'answer' => 'Beyond Ashland, we regularly serve Flatwoods, Russell, Grayson, Huntington, Ironton, and other communities across the Kentucky, West Virginia, and Ohio tri-state area.',
+                ],
+            ],
         ],
         'portsmouth-oh' => [
             'city' => 'Portsmouth',
@@ -90,10 +140,32 @@ return [
             'rank' => 6,
             'population' => 7300,
             'population_label' => '~7,300',
-            'intro' => 'Ridgeline Roofing helps Hurricane homeowners and businesses protect their properties with quality roof systems, quick inspections, and responsive repair work.',
-            'local_context' => 'Growing neighborhoods and commercial corridors in Hurricane need roofing solutions that can handle West Virginia weather while keeping projects organized and on schedule.',
-            'service_focus' => 'In Hurricane we provide roof replacement, leak repair, storm damage service, and commercial flat roof support with a local-service mindset.',
+            'county' => 'Putnam County',
+            'zip_codes' => ['25526'],
+            'latitude' => 38.4326,
+            'longitude' => -82.0201,
+            'intro' => 'Ridgeline Roofing helps Hurricane, WV homeowners and businesses with roof replacement, roof repair, storm damage inspections, and commercial flat roofing throughout Putnam County.',
+            'local_context' => 'Growing neighborhoods and commercial corridors along Route 34 and I-64 in Hurricane need roofing solutions that handle West Virginia storms, wind exposure, and seasonal weather while keeping projects organized and on schedule.',
+            'service_focus' => 'In Hurricane we provide shingle and metal roof replacement, leak repair, storm damage service, seamless gutters, and commercial flat roof support with responsive local scheduling.',
             'nearby_areas' => ['Milton', 'Barboursville', 'Huntington', 'Pea Ridge', 'Kenova'],
+            'faqs' => [
+                [
+                    'question' => 'Does Ridgeline Roofing serve Hurricane, WV?',
+                    'answer' => 'Yes. Ridgeline Roofing provides residential and commercial roofing in Hurricane, WV and throughout Putnam County, including roof repair, replacement, and storm damage inspections.',
+                ],
+                [
+                    'question' => 'What roofing services are available in Hurricane, WV?',
+                    'answer' => 'Hurricane property owners can request shingle roof replacement, metal roofing, leak repair, gutter installation, commercial flat roof service, and free roofing inspections.',
+                ],
+                [
+                    'question' => 'Does Ridgeline Roofing work on storm-damaged roofs in Hurricane?',
+                    'answer' => 'Yes. We inspect storm-damaged roofs in Hurricane and Putnam County, document damage for insurance claims when needed, and provide repair or replacement recommendations.',
+                ],
+                [
+                    'question' => 'What areas near Hurricane does Ridgeline Roofing cover?',
+                    'answer' => 'In addition to Hurricane, we serve Milton, Barboursville, Huntington, Pea Ridge, Kenova, and other communities across the Huntington and Putnam County market.',
+                ],
+            ],
         ],
         'pea-ridge-wv' => [
             'city' => 'Pea Ridge',
