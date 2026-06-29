@@ -90,6 +90,7 @@ class ServiceAreaPageController extends Controller
             'blog.index',
             'testimonials.index',
             'faq',
+            'shingle-colors',
             'service-areas',
             'contact',
         ];

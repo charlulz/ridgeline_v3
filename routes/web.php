@@ -98,6 +98,10 @@ Route::get('/contact', function () {
     return view('contact');
 })->name('contact');
 
+Route::get('/shingle-colors', [ServicePageController::class, 'shingleColors'])->name('shingle-colors');
+
+Route::get('/financing', [ServicePageController::class, 'financing'])->name('financing');
+
 // Funnel pages
 Route::get('/funnel/{funnelPage:slug}', [FunnelPageController::class, 'show'])->name('funnel.show');
 Route::post('/funnel/{funnelPage:slug}/submit', [FunnelPageController::class, 'submit'])->name('funnel.submit');

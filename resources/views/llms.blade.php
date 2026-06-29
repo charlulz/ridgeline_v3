@@ -28,6 +28,7 @@
 - [Residential Roofing]({{ route('services.residential') }})
 - [Commercial Roofing]({{ route('services.commercial') }})
 - [Shingle Roof Replacement]({{ route('services.residential.shingle-replacement') }})
+- [GAF & Owens Corning Shingle Colors]({{ route('shingle-colors') }})
 - [Metal Roof Replacement]({{ route('services.residential.metal-replacement') }})
 - [Roof Repair]({{ route('services.residential.shingle-repair') }})
 - [Commercial Flat Roofing]({{ route('services.commercial.flat-replacement') }})

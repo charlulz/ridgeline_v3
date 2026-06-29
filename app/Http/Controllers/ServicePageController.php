@@ -126,4 +126,16 @@ class ServicePageController extends Controller
     {
         return view('services.commercial.siding');
     }
+
+    public function shingleColors()
+    {
+        return view('shingle-colors');
+    }
+
+    public function financing()
+    {
+        return view('financing', [
+            'goodleapApplicationUrl' => config('goodleap.application_url'),
+        ]);
+    }
 }
