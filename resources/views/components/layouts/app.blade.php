@@ -205,6 +205,10 @@
                                     </div>
                                 </div>
 
+                                <a href="{{ route('financing') }}" class="border-transparent text-gray-700 hover:text-orange-600 hover:border-orange-500 dark:text-gray-300 dark:hover:text-orange-400 dark:hover:border-orange-400 whitespace-nowrap py-2 px-4 border-b-2 font-semibold text-sm transition-all duration-200 {{ request()->routeIs('financing') ? 'border-orange-500 text-orange-600 dark:text-orange-400' : '' }}">
+                                    Financing
+                                </a>
+
                                 <a href="{{ route('contact') }}" class="border-transparent text-gray-700 hover:text-orange-600 hover:border-orange-500 dark:text-gray-300 dark:hover:text-orange-400 dark:hover:border-orange-400 whitespace-nowrap py-2 px-4 border-b-2 font-semibold text-sm transition-all duration-200 {{ request()->routeIs('contact') ? 'border-orange-500 text-orange-600 dark:text-orange-400' : '' }}">
                                     Contact
                                 </a>
@@ -297,6 +301,10 @@
                                 <a href="{{ route('services.commercial.siding') }}" class="block px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:text-orange-600">Siding Installation</a>
                             </div>
                         </div>
+
+                        <a href="{{ route('financing') }}" class="block px-3 py-3 text-base font-semibold {{ request()->routeIs('financing') ? 'bg-orange-50 border-l-4 border-orange-500 text-orange-700 dark:bg-orange-900 dark:border-orange-400 dark:text-orange-200' : 'text-gray-700 hover:bg-gray-50 hover:text-orange-600 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-orange-400' }}">
+                            Financing
+                        </a>
 
                         <a href="{{ route('contact') }}" class="block px-3 py-3 text-base font-semibold {{ request()->routeIs('contact') ? 'bg-orange-50 border-l-4 border-orange-500 text-orange-700 dark:bg-orange-900 dark:border-orange-400 dark:text-orange-200' : 'text-gray-700 hover:bg-gray-50 hover:text-orange-600 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-orange-400' }}">
                             Contact
