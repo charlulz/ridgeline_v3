@@ -15,6 +15,7 @@
 
     $featuredTestimonial = $approvedTestimonials->first();
     $gridTestimonials = $approvedTestimonials->skip($featuredTestimonial ? 1 : 0)->take(3)->values();
+    $goodleapApplicationUrl = config('goodleap.application_url');
 
     $homeSchema = [
         '@context' => 'https://schema.org',
@@ -122,10 +123,14 @@
                     <!-- Primary CTA -->
                     <div class="flex flex-col sm:flex-row gap-3 items-center justify-center lg:justify-start">
                         <a
-                            href="tel:3043811122"
-                            class="w-full sm:w-auto inline-flex items-center justify-center bg-green-600 hover:bg-green-700 text-white px-7 py-3.5 rounded-xl font-bold text-lg transition-all duration-200 shadow-lg hover:shadow-xl"
+                            href="{{ route('financing') }}"
+                            class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-yellow-400 hover:bg-yellow-300 text-gray-900 px-7 py-3.5 rounded-xl font-bold text-lg transition-all duration-200 shadow-lg hover:shadow-xl"
                         >
-                            Call Now: (304) 381-1122
+                            <svg class="h-5 w-5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                <path d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4z"/>
+                                <path fill-rule="evenodd" d="M18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z" clip-rule="evenodd"/>
+                            </svg>
+                            Need Financing?
                         </a>
                         <button
                             type="button"
@@ -741,6 +746,149 @@
                                     Join Our Community
                                 </a>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Shingle Colors & Financing -->
+    <div class="relative py-24 bg-white dark:bg-gray-900 overflow-hidden">
+        <div class="absolute inset-0 opacity-5">
+            <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,%3Csvg width=&quot;60&quot; height=&quot;60&quot; viewBox=&quot;0 0 60 60&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Cg fill=&quot;none&quot; fill-rule=&quot;evenodd&quot;%3E%3Cg fill=&quot;%23000000&quot; fill-opacity=&quot;0.1&quot;%3E%3Cpath d=&quot;M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z&quot;/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+        </div>
+
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-14">
+                <div class="inline-flex items-center bg-orange-100 dark:bg-orange-900 rounded-full px-6 py-3 mb-6">
+                    <span class="text-orange-800 dark:text-orange-200 text-sm font-semibold uppercase tracking-wide">Plan Your Project</span>
+                </div>
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4 leading-tight">
+                    Choose Your Color. Explore Your Options.
+                </h2>
+                <p class="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                    Browse real shingle colors from GAF and Owens Corning, then see how flexible financing can help you move forward with your roof project.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                {{-- Shingle Colors --}}
+                <div class="group rounded-3xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
+                    <div class="relative h-56 sm:h-64 overflow-hidden">
+                        <img
+                            src="{{ asset('img/shingles/shingle_roof_2.jpg') }}"
+                            alt="GAF and Owens Corning shingle color options"
+                            class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        >
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                        <div class="absolute bottom-5 left-5 right-5">
+                            <div class="flex flex-wrap items-center gap-3">
+                                <img src="{{ asset('img/GAF_logo.png') }}" alt="GAF" class="h-8 w-auto bg-white/90 rounded px-2 py-1">
+                                <span class="inline-flex items-center rounded-md bg-[#e4002b] px-2.5 py-1 text-xs font-bold text-white">Owens Corning</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-8">
+                        <div class="inline-flex items-center bg-orange-100 dark:bg-orange-900/40 text-orange-800 dark:text-orange-200 rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-wide mb-4">
+                            Shingle Colors
+                        </div>
+                        <h3 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-3">
+                            Explore 27 Shingle Colors
+                        </h3>
+                        <p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
+                            Use our interactive color galleries to compare <strong>12 GAF Timberline HDZ</strong> colors and <strong>15 Owens Corning TruDefinition Duration</strong> colors before your free inspection.
+                        </p>
+                        <ul class="space-y-2 mb-8 text-sm text-gray-600 dark:text-gray-300">
+                            <li class="flex items-center gap-2">
+                                <svg class="h-4 w-4 text-orange-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                Official manufacturer color widgets
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <svg class="h-4 w-4 text-orange-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                Shingle and house preview views
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <svg class="h-4 w-4 text-orange-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                Great starting point before your in-person consultation
+                            </li>
+                        </ul>
+                        <a
+                            href="{{ route('shingle-colors') }}"
+                            class="inline-flex w-full sm:w-auto items-center justify-center bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-200 shadow-lg hover:shadow-xl"
+                        >
+                            Browse Shingle Colors
+                            <svg class="ml-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                {{-- Financing --}}
+                <div class="group rounded-3xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
+                    <div class="relative h-56 sm:h-64 overflow-hidden">
+                        <img
+                            src="{{ asset('img/shingles/shingle_roof_6.jpg') }}"
+                            alt="Roof financing options through GoodLeap"
+                            class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        >
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                        <div class="absolute bottom-5 left-5">
+                            <img src="{{ asset('img/goodleap-logo.png') }}" alt="GoodLeap" class="h-9 w-auto brightness-0 invert">
+                        </div>
+                    </div>
+
+                    <div class="p-8">
+                        <div class="inline-flex items-center bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-200 rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-wide mb-4">
+                            Roof Financing
+                        </div>
+                        <h3 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-3">
+                            Flexible Payment Options
+                        </h3>
+                        <p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
+                            We partner with <strong>GoodLeap</strong> so you can explore financing online with a soft credit check, compare loan options, and see estimated monthly payments in minutes.
+                        </p>
+                        <ul class="space-y-2 mb-8 text-sm text-gray-600 dark:text-gray-300">
+                            <li class="flex items-center gap-2">
+                                <svg class="h-4 w-4 text-green-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                Soft credit check until funding
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <svg class="h-4 w-4 text-green-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                Fast online application
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <svg class="h-4 w-4 text-green-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                No home equity required
+                            </li>
+                        </ul>
+                        <div class="flex flex-col sm:flex-row gap-3">
+                            <a
+                                href="{{ route('financing') }}"
+                                class="inline-flex flex-1 items-center justify-center bg-orange-600 hover:bg-orange-700 text-white px-6 py-4 rounded-xl font-bold text-lg transition-all duration-200 shadow-lg hover:shadow-xl"
+                            >
+                                Learn About Financing
+                            </a>
+                            <a
+                                href="{{ $goodleapApplicationUrl }}"
+                                class="inline-flex flex-1 items-center justify-center bg-[#00a651] hover:bg-[#008f46] text-white px-6 py-4 rounded-xl font-bold text-lg uppercase tracking-wide transition-all duration-200 shadow-lg hover:shadow-xl"
+                            >
+                                Get Started
+                            </a>
                         </div>
                     </div>
                 </div>
