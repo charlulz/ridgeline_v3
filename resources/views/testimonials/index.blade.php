@@ -28,6 +28,16 @@
         </div>
     </div>
 
+    <div class="py-12 bg-gray-50 dark:bg-gray-800">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <img
+                src="{{ company_cam_url('testimonials.featured') }}"
+                alt="{{ company_cam_alt('testimonials.featured') }}"
+                class="w-full rounded-2xl shadow-lg"
+            >
+        </div>
+    </div>
+
     <!-- Featured Testimonial -->
     @if($featured)
         <div class="py-16 bg-white dark:bg-gray-900">

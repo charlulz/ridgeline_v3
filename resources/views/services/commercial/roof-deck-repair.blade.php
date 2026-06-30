@@ -1,7 +1,7 @@
 <x-layouts.app title="Commercial Roof Deck Services">
     <!-- Hero Section -->
     <div class="relative text-white py-24 md:py-32 overflow-hidden">
-        <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" style="background-image: url('{{ asset('img/rubber/088de069-001d-4a7f-a9fc-67b98123aadd.jpg') }}');"></div>
+        <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" style="background-image: url('{ company_cam_url('services.commercial.roof-deck') }');"></div>
         <div class="absolute inset-0 bg-black/60"></div>
         <div class="absolute inset-0 bg-gradient-to-br from-orange-600/40 via-orange-700/30 to-orange-800/50"></div>
         <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

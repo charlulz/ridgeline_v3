@@ -14,7 +14,7 @@ class ServiceAreaPageController extends Controller
         $cityPages = $this->serviceAreaPages();
 
         return view('service-areas', [
-            'heroImageUrl' => $this->heroImageUrl(),
+            'heroImageUrl' => $this->heroImageUrl('service-areas.index'),
             'serviceAreas' => $this->stateSummaries($cityPages),
             'cityPages' => $cityPages,
             'schemaJson' => $this->hubSchemaJson($cityPages),
@@ -31,7 +31,8 @@ class ServiceAreaPageController extends Controller
         $metaDescription = $this->cityMetaDescription($cityPage);
 
         return view('service-areas.show', [
-            'heroImageUrl' => $this->heroImageUrl(),
+            'heroImageUrl' => $this->heroImageUrl('service-areas.'.$cityPage['slug'].'.hero'),
+            'trustImage' => $this->trustImageUrl($cityPage['slug']),
             'cityPage' => $cityPage,
             'canonical' => $canonical,
             'metaDescription' => $metaDescription,
@@ -151,8 +152,16 @@ class ServiceAreaPageController extends Controller
         return is_array($cityPage) ? $cityPage : null;
     }
 
-    private function heroImageUrl(): string
+    private function heroImageUrl(?string $pageKey = null): string
     {
+        if ($pageKey !== null) {
+            $companyCamUrl = company_cam_url($pageKey);
+
+            if ($companyCamUrl !== '') {
+                return $companyCamUrl;
+            }
+        }
+
         $heroImage = Setting::getHeroImage();
 
         if (empty($heroImage)) {
@@ -168,6 +177,13 @@ class ServiceAreaPageController extends Controller
         }
 
         return asset('storage/' . ltrim($heroImage, '/'));
+    }
+
+    private function trustImageUrl(string $slug): ?string
+    {
+        $url = company_cam_url('service-areas.'.$slug.'.trust');
+
+        return $url !== '' ? $url : null;
     }
 
     private function residentialServices(): array

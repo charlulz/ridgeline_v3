@@ -1,7 +1,9 @@
 <x-layouts.app title="Residential Roofing Services">
     <!-- Hero Section -->
-    <div class="relative bg-gradient-to-br from-orange-600 via-orange-700 to-orange-800 text-white py-20 overflow-hidden">
-        <div class="absolute inset-0 bg-black/20"></div>
+    <div class="relative text-white py-20 overflow-hidden">
+        <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" style="background-image: url('{{ company_cam_url('services.residential.hub') }}');"></div>
+        <div class="absolute inset-0 bg-black/60"></div>
+        <div class="absolute inset-0 bg-gradient-to-br from-orange-600/40 via-orange-700/30 to-orange-800/50"></div>
         <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center">
                 <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">Residential Roofing Services</h1>

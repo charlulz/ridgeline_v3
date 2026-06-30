@@ -1,7 +1,7 @@
 <x-layouts.app title="Rolled Roofing Low-Slope Replacement">
     <!-- Hero Section -->
     <div class="relative text-white py-24 md:py-32 overflow-hidden">
-        <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" style="background-image: url('{{ asset('img/full-shot-man-sitting-roof.webp') }}');"></div>
+        <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" style="background-image: url('{ company_cam_url('services.residential.rolled-roofing') }');"></div>
         <div class="absolute inset-0 bg-black/60"></div>
         <div class="absolute inset-0 bg-gradient-to-br from-purple-900/50 to-purple-800/30"></div>
         <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

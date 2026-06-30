@@ -4,7 +4,7 @@
     :canonical="route('shingle-colors')"
 >
     <div class="relative text-white py-16 sm:py-20 lg:py-24 overflow-hidden">
-        <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" style="background-image: url('{{ asset('img/shingles/shingle_roof_2.jpg') }}');"></div>
+        <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" style="background-image: url('{{ company_cam_url('shingle-colors.hero') }}');"></div>
         <div class="absolute inset-0 bg-black/60"></div>
         <div class="absolute inset-0 bg-gradient-to-br from-orange-600/40 via-orange-700/30 to-orange-800/50"></div>
 

@@ -1,6 +1,6 @@
 @php
-    $heroImage = asset('img/shingles/shingle_roof_6.jpg');
-    $projectImage = asset('img/shingles/shingle_roof_1.jpg');
+    $heroImage = company_cam_url('financing.hero');
+    $projectImage = company_cam_url('financing.sidebar');
 @endphp
 
 <x-layouts.app
@@ -242,10 +242,10 @@
                 </div>
 
                 <div class="grid grid-cols-2 gap-4">
-                    <img src="{{ asset('img/shingles/shingle_roof_3.jpg') }}" alt="Shingle roof replacement" class="rounded-2xl shadow-lg object-cover h-48 w-full">
-                    <img src="{{ asset('img/metal/d584f2a4-968d-4426-9925-81cb21018897.jpg') }}" alt="Metal roofing project" class="rounded-2xl shadow-lg object-cover h-48 w-full mt-8">
-                    <img src="{{ asset('img/shingles/shingle_roof_5.jpg') }}" alt="Roof repair work" class="rounded-2xl shadow-lg object-cover h-48 w-full -mt-8">
-                    <img src="{{ asset('img/rubber/f7c54870-5141-42e9-b2c5-2228f0f26ff2.jpg') }}" alt="Commercial roofing project" class="rounded-2xl shadow-lg object-cover h-48 w-full">
+                    <img src="{{ company_cam_url('financing.grid_1') }}" alt="{{ company_cam_alt('financing.grid_1') }}" class="rounded-2xl shadow-lg object-cover h-48 w-full">
+                    <img src="{{ company_cam_url('financing.grid_2') }}" alt="{{ company_cam_alt('financing.grid_2') }}" class="rounded-2xl shadow-lg object-cover h-48 w-full mt-8">
+                    <img src="{{ company_cam_url('financing.grid_3') }}" alt="{{ company_cam_alt('financing.grid_3') }}" class="rounded-2xl shadow-lg object-cover h-48 w-full -mt-8">
+                    <img src="{{ company_cam_url('financing.grid_4') }}" alt="{{ company_cam_alt('financing.grid_4') }}" class="rounded-2xl shadow-lg object-cover h-48 w-full">
                 </div>
             </div>
         </div>

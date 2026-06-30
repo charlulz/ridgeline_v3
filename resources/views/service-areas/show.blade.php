@@ -75,6 +75,11 @@
                 </div>
 
                 <div class="relative hidden lg:block">
+                    @if(!empty($trustImage))
+                        <div class="mb-6 overflow-hidden rounded-2xl border border-white/20 shadow-2xl">
+                            <img src="{{ $trustImage }}" alt="{{ company_cam_alt('service-areas.'.$cityPage['slug'].'.trust') }}" class="w-full h-48 object-cover">
+                        </div>
+                    @endif
                     <div class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 shadow-2xl">
                         <div class="rounded-2xl border border-white/15 bg-black/10 px-5 py-6 text-center">
                             <div class="text-xs uppercase tracking-wide text-orange-100">Primary Service Market</div>

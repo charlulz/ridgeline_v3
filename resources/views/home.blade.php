@@ -1,9 +1,13 @@
 @php
     $homeMetaDescription = 'Ridgeline Roofing is a local roofing contractor serving Ashland, KY, Huntington, WV, Hurricane, WV, and the surrounding tri-state area. Residential and commercial roofing, roof repairs, roof replacements, and free inspections.';
-    $heroProjectImage = asset('img/shingles/shingle_roof_6.jpg');
-    $commercialProjectImage = asset('img/rubber/f7c54870-5141-42e9-b2c5-2228f0f26ff2.jpg');
-    $repairSupportImage = asset('img/shingles/shingle_roof_5.jpg');
-    $communityProjectImage = asset('img/metal/d584f2a4-968d-4426-9925-81cb21018897.jpg');
+    $heroProjectImage = company_cam_url('home.hero');
+    $commercialProjectImage = company_cam_url('home.commercial');
+    $repairSupportImage = company_cam_url('home.repair');
+    $communityProjectImage = company_cam_url('home.community');
+    $residentialProjectImage = company_cam_url('home.residential');
+    $whyChooseImage = company_cam_url('home.why_choose');
+    $shingleColorsCardImage = company_cam_url('home.shingle_colors_card');
+    $financingCardImage = company_cam_url('home.financing_card');
     $approvedTestimonials = collect();
 
     if (\Illuminate\Support\Facades\Schema::hasTable('testimonials')) {
@@ -264,7 +268,7 @@
                         <div class="order-1">
                             <div class="relative">
                                 <div class="aspect-[4/3] bg-gradient-to-br from-orange-500/20 to-orange-600/10 rounded-3xl overflow-hidden border border-white/20">
-                                    <img src="{{ asset('img/shingles/shingle_roof_1.jpg') }}" alt="Residential roofing project" class="w-full h-full object-cover">
+                                    <img src="{{ $residentialProjectImage }}" alt="{{ company_cam_alt('home.residential') }}" class="w-full h-full object-cover">
                                 </div>
                                 <div class="absolute -bottom-6 -left-6 bg-orange-600 text-white px-6 py-3 rounded-2xl shadow-2xl">
                                     <div class="text-sm font-semibold">Residential Roofing</div>
@@ -568,7 +572,7 @@
                         <div class="order-1">
                             <div class="relative">
                                 <div class="aspect-[4/3] bg-gradient-to-br from-orange-500/20 to-orange-600/10 rounded-3xl overflow-hidden border border-gray-200 dark:border-gray-700">
-                                    <img src="{{ asset('img/shingles/shingle_roof_2.jpg') }}" alt="Quality roofing work" class="w-full h-full object-cover">
+                                    <img src="{{ $whyChooseImage }}" alt="{{ company_cam_alt('home.why_choose') }}" class="w-full h-full object-cover">
                                 </div>
                                 <div class="absolute -bottom-6 -left-6 bg-orange-600 text-white px-6 py-3 rounded-2xl shadow-2xl">
                                     <div class="text-sm font-semibold">Quality Materials</div>
@@ -777,8 +781,8 @@
                 <div class="group rounded-3xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
                     <div class="relative h-56 sm:h-64 overflow-hidden">
                         <img
-                            src="{{ asset('img/shingles/shingle_roof_2.jpg') }}"
-                            alt="GAF and Owens Corning shingle color options"
+                            src="{{ $shingleColorsCardImage }}"
+                            alt="{{ company_cam_alt('home.shingle_colors_card') }}"
                             class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                         >
                         <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
@@ -836,8 +840,8 @@
                 <div class="group rounded-3xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
                     <div class="relative h-56 sm:h-64 overflow-hidden">
                         <img
-                            src="{{ asset('img/shingles/shingle_roof_6.jpg') }}"
-                            alt="Roof financing options through GoodLeap"
+                            src="{{ $financingCardImage }}"
+                            alt="{{ company_cam_alt('home.financing_card') }}"
                             class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                         >
                         <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
