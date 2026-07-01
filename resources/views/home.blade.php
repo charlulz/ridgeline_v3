@@ -4,6 +4,9 @@
     $commercialProjectImage = company_cam_url('home.commercial');
     $repairSupportImage = company_cam_url('home.repair');
     $communityProjectImage = company_cam_url('home.community');
+    $localTrustImage = company_cam_url('home.local_trust');
+    $testimonialsImage = company_cam_url('home.testimonials_image');
+    $repairGuidanceImage = company_cam_url('home.repair_guidance');
     $residentialProjectImage = company_cam_url('home.residential');
     $whyChooseImage = company_cam_url('home.why_choose');
     $shingleColorsCardImage = company_cam_url('home.shingle_colors_card');
@@ -680,7 +683,7 @@
                         <div class="order-1 lg:order-2">
                             <div class="relative">
                                 <div class="aspect-[4/3] bg-gradient-to-br from-yellow-500/20 to-orange-600/10 rounded-3xl overflow-hidden border border-gray-200 dark:border-gray-700">
-                                    <img src="{{ $repairSupportImage }}" alt="Roof repair guidance" class="w-full h-full object-cover">
+                                    <img src="{{ $repairGuidanceImage }}" alt="{{ company_cam_alt('home.repair_guidance') }}" class="w-full h-full object-cover">
                                 </div>
                                 <div class="absolute -bottom-6 -right-6 bg-yellow-500 text-gray-900 px-6 py-3 rounded-2xl shadow-2xl">
                                     <div class="text-sm font-semibold">Roof Repair Support</div>
@@ -698,7 +701,7 @@
                         <div class="order-1">
                             <div class="relative">
                                 <div class="aspect-[4/3] bg-gradient-to-br from-green-500/20 to-green-600/10 rounded-3xl overflow-hidden border border-gray-200 dark:border-gray-700">
-                                    <img src="{{ $communityProjectImage }}" alt="Local community roofing" class="w-full h-full object-cover">
+                                    <img src="{{ $localTrustImage }}" alt="{{ company_cam_alt('home.local_trust') }}" class="w-full h-full object-cover">
                                 </div>
                                 <div class="absolute -bottom-6 -left-6 bg-green-600 text-white px-6 py-3 rounded-2xl shadow-2xl">
                                     <div class="text-sm font-semibold">Local Trust</div>
@@ -969,7 +972,7 @@
                             <div class="order-1 lg:order-2">
                                 <div class="relative">
                                     <div class="aspect-[4/3] bg-gradient-to-br from-orange-500/20 to-orange-600/10 rounded-3xl overflow-hidden border border-white/20">
-                                        <img src="{{ $communityProjectImage }}" alt="Ridgeline roofing project" class="w-full h-full object-cover">
+                                        <img src="{{ $testimonialsImage }}" alt="{{ company_cam_alt('home.testimonials_image') }}" class="w-full h-full object-cover">
                                     </div>
                                     <div class="absolute -bottom-6 -right-6 bg-orange-600 text-white px-6 py-3 rounded-2xl shadow-2xl">
                                         <div class="text-sm font-semibold">Real Customer Feedback</div>
