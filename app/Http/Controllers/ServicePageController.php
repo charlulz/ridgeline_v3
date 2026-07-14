@@ -127,9 +127,14 @@ class ServicePageController extends Controller
         return view('services.commercial.siding');
     }
 
-    public function shingleColors()
+    public function shingleColorsGaf()
     {
-        return view('shingle-colors');
+        return view('shingle-colors-gaf');
+    }
+
+    public function shingleColorsOwensCorning()
+    {
+        return view('shingle-colors-owens-corning');
     }
 
     public function financing()

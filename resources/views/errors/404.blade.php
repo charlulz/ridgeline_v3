@@ -65,7 +65,7 @@
                     <a href="{{ route('service-areas') }}" class="rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 px-4 py-3 text-gray-200 hover:text-white transition-colors duration-200">
                         → Service Areas
                     </a>
-                    <a href="{{ route('shingle-colors') }}" class="rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 px-4 py-3 text-gray-200 hover:text-white transition-colors duration-200">
+                    <a href="{{ route('shingle-colors.gaf') }}" class="rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 px-4 py-3 text-gray-200 hover:text-white transition-colors duration-200">
                         → Browse Shingle Colors
                     </a>
                     <a href="{{ route('financing') }}" class="rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 px-4 py-3 text-gray-200 hover:text-white transition-colors duration-200">

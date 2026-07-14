@@ -158,7 +158,7 @@
                 <a href="{{ route('contact') }}" class="bg-white text-orange-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors duration-200">
                     Request Free Estimate
                 </a>
-                <a href="{{ route('shingle-colors') }}" class="bg-orange-800 hover:bg-orange-900 text-white px-8 py-4 rounded-lg font-bold text-lg transition-colors duration-200">
+                <a href="{{ route('shingle-colors.gaf') }}" class="bg-orange-800 hover:bg-orange-900 text-white px-8 py-4 rounded-lg font-bold text-lg transition-colors duration-200">
                     Browse Shingle Colors
                 </a>
                 <a href="tel:3043811122" class="bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition-colors duration-200">

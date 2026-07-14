@@ -98,7 +98,9 @@ Route::get('/contact', function () {
     return view('contact');
 })->name('contact');
 
-Route::get('/shingle-colors', [ServicePageController::class, 'shingleColors'])->name('shingle-colors');
+Route::redirect('/shingle-colors', '/shingle-colors/gaf', 301);
+Route::get('/shingle-colors/gaf', [ServicePageController::class, 'shingleColorsGaf'])->name('shingle-colors.gaf');
+Route::get('/shingle-colors/owens-corning', [ServicePageController::class, 'shingleColorsOwensCorning'])->name('shingle-colors.owens-corning');
 
 Route::get('/financing', [ServicePageController::class, 'financing'])->name('financing');
 

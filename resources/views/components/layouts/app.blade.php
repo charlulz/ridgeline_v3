@@ -93,34 +93,34 @@
 
             <!-- Main Navigation -->
             <nav class="bg-white shadow-lg border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700 sticky top-0 z-50" x-data="{ mobileMenuOpen: false, residentialOpen: false, commercialOpen: false }">
-                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div class="flex justify-between h-20 items-center gap-3">
-                        <div class="flex items-center min-w-0">
+                <div class="mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="flex justify-between h-20 items-center gap-4">
+                        <div class="flex items-center min-w-0 flex-1">
                             <!-- Logo -->
-                            <div class="flex-shrink-0 flex items-center min-w-0">
+                            <div class="flex-shrink-0 flex items-center">
                                 <a href="{{ route('home') }}" class="flex items-center group">
                                     <div class="h-12 flex items-center justify-center group-hover:scale-105 transition-transform duration-200">
                                         <img src="{{ asset('logo.webp') }}" alt="Ridgeline Roofing" class="h-12 w-auto">
                                     </div>
-                                    <div class="ml-3 min-w-0">
-                                        <span class="block text-xl sm:text-2xl font-bold text-gray-900 dark:text-white truncate">Ridgeline Roofing</span>
-                                        <div class="hidden sm:block text-xs text-gray-500 dark:text-gray-400 -mt-1 truncate">Professional Roofing Services</div>
+                                    <div class="ml-3 min-w-0 block min-[1200px]:hidden min-[1400px]:block">
+                                        <span class="block text-xl sm:text-2xl min-[1400px]:text-xl font-bold text-gray-900 dark:text-white">Ridgeline Roofing</span>
+                                        <div class="hidden sm:block text-xs text-gray-500 dark:text-gray-400 -mt-1">Professional Roofing Services</div>
                                     </div>
                                 </a>
                             </div>
 
                             <!-- Navigation Links -->
-                            <div class="hidden lg:ml-8 lg:flex lg:items-center lg:space-x-1">
-                                <a href="{{ route('home') }}" class="border-transparent text-gray-700 hover:text-orange-600 hover:border-orange-500 dark:text-gray-300 dark:hover:text-orange-400 dark:hover:border-orange-400 whitespace-nowrap py-2 px-4 border-b-2 font-semibold text-sm transition-all duration-200 {{ request()->routeIs('home') ? 'border-orange-500 text-orange-600 dark:text-orange-400' : '' }}">
+                            <div class="hidden min-[1200px]:ml-4 min-[1200px]:flex min-[1200px]:items-center min-[1200px]:gap-0.5 min-[1400px]:ml-6 min-[1400px]:gap-1">
+                                <a href="{{ route('home') }}" class="border-transparent text-gray-700 hover:text-orange-600 hover:border-orange-500 dark:text-gray-300 dark:hover:text-orange-400 dark:hover:border-orange-400 whitespace-nowrap py-2 px-2 min-[1400px]:px-3 border-b-2 font-semibold text-sm transition-all duration-200 {{ request()->routeIs('home') ? 'border-orange-500 text-orange-600 dark:text-orange-400' : '' }}">
                                     Home
                                 </a>
-                                <a href="{{ route('about') }}" class="border-transparent text-gray-700 hover:text-orange-600 hover:border-orange-500 dark:text-gray-300 dark:hover:text-orange-400 dark:hover:border-orange-400 whitespace-nowrap py-2 px-4 border-b-2 font-semibold text-sm transition-all duration-200 {{ request()->routeIs('about') ? 'border-orange-500 text-orange-600 dark:text-orange-400' : '' }}">
+                                <a href="{{ route('about') }}" class="border-transparent text-gray-700 hover:text-orange-600 hover:border-orange-500 dark:text-gray-300 dark:hover:text-orange-400 dark:hover:border-orange-400 whitespace-nowrap py-2 px-2 min-[1400px]:px-3 border-b-2 font-semibold text-sm transition-all duration-200 {{ request()->routeIs('about') ? 'border-orange-500 text-orange-600 dark:text-orange-400' : '' }}">
                                     About Us
                                 </a>
                                 
                                 <!-- Residential Dropdown -->
                                 <div class="relative" x-data="{ open: false }" @mouseenter="open = true" @mouseleave="open = false">
-                                    <button class="border-transparent text-gray-700 hover:text-orange-600 hover:border-orange-500 dark:text-gray-300 dark:hover:text-orange-400 dark:hover:border-orange-400 whitespace-nowrap py-2 px-4 border-b-2 font-semibold text-sm transition-all duration-200 flex items-center {{ request()->is('services/residential*') ? 'border-orange-500 text-orange-600 dark:text-orange-400' : '' }}">
+                                    <button class="border-transparent text-gray-700 hover:text-orange-600 hover:border-orange-500 dark:text-gray-300 dark:hover:text-orange-400 dark:hover:border-orange-400 whitespace-nowrap py-2 px-2 min-[1400px]:px-3 border-b-2 font-semibold text-sm transition-all duration-200 flex items-center {{ request()->is('services/residential*') ? 'border-orange-500 text-orange-600 dark:text-orange-400' : '' }}">
                                         Residential
                                         <svg class="ml-1 h-4 w-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
                                     </button>
@@ -137,7 +137,8 @@
                                                         <li><a href="{{ route('services.residential.shingle-replacement') }}" class="flex items-center text-sm text-gray-700 dark:text-gray-300 hover:text-orange-600 dark:hover:text-orange-400"><svg class="h-3 w-3 mr-2 text-orange-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/></svg>Shingle Roof</a></li>
                                                         <li><a href="{{ route('services.residential.metal-replacement') }}" class="flex items-center text-sm text-gray-700 dark:text-gray-300 hover:text-orange-600 dark:hover:text-orange-400"><svg class="h-3 w-3 mr-2 text-orange-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/></svg>Metal Roof</a></li>
                                                         <li><a href="{{ route('services.residential.designer-shingle-replacement') }}" class="flex items-center text-sm text-gray-700 dark:text-gray-300 hover:text-orange-600 dark:hover:text-orange-400"><svg class="h-3 w-3 mr-2 text-orange-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/></svg>Designer Shingles</a></li>
-                                                        <li><a href="{{ route('shingle-colors') }}" class="flex items-center text-sm text-gray-700 dark:text-gray-300 hover:text-orange-600 dark:hover:text-orange-400"><svg class="h-3 w-3 mr-2 text-orange-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/></svg>Shingle Colors</a></li>
+                                                        <li><a href="{{ route('shingle-colors.gaf') }}" class="flex items-center text-sm text-gray-700 dark:text-gray-300 hover:text-orange-600 dark:hover:text-orange-400"><svg class="h-3 w-3 mr-2 text-orange-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/></svg>GAF Shingle Colors</a></li>
+                                                        <li><a href="{{ route('shingle-colors.owens-corning') }}" class="flex items-center text-sm text-gray-700 dark:text-gray-300 hover:text-orange-600 dark:hover:text-orange-400"><svg class="h-3 w-3 mr-2 text-orange-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/></svg>Owens Corning Shingle Colors</a></li>
                                                     </ul>
                                                 </div>
                                                 <div>
@@ -165,7 +166,7 @@
 
                                 <!-- Commercial Dropdown -->
                                 <div class="relative" x-data="{ open: false }" @mouseenter="open = true" @mouseleave="open = false">
-                                    <button class="border-transparent text-gray-700 hover:text-orange-600 hover:border-orange-500 dark:text-gray-300 dark:hover:text-orange-400 dark:hover:border-orange-400 whitespace-nowrap py-2 px-4 border-b-2 font-semibold text-sm transition-all duration-200 flex items-center {{ request()->is('services/commercial*') ? 'border-orange-500 text-orange-600 dark:text-orange-400' : '' }}">
+                                    <button class="border-transparent text-gray-700 hover:text-orange-600 hover:border-orange-500 dark:text-gray-300 dark:hover:text-orange-400 dark:hover:border-orange-400 whitespace-nowrap py-2 px-2 min-[1400px]:px-3 border-b-2 font-semibold text-sm transition-all duration-200 flex items-center {{ request()->is('services/commercial*') ? 'border-orange-500 text-orange-600 dark:text-orange-400' : '' }}">
                                         Commercial
                                         <svg class="ml-1 h-4 w-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
                                     </button>
@@ -205,28 +206,28 @@
                                     </div>
                                 </div>
 
-                                <a href="{{ route('financing') }}" class="border-transparent text-gray-700 hover:text-orange-600 hover:border-orange-500 dark:text-gray-300 dark:hover:text-orange-400 dark:hover:border-orange-400 whitespace-nowrap py-2 px-4 border-b-2 font-semibold text-sm transition-all duration-200 {{ request()->routeIs('financing') ? 'border-orange-500 text-orange-600 dark:text-orange-400' : '' }}">
+                                <a href="{{ route('financing') }}" class="border-transparent text-gray-700 hover:text-orange-600 hover:border-orange-500 dark:text-gray-300 dark:hover:text-orange-400 dark:hover:border-orange-400 whitespace-nowrap py-2 px-2 min-[1400px]:px-3 border-b-2 font-semibold text-sm transition-all duration-200 {{ request()->routeIs('financing') ? 'border-orange-500 text-orange-600 dark:text-orange-400' : '' }}">
                                     Financing
                                 </a>
 
-                                <a href="{{ route('contact') }}" class="border-transparent text-gray-700 hover:text-orange-600 hover:border-orange-500 dark:text-gray-300 dark:hover:text-orange-400 dark:hover:border-orange-400 whitespace-nowrap py-2 px-4 border-b-2 font-semibold text-sm transition-all duration-200 {{ request()->routeIs('contact') ? 'border-orange-500 text-orange-600 dark:text-orange-400' : '' }}">
+                                <a href="{{ route('contact') }}" class="border-transparent text-gray-700 hover:text-orange-600 hover:border-orange-500 dark:text-gray-300 dark:hover:text-orange-400 dark:hover:border-orange-400 whitespace-nowrap py-2 px-2 min-[1400px]:px-3 border-b-2 font-semibold text-sm transition-all duration-200 {{ request()->routeIs('contact') ? 'border-orange-500 text-orange-600 dark:text-orange-400' : '' }}">
                                     Contact
                                 </a>
                             </div>
                         </div>
 
                         <!-- Right side - CTAs -->
-                        <div class="flex items-center space-x-2 sm:space-x-3 flex-shrink-0">
+                        <div class="flex items-center space-x-2 sm:space-x-3 flex-shrink-0 relative z-10">
                             <!-- Phone CTA -->
-                            <a href="tel:3043811122" class="hidden md:flex items-center bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200 shadow-md hover:shadow-lg">
-                                <svg class="h-4 w-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <a href="tel:3043811122" class="hidden md:inline-flex items-center bg-green-600 hover:bg-green-700 text-white px-3 py-2 rounded-lg text-sm font-semibold transition-all duration-200 shadow-md hover:shadow-lg" aria-label="Call Now">
+                                <svg class="h-4 w-4 mr-2 min-[1200px]:mr-0 min-[1400px]:mr-2" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
                                     <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
                                 </svg>
-                                Call Now
+                                <span class="inline min-[1200px]:hidden min-[1400px]:inline">Call Now</span>
                             </a>
                             
                             <!-- Primary CTA -->
-                            <a href="{{ route('contact') }}" class="hidden sm:inline-flex bg-orange-600 hover:bg-orange-700 text-white px-5 sm:px-6 py-3 rounded-lg text-sm font-bold transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105">
+                            <a href="{{ route('contact') }}" class="hidden sm:inline-flex bg-orange-600 hover:bg-orange-700 text-white px-4 min-[1400px]:px-5 py-2.5 rounded-lg text-sm font-bold transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105">
                                 Free Quote
                             </a>
 
@@ -234,7 +235,7 @@
                             <button
                                 type="button"
                                 @click="mobileMenuOpen = !mobileMenuOpen"
-                                class="lg:hidden p-2 rounded-md text-gray-700 hover:text-orange-600 hover:bg-gray-100 dark:text-gray-300 dark:hover:text-orange-400 dark:hover:bg-gray-700"
+                                class="min-[1200px]:hidden p-2 rounded-md text-gray-700 hover:text-orange-600 hover:bg-gray-100 dark:text-gray-300 dark:hover:text-orange-400 dark:hover:bg-gray-700"
                                 :aria-expanded="mobileMenuOpen"
                                 aria-controls="mobile-navigation"
                                 aria-label="Toggle navigation menu"
@@ -248,7 +249,7 @@
                 </div>
 
                 <!-- Mobile menu -->
-                <div id="mobile-navigation" class="lg:hidden" x-show="mobileMenuOpen" x-transition x-cloak>
+                <div id="mobile-navigation" class="min-[1200px]:hidden" x-show="mobileMenuOpen" x-transition x-cloak>
                     <div class="px-2 pt-2 pb-3 space-y-1 bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700">
                         <a href="{{ route('home') }}" class="block px-3 py-3 text-base font-semibold {{ request()->routeIs('home') ? 'bg-orange-50 border-l-4 border-orange-500 text-orange-700 dark:bg-orange-900 dark:border-orange-400 dark:text-orange-200' : 'text-gray-700 hover:bg-gray-50 hover:text-orange-600 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-orange-400' }}">
                             Home
@@ -268,7 +269,8 @@
                                 <a href="{{ route('services.residential.shingle-replacement') }}" class="block px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:text-orange-600">Shingle Roof</a>
                                 <a href="{{ route('services.residential.metal-replacement') }}" class="block px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:text-orange-600">Metal Roof</a>
                                 <a href="{{ route('services.residential.designer-shingle-replacement') }}" class="block px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:text-orange-600">Designer Shingles</a>
-                                <a href="{{ route('shingle-colors') }}" class="block px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:text-orange-600">Shingle Colors</a>
+                                <a href="{{ route('shingle-colors.gaf') }}" class="block px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:text-orange-600">GAF Shingle Colors</a>
+                                <a href="{{ route('shingle-colors.owens-corning') }}" class="block px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:text-orange-600">Owens Corning Shingle Colors</a>
                                 <p class="px-3 py-2 text-xs font-bold text-gray-500 dark:text-gray-400 uppercase">Repair</p>
                                 <a href="{{ route('services.residential.shingle-repair') }}" class="block px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:text-orange-600">Shingle Repair</a>
                                 <a href="{{ route('services.residential.metal-repair') }}" class="block px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:text-orange-600">Metal Repair</a>
@@ -398,7 +400,8 @@
                                 <li><a href="{{ route('services.residential') }}" class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white text-sm transition-colors duration-200">Residential Roofing</a></li>
                                 <li><a href="{{ route('services.commercial') }}" class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white text-sm transition-colors duration-200">Commercial Roofing</a></li>
                                 <li><a href="{{ route('services') }}" class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white text-sm transition-colors duration-200">Roof Replacement</a></li>
-                                <li><a href="{{ route('shingle-colors') }}" class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white text-sm transition-colors duration-200">Shingle Colors</a></li>
+                                <li><a href="{{ route('shingle-colors.gaf') }}" class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white text-sm transition-colors duration-200">GAF Shingle Colors</a></li>
+                                <li><a href="{{ route('shingle-colors.owens-corning') }}" class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white text-sm transition-colors duration-200">Owens Corning Shingle Colors</a></li>
                                 <li><a href="{{ route('financing') }}" class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white text-sm transition-colors duration-200">Financing</a></li>
                                 <li><a href="{{ route('contact') }}" class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white text-sm transition-colors duration-200">Roof Inspection</a></li>
                                 <li><a href="{{ route('services.residential.siding') }}" class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white text-sm transition-colors duration-200">Siding</a></li>

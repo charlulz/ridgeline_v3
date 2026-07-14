@@ -91,7 +91,8 @@ class ServiceAreaPageController extends Controller
             'blog.index',
             'testimonials.index',
             'faq',
-            'shingle-colors',
+            'shingle-colors.gaf',
+            'shingle-colors.owens-corning',
             'service-areas',
             'contact',
         ];
