@@ -44,6 +44,7 @@ class LeadController extends Controller
                 'email' => $request->email,
                 'property_type' => $request->property_type,
                 'message' => $request->message,
+                'urgency' => $request->urgency,
                 'source' => $request->source ?? 'website',
                 'utm_source' => $utmSource,
                 'utm_medium' => $utmMedium,

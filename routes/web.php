@@ -104,6 +104,10 @@ Route::get('/shingle-colors/owens-corning', [ServicePageController::class, 'shin
 
 Route::get('/financing', [ServicePageController::class, 'financing'])->name('financing');
 
+Route::get('/storm-damage', function () {
+    return view('landing.storm-damage');
+})->name('landing.storm-damage');
+
 // Funnel pages
 Route::get('/funnel/{funnelPage:slug}', [FunnelPageController::class, 'show'])->name('funnel.show');
 Route::post('/funnel/{funnelPage:slug}/submit', [FunnelPageController::class, 'submit'])->name('funnel.submit');

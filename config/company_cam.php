@@ -223,5 +223,6 @@ return [
         'services.commercial.gutters' => 'cc-033-brick-apartment-charcoal-shingles-gutters.jpg',
         'services.commercial.siding' => 'cc-032-finished-brown-shingle-park-building.jpg',
         'testimonials.featured' => 'cc-020-testimonial-andrew-crager-google-review.jpg',
+        'landing.storm-damage.hero' => 'cc-012-storm-damage-unlicensed-contractor-ad.jpg',
     ],
 ];

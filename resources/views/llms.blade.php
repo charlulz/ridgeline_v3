@@ -27,6 +27,7 @@
 
 - [Residential Roofing]({{ route('services.residential') }})
 - [Commercial Roofing]({{ route('services.commercial') }})
+- [Storm Damage Roof Inspection]({{ route('landing.storm-damage') }})
 - [Shingle Roof Replacement]({{ route('services.residential.shingle-replacement') }})
 - [GAF Timberline HDZ Shingle Colors]({{ route('shingle-colors.gaf') }})
 - [Owens Corning TruDefinition Duration Shingle Colors]({{ route('shingle-colors.owens-corning') }})

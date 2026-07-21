@@ -5,6 +5,10 @@
     'ogImage' => null,
     'robots' => null,
     'schemaJson' => null,
+    'stickyMode' => 'default',
+    'stickyTitle' => null,
+    'stickySubtitle' => null,
+    'stickyCallLabel' => null,
 ])
 
 @php
@@ -13,6 +17,10 @@
         ?? 'Ridgeline Roofing provides residential and commercial roofing, storm damage repair, and emergency service. Get a free inspection and estimate today.';
     $computedCanonical = $canonical ?? url()->current();
     $computedOgImage = $ogImage ?? asset('logo.webp');
+    $isCallOnlySticky = $stickyMode === 'call-only';
+    $resolvedStickyTitle = $stickyTitle ?? ($isCallOnlySticky ? 'Storm Damage?' : 'Need a Roof Repair?');
+    $resolvedStickySubtitle = $stickySubtitle ?? ($isCallOnlySticky ? 'Call for a storm-damage inspection' : 'Get a free estimate today');
+    $resolvedStickyCallLabel = $stickyCallLabel ?? ($isCallOnlySticky ? 'Call Now' : 'Call');
 @endphp
 
 <!DOCTYPE html>
@@ -434,20 +442,22 @@
         <div x-data="{ show: false }" x-init="window.addEventListener('scroll', () => { show = window.scrollY > 300 })" x-show="show" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 transform translate-y-full" x-transition:enter-end="opacity-100 transform translate-y-0" x-transition:leave="transition ease-in duration-200" x-transition:leave-start="opacity-100 transform translate-y-0" x-transition:leave-end="opacity-0 transform translate-y-full" class="fixed bottom-0 left-0 right-0 z-40 bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 shadow-lg lg:hidden">
             <div class="px-4 py-3">
                 <div class="flex items-center justify-between space-x-3">
-                    <div class="flex-1">
-                        <p class="text-sm font-semibold text-gray-900 dark:text-white">Need a Roof Repair?</p>
-                        <p class="text-xs text-gray-600 dark:text-gray-300">Get a free estimate today</p>
+                    <div class="flex-1 min-w-0">
+                        <p class="text-sm font-semibold text-gray-900 dark:text-white truncate">{{ $resolvedStickyTitle }}</p>
+                        <p class="text-xs text-gray-600 dark:text-gray-300 truncate">{{ $resolvedStickySubtitle }}</p>
                     </div>
-                    <div class="flex space-x-2">
-                        <a href="tel:3043811122" class="flex items-center bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg text-sm font-semibold transition-colors duration-200">
+                    <div class="flex space-x-2 flex-shrink-0">
+                        <a href="tel:3043811122" class="flex items-center bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg text-sm font-semibold transition-colors duration-200 {{ $isCallOnlySticky ? 'px-5' : '' }}">
                             <svg class="h-4 w-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
                                 <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
                             </svg>
-                            Call
+                            {{ $resolvedStickyCallLabel }}
                         </a>
-                        <a href="{{ route('contact') }}" class="bg-orange-600 hover:bg-orange-700 text-white px-4 py-2 rounded-lg text-sm font-bold transition-colors duration-200">
-                            Quote
-                        </a>
+                        @unless($isCallOnlySticky)
+                            <a href="{{ route('contact') }}" class="bg-orange-600 hover:bg-orange-700 text-white px-4 py-2 rounded-lg text-sm font-bold transition-colors duration-200">
+                                Quote
+                            </a>
+                        @endunless
                     </div>
                 </div>
             </div>
@@ -457,19 +467,21 @@
         <div x-data="{ show: false }" x-init="window.addEventListener('scroll', () => { show = window.scrollY > 500 })" x-show="show" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 transform translate-y-full" x-transition:enter-end="opacity-100 transform translate-y-0" x-transition:leave="transition ease-in duration-200" x-transition:leave-start="opacity-100 transform translate-y-0" x-transition:leave-end="opacity-0 transform translate-y-full" class="hidden lg:block fixed bottom-6 right-6 z-40 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-xl">
             <div class="p-4">
                 <div class="text-center mb-3">
-                    <p class="text-sm font-semibold text-gray-900 dark:text-white">Need Roofing Services?</p>
-                    <p class="text-xs text-gray-600 dark:text-gray-300">Get a free estimate</p>
+                    <p class="text-sm font-semibold text-gray-900 dark:text-white">{{ $isCallOnlySticky ? $resolvedStickyTitle : 'Need Roofing Services?' }}</p>
+                    <p class="text-xs text-gray-600 dark:text-gray-300">{{ $isCallOnlySticky ? $resolvedStickySubtitle : 'Get a free estimate' }}</p>
                 </div>
                 <div class="space-y-2">
                     <a href="tel:3043811122" class="flex items-center justify-center bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg text-sm font-semibold transition-colors duration-200 w-full">
                         <svg class="h-4 w-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
                             <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
                         </svg>
-                        Call Now
+                        {{ $isCallOnlySticky ? $resolvedStickyCallLabel : 'Call Now' }}
                     </a>
-                    <a href="{{ route('contact') }}" class="flex items-center justify-center bg-orange-600 hover:bg-orange-700 text-white px-4 py-2 rounded-lg text-sm font-bold transition-colors duration-200 w-full">
-                        Get Free Quote
-                    </a>
+                    @unless($isCallOnlySticky)
+                        <a href="{{ route('contact') }}" class="flex items-center justify-center bg-orange-600 hover:bg-orange-700 text-white px-4 py-2 rounded-lg text-sm font-bold transition-colors duration-200 w-full">
+                            Get Free Quote
+                        </a>
+                    @endunless
                 </div>
             </div>
         </div>

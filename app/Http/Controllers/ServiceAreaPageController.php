@@ -95,6 +95,7 @@ class ServiceAreaPageController extends Controller
             'shingle-colors.owens-corning',
             'service-areas',
             'contact',
+            'landing.storm-damage',
         ];
 
         $urls = collect($staticRouteNames)
