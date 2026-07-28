@@ -56,48 +56,7 @@
             <script type="application/ld+json">{!! $schemaJson !!}</script>
         @endif
 
-        <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-0D70KT6P5W"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-0D70KT6P5W');
-            gtag('config', 'AW-10862474531');
-
-            // Google Ads "Contact" conversion — fire on click-to-call
-            function gtag_report_conversion(url) {
-                var callback = function () {
-                    if (typeof url !== 'undefined') {
-                        window.location = url;
-                    }
-                };
-
-                if (typeof gtag === 'function') {
-                    gtag('event', 'conversion', {
-                        'send_to': 'AW-10862474531/lnzmCL24oNQcEKPq0Lso',
-                        'value': 1.0,
-                        'currency': 'USD',
-                        'event_callback': callback,
-                        'event_timeout': 2000
-                    });
-                } else {
-                    callback();
-                }
-
-                return false;
-            }
-
-            document.addEventListener('click', function (event) {
-                var link = event.target.closest('a[href^="tel:"]');
-                if (!link) {
-                    return;
-                }
-
-                event.preventDefault();
-                gtag_report_conversion(link.getAttribute('href'));
-            });
-        </script>
+        <x-google-ads-tracking />
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
