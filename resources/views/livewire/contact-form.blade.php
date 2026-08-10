@@ -42,6 +42,7 @@
             <select id="service-type" wire:model="service_type" class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-orange-500 focus:border-orange-500 dark:bg-gray-700 dark:text-white @error('service_type') border-red-500 @enderror">
                 <option value="">Select a service</option>
                 <option value="residential">Residential Roofing</option>
+                <option value="replacement">Roof Replacement</option>
                 <option value="commercial">Commercial Roofing</option>
                 <option value="repair">Roof Repair</option>
                 <option value="maintenance">Roof Maintenance</option>

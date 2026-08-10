@@ -65,6 +65,7 @@ class ContactForm extends Component
     {
         return match ($serviceType) {
             'residential' => 'residential',
+            'replacement' => 'residential',
             'commercial' => 'commercial',
             default => 'not_sure',
         };
@@ -87,6 +88,7 @@ class ContactForm extends Component
     {
         return match ($this->service_type) {
             'residential' => 'Residential Roofing',
+            'replacement' => 'Roof Replacement',
             'commercial' => 'Commercial Roofing',
             'repair' => 'Roof Repair',
             'maintenance' => 'Roof Maintenance',

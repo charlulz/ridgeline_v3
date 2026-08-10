@@ -1,27 +1,5 @@
-<x-layouts.app title="Metal Roof Replacement - Residential">
-    <!-- Hero Section -->
-    <div class="relative text-white py-24 md:py-32 overflow-hidden">
-        <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" style="background-image: url('{{ asset('img/metal/9e52ddb4-1d34-40f0-ac91-3f7b4a72b270.jpg') }}');"></div>
-        <div class="absolute inset-0 bg-black/60"></div>
-        <div class="absolute inset-0 bg-gradient-to-br from-orange-600/40 via-orange-700/30 to-orange-800/50"></div>
-        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center">
-                <span class="inline-block bg-orange-600 text-white px-4 py-1 rounded-full text-sm font-bold mb-4">RESIDENTIAL</span>
-                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">Metal Roof Replacement</h1>
-                <p class="text-xl md:text-2xl max-w-3xl mx-auto mb-8 text-gray-100">
-                    Premium metal roofing for lasting protection. Standing seam and exposed-fastener panel options built for long-term performance.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="{{ route('contact') }}" class="bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition-colors duration-200 shadow-lg">
-                        Get Free Estimate
-                    </a>
-                    <a href="tel:3043811122" class="bg-white text-orange-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-bold text-lg transition-colors duration-200 shadow-lg">
-                        Call (304) 381-1122
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
+<x-layouts.app title="Metal Roof Replacement - Residential" sticky-title="Ready for a New Metal Roof?" sticky-subtitle="Free roof inspections and replacement estimates" sticky-call-label="Call Now">
+    <x-replacement-hero service="Metal Roof Replacement" description="Compare standing seam and exposed-fastener metal roof systems built for long-term durability. Get a clear inspection, practical options, and a detailed estimate." :background-image="asset('img/metal/9e52ddb4-1d34-40f0-ac91-3f7b4a72b270.jpg')" />
 
     <!-- Benefits Section -->
     <div class="py-16 bg-white dark:bg-gray-900">
@@ -151,4 +129,3 @@
         </div>
     </div>
 </x-layouts.app>
-
