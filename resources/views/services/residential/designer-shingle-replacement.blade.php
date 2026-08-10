@@ -1,4 +1,4 @@
-<x-layouts.app title="Designer Shingle Replacement - Residential" sticky-title="Upgrade Your Roof" sticky-subtitle="Free designer-shingle consultations" sticky-call-label="Call Now">
+<x-layouts.app title="Designer Shingle Replacement - Residential" sticky-title="Schedule a Free Roof Consultation" sticky-subtitle="Call to discuss your roof and next steps" sticky-call-label="Call to Schedule">
     <x-replacement-hero service="Designer Shingle Roof Replacement" description="Upgrade your home's curb appeal with premium slate-, shake-, and dimensional-style shingles installed by Ridgeline Roofing. Explore colors, warranties, and financing options." :background-image="company_cam_url('services.residential.designer-shingle')" />
 
     <!-- Benefits Section -->

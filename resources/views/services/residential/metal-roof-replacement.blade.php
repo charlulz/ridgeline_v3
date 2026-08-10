@@ -1,4 +1,4 @@
-<x-layouts.app title="Metal Roof Replacement - Residential" sticky-title="Ready for a New Metal Roof?" sticky-subtitle="Free roof inspections and replacement estimates" sticky-call-label="Call Now">
+<x-layouts.app title="Metal Roof Replacement - Residential" sticky-title="Schedule a Free Roof Consultation" sticky-subtitle="Call to discuss your roof and next steps" sticky-call-label="Call to Schedule">
     <x-replacement-hero service="Metal Roof Replacement" description="Compare standing seam and exposed-fastener metal roof systems built for long-term durability. Get a clear inspection, practical options, and a detailed estimate." :background-image="asset('img/metal/9e52ddb4-1d34-40f0-ac91-3f7b4a72b270.jpg')" />
 
     <!-- Benefits Section -->

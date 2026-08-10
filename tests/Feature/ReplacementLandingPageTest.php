@@ -14,6 +14,8 @@ class ReplacementLandingPageTest extends TestCase
             ->assertSee($service.' in Eastern Kentucky &amp; Huntington', false)
             ->assertSee('Call 304-381-1122 for a Free Inspection')
             ->assertSee('Request a Callback')
+            ->assertSee('Schedule a Free Roof Consultation')
+            ->assertSee('Call to Schedule')
             ->assertSee('Financing options available')
             ->assertSee('Licensed &amp; Insured', false)
             ->assertSee('Owens Corning Options')
