@@ -43,6 +43,11 @@ class GoogleAdsCallTrackingTest extends TestCase
         $this->assertStringContainsString('closest(\'a[href^="tel:3043811122"]\')', $html);
         $this->assertStringContainsString('window.location.href = phoneHref', $html);
 
+        // Callback form conversion fires only after the backend success event.
+        $this->assertStringContainsString('AW-10862474531/SYjeCN3Ypt8cEKPq0Lso', $html);
+        $this->assertStringContainsString('__ridgelineCallbackConversionBound', $html);
+        $this->assertStringContainsString("document.addEventListener('callback-request-saved'", $html);
+
         // Click binding — not invoked on page load
         $this->assertStringContainsString("document.addEventListener('click'", $html);
         $beforeClickListener = explode("document.addEventListener('click'", $html, 2)[0];

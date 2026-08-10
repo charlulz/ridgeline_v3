@@ -2,6 +2,11 @@
 
 namespace Tests\Feature;
 
+use App\Livewire\ReplacementCallbackForm;
+use App\Models\Lead;
+use App\Services\LeadService;
+use Livewire\Livewire;
+use Mockery;
 use Tests\TestCase;
 
 class ReplacementLandingPageTest extends TestCase
@@ -39,6 +44,39 @@ class ReplacementLandingPageTest extends TestCase
         $this->get('/services/residential/metal-roof-replacement?loc=1028357')
             ->assertOk()
             ->assertSee('Metal Roof Replacement in Huntington, WV');
+    }
+
+    public function test_successful_callback_request_dispatches_google_ads_conversion_event(): void
+    {
+        $leadService = Mockery::mock(LeadService::class);
+        $leadService->shouldReceive('createLead')
+            ->once()
+            ->andReturn(new Lead());
+        $this->app->instance(LeadService::class, $leadService);
+
+        Livewire::test(ReplacementCallbackForm::class, ['service' => 'Shingle Roof Replacement'])
+            ->set('name', 'Test Homeowner')
+            ->set('phone', '304-555-0100')
+            ->set('zip', '41143')
+            ->call('submit')
+            ->assertHasNoErrors()
+            ->assertDispatched('callback-request-saved');
+    }
+
+    public function test_invalid_callback_request_does_not_dispatch_conversion_event(): void
+    {
+        Livewire::test(ReplacementCallbackForm::class)
+            ->call('submit')
+            ->assertHasErrors(['name', 'phone', 'zip'])
+            ->assertNotDispatched('callback-request-saved');
+    }
+
+    public function test_callback_form_contains_dedicated_google_ads_event_label(): void
+    {
+        $this->get('/services/residential/shingle-roof-replacement')
+            ->assertOk()
+            ->assertSee('AW-10862474531/SYjeCN3Ypt8cEKPq0Lso', false)
+            ->assertSee("document.addEventListener('callback-request-saved'", false);
     }
 
     public static function replacementPages(): array

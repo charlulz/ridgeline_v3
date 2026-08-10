@@ -78,4 +78,21 @@
             window.gtag_report_conversion(phoneHref);
         }, false);
     }
+
+    // Callback Request conversion — emitted by Livewire only after the lead is saved.
+    if (!window.__ridgelineCallbackConversionBound) {
+        window.__ridgelineCallbackConversionBound = true;
+
+        document.addEventListener('callback-request-saved', function () {
+            if (typeof gtag !== 'function') {
+                return;
+            }
+
+            gtag('event', 'conversion', {
+                send_to: 'AW-10862474531/SYjeCN3Ypt8cEKPq0Lso',
+                value: 1.0,
+                currency: 'USD'
+            });
+        }, false);
+    }
 </script>

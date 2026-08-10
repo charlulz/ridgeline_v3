@@ -39,6 +39,7 @@ class ReplacementCallbackForm extends Component
 
             $this->reset(['name', 'phone', 'zip']);
             session()->flash('replacement_callback_success', 'Thanks! Ridgeline will call you shortly.');
+            $this->dispatch('callback-request-saved');
         } catch (\Throwable $e) {
             Log::error('Replacement callback request failed', ['error' => $e->getMessage()]);
             session()->flash('replacement_callback_error', 'We could not send that request. Please call (304) 381-1122.');
