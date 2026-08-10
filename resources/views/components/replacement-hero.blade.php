@@ -59,10 +59,11 @@
 </section>
 
 <section aria-label="Why homeowners choose Ridgeline" class="border-b border-gray-200 bg-white dark:border-gray-700 dark:bg-gray-900">
-    <div class="mx-auto grid max-w-7xl grid-cols-2 gap-4 px-4 py-5 text-center text-sm font-bold text-gray-800 dark:text-gray-100 sm:px-6 md:grid-cols-4 lg:px-8">
+    <div class="mx-auto grid max-w-7xl grid-cols-2 gap-4 px-4 py-5 text-center text-sm font-bold text-gray-800 dark:text-gray-100 sm:px-6 md:grid-cols-5 lg:px-8">
         <div>✓ Licensed &amp; Insured</div>
         <div>✓ 20+ Years' Experience</div>
         <div>✓ GAF Certified</div>
+        <div>✓ Owens Corning Options</div>
         <div>✓ Financing Available</div>
     </div>
 </section>

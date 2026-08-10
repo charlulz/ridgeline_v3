@@ -16,6 +16,7 @@ class ReplacementLandingPageTest extends TestCase
             ->assertSee('Request a Callback')
             ->assertSee('Financing options available')
             ->assertSee('Licensed &amp; Insured', false)
+            ->assertSee('Owens Corning Options')
             ->assertSee('replacement-callback-form');
     }
 
