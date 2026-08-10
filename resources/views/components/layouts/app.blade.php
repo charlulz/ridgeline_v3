@@ -442,11 +442,11 @@
 
         <!-- Sticky CTA Bar - Mobile -->
         <div x-data="{ show: false }" x-init="window.addEventListener('scroll', () => { show = window.scrollY > 300 })" x-show="show" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 transform translate-y-full" x-transition:enter-end="opacity-100 transform translate-y-0" x-transition:leave="transition ease-in duration-200" x-transition:leave-start="opacity-100 transform translate-y-0" x-transition:leave-end="opacity-0 transform translate-y-full" class="fixed bottom-0 left-0 right-0 z-40 bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 shadow-lg lg:hidden">
-            <div class="px-4 py-3">
+            <div class="px-4 {{ $isCallOnlySticky ? 'py-2' : 'py-3' }}">
                 <div class="flex items-center justify-between space-x-3">
                     <div class="flex-1 min-w-0">
                         <p class="text-sm font-semibold text-gray-900 dark:text-white truncate">{{ $resolvedStickyTitle }}</p>
-                        <p class="text-xs text-gray-600 dark:text-gray-300 truncate">{{ $resolvedStickySubtitle }}</p>
+                        <p class="text-xs text-gray-600 dark:text-gray-300 truncate {{ $isCallOnlySticky ? 'hidden sm:block' : '' }}">{{ $resolvedStickySubtitle }}</p>
                     </div>
                     <div class="flex space-x-2 flex-shrink-0">
                         <a href="tel:3043811122" class="flex items-center bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg text-sm font-semibold transition-colors duration-200 {{ $isCallOnlySticky ? 'px-5' : '' }}">

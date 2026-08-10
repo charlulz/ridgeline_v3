@@ -1,4 +1,4 @@
-<x-layouts.app title="Shingle Roof Replacement - Residential" sticky-title="Schedule a Free Roof Consultation" sticky-subtitle="Call to discuss your roof and next steps" sticky-call-label="Call to Schedule">
+<x-layouts.app title="Shingle Roof Replacement - Residential" sticky-mode="call-only" sticky-title="Free Roof Consultation" sticky-subtitle="Call to discuss your roof and next steps" sticky-call-label="Call to Schedule">
     <x-replacement-hero service="Shingle Roof Replacement" description="Get a free roof inspection and straightforward replacement options from Ridgeline Roofing. Choose from durable architectural and premium shingles backed by dependable workmanship." :background-image="company_cam_url('services.residential.shingle-replacement.hero')" />
 
     <!-- Benefits Section -->
